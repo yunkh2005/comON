@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div class=" px-4 py-2 border-b border-gray-100">
         <!-- 뒤로가기 버튼 -->
         <button class="mr-4">
@@ -10,24 +10,24 @@
     </div>
 
     <!-- 검색어 입력 창 -->
-    <div class="relative px-5 py-2">
+    <div class="flex items-center px-5 py-5 cursor-pointer">
         <input 
             placeholder="검색어를 입력하세요."
-            type="text" 
-            class="pl-10 rounded-full w-full p-2 bg-gray-100 text-sm focus:ring-1 focus:ring-black focus:bg-white focus:outline-none"
-        >
-        <i class="fa-solid fa-magnifying-glass absolute left-0 mt-2 ml-8 text-sm text-light"></i>
+            type="text"
+            class="w-11/12 p-2 bg-gray-100 focus:outline-none rounded-l-full text-sm text-center">
+        <button class="w-1/12 p-1 bg-gray-100 hover:bg-gray-300 rounded-r-full text-lg font-semibold text-center">
+            <i class="fa-solid fa-magnifying-glass left-0 text-sm text-light"></i>
+        </button>
     </div>
 
     <!-- 선택 버튼 -->
-    <div class="flex px-20 py-2 items-center">
-        <div class="mr-4 text-center w-1/2 ring-1 ring-gray-300 hover:bg-gray-300 text-lg font-semibold rounded-md">
+    <div class="flex items-center px-60 cursor-pointer">
+        <div class="text-center w-1/2 ring-1 ring-gray-300 hover:bg-gray-300 text-lg font-semibold rounded-l-lg">
             선택1
         </div>
-        <div class="text-center w-1/2 ring-1 ring-gray-300 hover:bg-gray-300 text-lg font-semibold rounded-md">
+        <div class="text-center w-1/2 ring-1 ring-gray-300 hover:bg-gray-300 text-lg font-semibold rounded-r-lg">
             선택2
         </div>
-        
     </div>
 </template>
 <script>
