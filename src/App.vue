@@ -1,11 +1,11 @@
 <template>
-	<PublicSearch></PublicSearch>
+	<ButtomTab></ButtomTab>
 </template>
 <script>
-import PublicSearch from './components/public/PublicSearch.vue';
+import ButtomTab from './components/public/ButtomTab.vue';
 
 export default {
-	components: { PublicSearch, }
+	components: { ButtomTab, }
 }
 </script>
 <style></style>
