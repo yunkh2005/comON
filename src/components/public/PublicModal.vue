@@ -13,7 +13,7 @@
                 aria-labelledby="modal-headline">
                 <div class="border-b border-gray-100 p-2 flex items-center justify-between">
                     <!-- 닫기 버튼 -->
-                    <button class="fas fa-times text-primary text-lg p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
+                    <button class="fas fa-times text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
                 </div>
 
                 <!-- 안내 멘트 -->
