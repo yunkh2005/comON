@@ -20,7 +20,39 @@
     </div>
 
     <!-- 중앙 내용 -->
-
+    <div class="absolute inset-0 mx-5 mt-20 mb-20 overflow-y-auto">
+        <div class="flex justify-between my-1 py-4 bg-gray-100" v-for="message in 100" :key="message">
+            <!-- 사용자 프로필 사진 -->
+            <span class="self-center pl-3 text-3xl">
+                <i class="fa-solid fa-users-viewfinder"></i>
+            </span>
+            <span class="self-center">
+                <!-- 모금 이름 -->
+                <div class="text-2xl font-bold">
+                    모금 이름
+                </div>
+                <!-- 목표 금액 -->
+                <div>
+                    <span class="font-bold">
+                        목표 금액:
+                    </span>
+                    <span>
+                        100,000,000,000,000
+                    </span>
+                    <span class="font-bold">
+                        원
+                    </span>
+                </div>
+                <!-- 그래프 -->
+                <div>
+                    그래프
+                </div>
+            </span>
+            <span class="self-center pr-3 text-xl">
+                <i class="fa-solid fa-chevron-right"></i>
+            </span>
+        </div>
+    </div>
 
     <!-- 하단 우측 내 모금, 추가 버튼 -->
     <div class="fixed bottom-0 right-0 pb-20 justify-items-end">
