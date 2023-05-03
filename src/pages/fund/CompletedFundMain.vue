@@ -1,10 +1,10 @@
 <template>
     <!-- 상단 중앙 진행, 완료 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
-        <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
+        <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
             진행
         </button>
-        <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
+        <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-r-full">
             완료
         </button>
     </div>
@@ -28,18 +28,8 @@
             </div>
             <div class="self-center">
                 <!-- 모금 이름 -->
-                <div class="grid grid-cols-2 font-bold">
-                    <div class="text-2xl">
-                        모금 이름
-                    </div>
-                    <div class="self-center">
-                        <span>
-                            D-
-                        </span>
-                        <span>
-                            DAY
-                        </span>
-                    </div>
+                <div class="text-2xl font-bold">
+                    모금 이름
                 </div>
                 <!-- 목표 금액 -->
                 <div>

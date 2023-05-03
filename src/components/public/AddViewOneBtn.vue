@@ -2,10 +2,10 @@
     <div>
         <div class="flex p-2 items-center">
             <!-- 닫기 버튼 -->
-            <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
+            <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
             <!-- 화면명 -->
-            <div class="flex-col pl-4 font-bold text-xl">
-                화면 이름
+            <div class="flex-col pl-4 font-bold text-2xl">
+                화면명
             </div>
         </div>
 
