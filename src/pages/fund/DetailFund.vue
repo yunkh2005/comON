@@ -45,6 +45,9 @@
             <div class="flex justify-between h-1/5">
                 <div class="text-mainblue font-bold text-xl w-1/3">참여자</div>
                 <div class="flex flex-col sm:w-1/2 md:w-1/3 lg:w-2/5">
+                    <div v-if="isCreator" class="text-right text-skyblue hover:text-mainblue cursor-pointer">
+                        <i class="fa-regular fa-square-plus"></i> 요청하기
+                    </div>
                     <div class="flex justify-between">
                         <div class="flex">
                             <i class="fa-solid fa-circle-user pt-1"></i>
@@ -63,18 +66,46 @@
             </div>
         </div>
         <!-- 하단 버튼 -->
-        <div class="flex absolute inset-x-0 bottom-0 px-6 py-3">
-            <button class="w-1/5 py-1 bg-skyblue  hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+        <div v-if="isCreator" class="flex absolute inset-x-0 bottom-0 px-6 py-3">
+            <button class="w-1/5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+                <i class="fa-solid fa-share-nodes"></i>
+            </button>
+            <button class="w-1/5 py-1 ml-5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
                 <i class="fa-solid fa-trash"></i>
             </button>
-            <button class="w-4/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+            <button @click="showEnterFundModal = true" class="w-3/5 ml-5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+                참여
+            </button>
+        </div>
+        <div v-else class="flex absolute inset-x-0 bottom-0 px-6 py-3">
+            <button class="w-1/5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+            <button @click="showEnterFundModal = true" class="w-4/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
                 참여
             </button>
         </div>
     </div>
+    <!-- 팝업 -->
+    <EnterFundModal v-if="showEnterFundModal" @close-modal="showEnterFundModal = false"></EnterFundModal>
 </template>
 
 <script>
+import EnterFundModal from './EnterFundModal.vue'
+
+    export default {
+        components: {
+            EnterFundModal
+        },
+        data(){
+            return{
+                isCreator: true,
+                showEnterFundModal: false,
+            }
+        },
+        methods: {
+        },
+}
 </script>
 
 <style></style>
