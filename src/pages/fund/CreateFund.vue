@@ -9,7 +9,7 @@
         </div>
     </div>
     <!-- 사진 입력 -->
-    <div class="flex justify-center w-full h-40 bg-mainblue">
+    <div class="flex justify-center w-full h-56 bg-mainblue">
         <i class="fa-solid fa-users-viewfinder m-auto text-5xl text-white"></i>
     </div>
     <!-- 상세 입력 -->
@@ -33,10 +33,10 @@
     </div>
     <!-- 하단 버튼 -->
     <div class="absolute inset-x-0 bottom-0 px-6 py-3">
-            <button class="w-full py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-mainblue text-white text-lg font-semibold rounded-lg">
-                생성
-            </button>
-        </div>
+        <button class="w-full py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-mainblue text-white text-lg font-semibold rounded-lg">
+            생성
+        </button>
+    </div>
 </template>
 
 <script>
