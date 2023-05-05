@@ -22,17 +22,17 @@
     <!-- 중앙 내용 -->
     <div class="absolute inset-0 mx-5 mt-20 mb-20 overflow-y-auto">
         <div class="flex justify-between my-1 py-4 bg-gray-100" v-for="message in 100" :key="message">
-            <!-- 사용자 프로필 사진 -->
-            <div class="self-center pl-3 text-3xl">
+            <!-- 모금 설명 사진 -->
+            <div class="w-1/5 self-center pl-3 text-4xl text-center">
                 <i class="fa-solid fa-users-viewfinder"></i>
             </div>
-            <div class="self-center">
+            <div class="w-3/5 self-center">
                 <!-- 모금 이름 -->
                 <div class="grid grid-cols-2 font-bold">
                     <div class="text-2xl">
                         모금 이름
                     </div>
-                    <div class="self-center">
+                    <div class="pl-1 self-center">
                         <span>
                             D-
                         </span>
@@ -44,7 +44,7 @@
                 <!-- 목표 금액 -->
                 <div>
                     <span class="font-bold">
-                        목표 금액:
+                        목표:
                     </span>
                     <span>
                         100,000,000,000,000
@@ -54,11 +54,11 @@
                     </span>
                 </div>
                 <!-- 그래프 -->
-                <div>
+                <div class="text-center">
                     그래프
                 </div>
             </div>
-            <button class="self-center pr-3 text-xl">
+            <button class="w-1/10 self-center pr-3 text-xl">
                 <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
             </button>
         </div>

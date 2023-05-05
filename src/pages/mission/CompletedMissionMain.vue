@@ -22,19 +22,22 @@
     <!-- 중앙 내용 -->
     <div class="absolute inset-0 mx-5 mt-20 mb-20 overflow-y-auto">
         <div class="flex justify-between my-1 py-4 bg-gray-100" v-for="message in 100" :key="message">
-            <!-- 모금 설명 사진 -->
-            <div class="w-1/5 self-center pl-3 text-4xl text-center">
-                <i class="fa-solid fa-users-viewfinder"></i>
+            <!-- 사용자 프로필 사진 -->
+            <div class="w-1/5 self-center pl-3 text-center">
+                <i class="fa-solid fa-circle-user text-4xl"></i>
+                <div class="font-bold">
+                    생성자
+                </div>
             </div>
             <div class="w-3/5 self-center">
-                <!-- 모금 이름 -->
+                <!-- 미션 이름 -->
                 <div class="text-2xl font-bold">
-                    모금 이름
+                    미션 이름
                 </div>
-                <!-- 목표 금액 -->
+                <!-- 보상 금액 -->
                 <div>
                     <span class="font-bold">
-                        목표:
+                        보상:
                     </span>
                     <span>
                         100,000,000,000,000
@@ -43,9 +46,9 @@
                         원
                     </span>
                 </div>
-                <!-- 그래프 -->
-                <div class="text-center">
-                    그래프
+                <!-- 보상 정보 -->
+                <div class="text-center font-bold">
+                    참여 완료
                 </div>
             </div>
             <button class="w-1/10 self-center pr-3 text-xl">
@@ -56,9 +59,9 @@
 
     <!-- 하단 우측 내 모금, 추가 버튼 -->
     <div class="fixed bottom-0 right-0 pb-20 justify-items-end">
-        <!-- 내 모금 버튼 -->
+        <!-- 내 미션 버튼 -->
         <div class="flex flex-row cursor-pointer place-content-end p-3">
-            <i class="px-3 py-2 fa-solid fa-user bg-skyblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
+            <i class="px-3 py-2 fa-solid fa-medal bg-skyblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
         </div>
         <!-- 모금 추가 버튼 -->
         <div class="flex flex-row cursor-pointer place-content-end p-3">

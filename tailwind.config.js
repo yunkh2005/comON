@@ -9,7 +9,7 @@ export default {
       colors: {
         mainblue: '#063B93',
         skyblue: '#00B1E4',
-        yellow: '#F6D000',
+        mainyellow: '#F6D000',
       },
     },
   },
