@@ -5,7 +5,7 @@
         <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
         <!-- 화면명 -->
         <div class="flex-col pl-4 font-bold text-2xl">
-            내 모금
+            내 미션
         </div>
     </div>
 
@@ -22,19 +22,19 @@
     <!-- 중앙 내용 -->
     <div class="absolute inset-0 mx-5 mt-32 mb-10 overflow-y-auto">
         <div class="flex justify-between my-1 py-4 bg-gray-100" v-for="message in 100" :key="message">
-            <!-- 모금 설명 사진 -->
-            <div class="w-1/5 self-center pl-3 text-4xl text-center">
-                <i class="fa-solid fa-users-viewfinder"></i>
+            <!-- 사용자 프로필 사진 -->
+            <div class="w-1/5 self-center pl-3 text-center">
+                <i class="fa-solid fa-circle-user text-4xl"></i>
             </div>
             <div class="w-3/5 self-center">
-                <!-- 모금 이름 -->
+                <!-- 미션 이름 -->
                 <div class="text-2xl font-bold">
-                    모금 이름
+                    미션 이름
                 </div>
-                <!-- 목표 금액 -->
+                <!-- 보상 금액 -->
                 <div>
                     <span class="font-bold">
-                        목표:
+                        보상:
                     </span>
                     <span>
                         100,000,000,000,000
@@ -43,9 +43,9 @@
                         원
                     </span>
                 </div>
-                <!-- 그래프 -->
-                <div class="text-center">
-                    그래프
+                <!-- 보상 정보 -->
+                <div class="mx-10 bg-mainyellow rounded text-white text-center font-bold">
+                    보상 대기
                 </div>
             </div>
             <button class="w-1/10 self-center pr-3 text-xl">
