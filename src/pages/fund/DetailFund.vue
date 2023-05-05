@@ -45,7 +45,7 @@
             <div class="flex justify-between h-1/5">
                 <div class="text-mainblue font-bold text-xl w-1/3">참여자</div>
                 <div class="flex flex-col sm:w-1/2 md:w-1/3 lg:w-2/5">
-                    <div v-if="isCreator" class="text-right text-skyblue hover:text-mainblue cursor-pointer">
+                    <div v-if="isCreator" @click="showRequestFundModal = true" class="text-right text-skyblue hover:text-mainblue cursor-pointer">
                         <i class="fa-regular fa-square-plus"></i> 요청하기
                     </div>
                     <div class="flex justify-between">
@@ -88,19 +88,23 @@
     </div>
     <!-- 팝업 -->
     <EnterFundModal v-if="showEnterFundModal" @close-modal="showEnterFundModal = false"></EnterFundModal>
+    <RequestFundModal v-if="showRequestFundModal" @close-modal="showRequestFundModal = false"></RequestFundModal>
 </template>
 
 <script>
 import EnterFundModal from './EnterFundModal.vue'
+import RequestFundModal from './RequestFundModal.vue';
 
     export default {
         components: {
-            EnterFundModal
+            EnterFundModal,
+            RequestFundModal,
         },
         data(){
             return{
                 isCreator: true,
                 showEnterFundModal: false,
+                showRequestFundModal: false,
             }
         },
         methods: {
