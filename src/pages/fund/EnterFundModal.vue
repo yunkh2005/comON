@@ -18,7 +18,7 @@
                             </div>
                             <!-- 금액 입력-->
                             <div class="flex justify-center text-2xl mb-9">
-                                <input type="text" class="text-center w-1/3 rounded focus:ring-2 focus:border-primary focus:outline-none" placeholder="입력하세요">
+                                <input v-model="amount" type="number" class="text-center w-1/3 rounded focus:ring-2 focus:border-primary focus:outline-none" placeholder="입력하세요" :step="1000" :min="100">
                                 <div>원</div>
                             </div>
                             <!-- 버튼 -->
@@ -26,16 +26,17 @@
                                 <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-300  hover:bg-mainblue text-lg font-semibold rounded-lg">
                                     취소
                                 </button>
-                                <button @click="enterYn = true" class="w-1/2 ml-5 p-4 text-center bg-skyblue  hover:bg-mainblue text-lg font-semibold rounded-lg">
+                                <button @click="amount ? enterYn = true : enterYn = false" class="w-1/2 ml-5 p-4 text-center bg-skyblue  hover:bg-mainblue text-lg font-semibold rounded-lg">
                                     참여
                                 </button>
                             </div>
                         </div>
                         <div v-else class="flex flex-col">
                             <button class="fas fa-times text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
-                            <div class="text-center text-lg font-extrabold py-10">
-                                참여하셨습니다!
+                            <div class="text-center text-lg font-extrabold pt-10">
+                                참여하셨습니다
                             </div>
+                            <div class="text-center text-lg font-extrabold py-10 text-gray-500">참여 금액: {{ amount }}</div>
                             <button @click="$emit('close-modal')" class="w-1/2 m-auto mb-4 p-4 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg">
                                 확인
                             </button>
@@ -52,9 +53,12 @@ export default {
     data(){
         return{
             enterYn: false,
+            amount: 0,
         }
     },
+    methods: {
 
+    }
 }
 </script>
 
