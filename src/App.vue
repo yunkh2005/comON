@@ -2,7 +2,7 @@
 	<FundMain></FundMain>
 </template>
 <script>
-import FundMain from './components/fund/FundMain.vue';
+import FundMain from './pages/fund/FundMain.vue';
 
 export default {
 	components: { 
