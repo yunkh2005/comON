@@ -22,7 +22,7 @@
 
     <!-- 중앙 내용 -->
     <div class="absolute inset-0 mx-5 mt-20 mb-20 overflow-y-auto">
-        <div class="flex justify-between my-1 py-4 bg-gray-100" v-for="message in 100" :key="message">
+        <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
             <!-- 사용자 프로필 사진 -->
             <div class="w-1/5 self-center pl-3 text-center">
                 <i class="fa-solid fa-circle-user text-4xl"></i>
@@ -36,19 +36,19 @@
                     미션 이름
                 </div>
                 <!-- 보상 금액 -->
-                <div>
-                    <span class="font-bold">
+                <div class="pt-1 font-bold">
+                    <span class="text-lg">
                         보상:
                     </span>
-                    <span>
-                        100,000,000,000,000
+                    <span class="text-xl">
+                        100,000,000
                     </span>
-                    <span class="font-bold">
+                    <span class="text-lg">
                         원
                     </span>
                 </div>
                 <!-- 기간 -->
-                <div>
+                <div class="text-lg text-center">
                     <span class="font-bold">
                         YY.MM.DD
                     </span>

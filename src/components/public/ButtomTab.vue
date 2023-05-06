@@ -15,11 +15,11 @@
 				<div class="text-xs font-bold">모금</div>
 			</div>
 			<div class="hover:bg-gray-200 cursor-pointer text-center">
-				<i class="fa-solid fa-coins text-2xl"></i>
+				<i class="fa-solid fa-sack-dollar text-2xl"></i>
 				<div class="text-xs font-bold">미션</div>
 			</div>
 			<div class="hover:bg-gray-200 cursor-pointer text-center">
-				<i class="fa-solid fa-sack-dollar text-2xl"></i>
+				<i class="fa-solid fa-comment-dollar text-2xl"></i>
 				<div class="text-xs font-bold">용돈</div>
 			</div>
 		</div>
