@@ -16,7 +16,8 @@
         </button>
         <!-- 월 안내 -->
         <button class="w-1/3 font-extrabold text-2xl text-center hover:bg-gray-300 rounded-full">
-            mm월
+            <span>MM</span>
+            <span>월</span>
         </button>
         <!-- 이후 월 이동 버튼 -->
         <button class="w-1/3 ">

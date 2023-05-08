@@ -5,7 +5,7 @@
         <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
         <!-- 화면명 -->
         <div class="flex-col pl-4 font-bold text-2xl">
-            화면명
+            미션 검색
         </div>
     </div>
 
@@ -20,10 +20,10 @@
     <!-- 선택 버튼 -->
     <div class="flex items-center w-full px-24 cursor-pointer">
         <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
-            선택1
+            진행
         </button>
         <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
-            선택2
+            완료
         </button>
     </div>
 </template>
