@@ -69,6 +69,9 @@
                         <div class="w-full">
                             메시지 내용 한줄 미리보기
                         </div>
+                        <div class="text-sm font-bold">
+                            YY-MM-DD AM12:00
+                        </div>
                     </div>
                     <button class="w-1/10 self-center pr-3 text-xl">
                         <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
@@ -95,6 +98,9 @@
                         </div>
                         <div class="w-full">
                             메시지 내용 한줄 미리보기
+                        </div>
+                        <div class="text-sm font-bold">
+                            YY-MM-DD AM12:00
                         </div>
                     </div>
                     <button class="w-1/10 self-center pr-3 text-xl">

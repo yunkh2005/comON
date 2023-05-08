@@ -14,7 +14,7 @@
         <button class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">
             <i class="px-2 py-1 fa-solid fa-magnifying-glass text-2xl"></i>
         </button>
-        <button class="flex-col cursor-pointer place-content-end bg-mainyellow hover:bg-opacity-20 rounded-full">
+        <button class="flex-col cursor-pointer place-content-end hover:bg-mainyellow hover:bg-opacity-20 rounded-full">
             <i class="px-2 py-1 fa-solid fa-bell text-2xl"></i>
         </button>
     </div>
