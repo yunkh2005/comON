@@ -59,7 +59,7 @@
             <button class="w-1/5 py-1 ml-5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
                 <i class="fa-solid fa-trash"></i>
             </button>
-            <button v-if="isHavePaticipant" class="w-3/5 ml-5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+            <button v-if="isHavePaticipant && isComplete" @click="showRewardMissionModal = true" class="w-3/5 ml-5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
                 보상 주기
             </button>
             <button v-else class="w-3/5 ml-5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
@@ -70,27 +70,35 @@
             <button class="w-1/5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
                 <i class="fa-solid fa-trash"></i>
             </button>
-            <button @click="showEnterFundModal = true" class="w-4/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+            <button v-if="isHavePaticipant && isComplete" class="w-4/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+                보상 수령 완료
+            </button>
+            <button v-else @click="showEnterFundModal = true" class="w-4/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
                 참여
             </button>
         </div>
     </div>
     <!-- 팝업 -->
     <EnterMissionModal v-if="showEnterFundModal" @close-modal="showEnterFundModal = false"></EnterMissionModal>
+    <RewardMissionModal v-if="showRewardMissionModal" @close-modal="showRewardMissionModal = false"></RewardMissionModal>
 </template>
 
 <script>
 import EnterMissionModal from './EnterMissionModal.vue'
+import RewardMissionModal from './RewardMissionModal.vue'
 
     export default {
         components: {
             EnterMissionModal,
+            RewardMissionModal,
         },
         data(){
             return{
-                isCreator: false,
-                isHavePaticipant: false,
+                isCreator: true,          //생성자인지 아닌지 구분
+                isHavePaticipant: true,    //참여자 유무 구분
+                isComplete: true,          //완료된 미션인지 구분
                 showEnterFundModal: false,
+                showRewardMissionModal:false,
             }
         },
         methods: {

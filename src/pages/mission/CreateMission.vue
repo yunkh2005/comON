@@ -37,20 +37,24 @@
     </div>
     <!-- 하단 버튼 -->
     <div class="absolute inset-x-0 bottom-0 px-6 py-3">
-        <button class="w-full py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-mainblue text-white text-lg font-semibold rounded-lg">
+        <button @click="showCheckCreateMissionModal = true" class="w-full py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-mainblue text-white text-lg font-semibold rounded-lg">
             생성
         </button>
     </div>
     <!-- 팝업 -->
+    <CheckCreateMissionModal v-if="showCheckCreateMissionModal" @close-modal="showCheckCreateMissionModal = false"></CheckCreateMissionModal>
 </template>
 
 <script>
+import CheckCreateMissionModal from './CheckCreateMissionModal.vue'
 
 export default {
 	components: { 
+        CheckCreateMissionModal,
 	},
     data(){
         return{
+            showCheckCreateMissionModal: false,
             isPayer: true,  //지급자, 수령자 구분
             todayDate: new Date().toISOString().split("T")[0],
             startDate: new Date().toISOString().split("T")[0],
