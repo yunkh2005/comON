@@ -19,7 +19,7 @@
 
         <!-- 용돈 총 금액-->
         <div class="pt-20 mx-5">
-            <div class="flex justify-between px-3 py-1 bg-skyblue rounded-lg text-2xl text-white">
+            <div class="flex justify-between px-3 py-1 bg-mainyellow rounded-lg text-2xl text-white">
                 <div class="font-bold text-center">
                     <div>받은</div>
                     <div>용돈</div>
@@ -33,7 +33,7 @@
                     </span>
                 </div>
             </div>
-            <div class="flex justify-between mt-1 px-3 py-1 bg-skyblue rounded-lg text-2xl text-white">
+            <div class="flex justify-between mt-1 px-3 py-1 bg-mainyellow rounded-lg text-2xl text-white">
                 <div class="font-bold text-center">
                     <div>준</div>
                     <div>용돈</div>
