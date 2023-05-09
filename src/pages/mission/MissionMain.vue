@@ -73,20 +73,29 @@
             <i class="px-3 py-2 fa-solid fa-medal bg-skyblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
         </div>
         <!-- 모금 추가 버튼 -->
-        <div class="flex flex-row cursor-pointer place-content-end p-3">
+        <div @click="showSelectMissionTypeModal = true" class="flex flex-row cursor-pointer place-content-end p-3">
             <i class="px-3 py-2 fa-solid fa-plus bg-mainblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
         </div>
     </div>
 
     <!-- 하단 탭 -->
     <ButtomTab></ButtomTab>
+    <!-- 미션 생성시 유형 선택 팝업 -->
+    <SelectMissionTypeModal v-if="showSelectMissionTypeModal" @close-modal="showSelectMissionTypeModal = false"></SelectMissionTypeModal>
 </template>
 <script>
 import ButtomTab from '../../components/public/ButtomTab.vue';
+import SelectMissionTypeModal from './SelectMissionTypeModal.vue';
 
 export default {
+    data() {
+        return {
+            showSelectMissionTypeModal: false,
+        }
+    },
     components: {
         ButtomTab,
+        SelectMissionTypeModal,
     }
 }
 </script>
