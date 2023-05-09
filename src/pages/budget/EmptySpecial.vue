@@ -1,38 +1,24 @@
 <template lang="">
-    <!-- 검색 버튼 -->
-    <!-- 아직 해결 못함 앞으로 안나옴 -->
-    <div class="flex sticky top-0 right-0">
-        <button class="flex flex-row cursor-pointer place-content-end p-3">
-            <i class="p-3 hover:bg-gray-200 fa-solid fa-magnifying-glass text-2xl rounded-full "></i>
-        </button>
-    </div>
-    
-    <!-- 월별, 특별 선택 버튼 -->
-    <div class="flex absolute left-0 top-0 bg-white w-full px-24 py-6">
-        <button class="text-center w-1/2 h-8 ring-1 ring-gray-300 hover:bg-gray-300 text-xl font-semibold rounded-l-lg">
+    <!-- 상단 선택 버튼 -->
+    <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
+        <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
             월별
         </button>
-        <button class="text-center w-1/2 h-8 ring-1 ring-gray-300 bg-gray-300 text-xl font-semibold rounded-r-lg">
+        <button
+            class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-r-full">
             특별
         </button>
     </div>
-    <!-- 월 이동 버튼 -->
-    <div class="flex absolute bg-white w-full mt-16 py-1">
-        <!-- 이전 월 이동 버튼 -->
-        <button class="w-1/3">
-            <i class="fa-solid fa-chevron-left px-2 text-xl hover:bg-gray-300 rounded-full"></i>
-        </button>
-        <!-- 월 안내 -->
-        <button class="w-1/3 font-extrabold text-2xl text-center hover:bg-gray-300 rounded-full">
-            mm월
-        </button>
-        <!-- 이후 월 이동 버튼 -->
-        <button class="w-1/3 ">
-            <i class="fa-solid fa-chevron-right px-2 text-xl hover:bg-gray-300 rounded-full"></i>
+
+    <!-- 상단 우측 버튼 -->
+    <div class="fixed top-0 right-0 px-3 py-6">
+        <button class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">
+            <i class="px-2 py-1 fa-solid fa-magnifying-glass text-2xl"></i>
         </button>
     </div>
+
     <!-- 중앙 내용 -->
-    <div class="absolute inset-0 mx-5 mt-32 mb-20 overflow-y-auto bg-gray-100 text-center">
+    <div class="absolute flex flex-col justify-center inset-0 mx-5 mt-24 mb-20 overflow-y-auto bg-gray-100 text-center">
         <!-- 안내 문구 -->
         <div class="flex-col place-self-center text-2xl font-bold">
             <i class="p-4 fa-regular fa-star text-5xl"></i>
@@ -44,10 +30,10 @@
             </div>
         </div>
         <!-- 계획 하러가기 버튼 -->
-        <button class="w-1/2 p-2 m-3 bg-gray-200 hover:bg-gray-300 rounded-full">
+        <button class="w-1/2 p-2 m-3 self-center bg-mainyellow rounded-full text-white text-xl ">
             <div class="ml-2 font-bold text-center">
-                계획하러가기
-                <i class="fa-solid fa-chevron-right pl-1 text-xl hover:bg-gray-300 rounded-full"></i>
+                계획하기
+                <i class="fa-solid fa-chevron-right pl-1"></i>
             </div>
         </button>
     </div>
