@@ -13,7 +13,7 @@
             </div>
         </div>
         <!-- 사진 -->
-        <div class="flex flex-col w-full h-1/5 sm:h-1/4 bg-mainblue">
+        <div class="flex flex-col w-full h-1/5 sm:h-1/4 xs:bg-mainblue">
             <i class="fa-solid fa-users-viewfinder m-auto text-5xl text-white"></i>
             <div class="m-auto text-3xl text-white font-bold">미션 이름</div>
         </div>
@@ -29,7 +29,7 @@
             </div>
             <div class="flex justify-between h-1/5">
                 <div class="text-mainblue font-bold text-xl w-1/3">기간</div>
-                <div>2023/03/01 ~ 2023/03/31</div>
+                <div class="text-xs sm:text-sm">2023/03/01 ~ 2023/03/31</div>
             </div>
             <div class="flex justify-between h-1/5">
                 <div class="text-mainblue font-bold text-xl w-1/3">참여자</div>
@@ -59,19 +59,32 @@
             <button class="w-1/5 py-1 ml-5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
                 <i class="fa-solid fa-trash"></i>
             </button>
-            <button v-if="isHavePaticipant && isComplete" @click="showRewardMissionModal = true" class="w-3/5 ml-5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
-                보상 주기
-            </button>
-            <button v-else class="w-3/5 ml-5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
-                수정
-            </button>
+            <div v-if="isPayer" class="w-3/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white text-center">
+                <button v-if="isHaveParticipant" @click="showRewardMissionModal = true" >
+                    보상 주기
+                </button>
+                <button v-if="isComplete">
+                    보상 지급 완료
+                </button>
+                <button v-else>
+                    수정
+                </button>
+            </div>
+            <div v-else class="w-3/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white text-center">
+                <button v-if="isComplete">
+                    보상 수령 완료
+                </button>
+                <button v-else>
+                    수정
+                </button>
+            </div>
         </div>
         <div v-else class="flex absolute inset-x-0 bottom-0 px-6 py-3">
             <button class="w-1/5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
                 <i class="fa-solid fa-trash"></i>
             </button>
-            <button v-if="isHavePaticipant && isComplete" class="w-4/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
-                보상 수령 완료
+            <button v-if="isComplete" class="w-4/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+                미션 완료
             </button>
             <button v-else @click="showEnterFundModal = true" class="w-4/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
                 참여
@@ -94,9 +107,10 @@ import RewardMissionModal from './RewardMissionModal.vue'
         },
         data(){
             return{
-                isCreator: true,          //생성자인지 아닌지 구분
-                isHavePaticipant: true,    //참여자 유무 구분
-                isComplete: true,          //완료된 미션인지 구분
+                isCreator: false,          //생성자인지 아닌지 구분
+                isPayer: false,            //지급자인지 수령자인지 구분
+                isHaveParticipant: false,  //참여자가 있는지 구분
+                isComplete: false,          //완료된 미션인지 구분
                 showEnterFundModal: false,
                 showRewardMissionModal:false,
             }
