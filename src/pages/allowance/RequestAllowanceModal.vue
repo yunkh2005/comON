@@ -29,15 +29,15 @@
                                         class="w-5/6 rounded ring-1 ring-gray-700 text-sm resize-none"
                                         placeholder=" 메시지를 입력하세요">
                                     </textarea>
-                                    <div class="flex justify-right ">
-                                            <button
-                                            class="w-1/8 ml-2 p-2 text-center bg-skyblue hover:bg-mainblue font-semibold rounded-lg">
-                                                <i class="fa-solid fa-image"></i>
-                                            </button>
-                                         </div>
+                                    
                                 </div>
                                 <!-- 사진 버튼-->
-                                
+                                <div class="flex justify-right ">
+                                    <button
+                                        class="w-1/8 ml-2 p-2 text-center bg-skyblue hover:bg-mainblue font-semibold rounded-lg">
+                                        <i class="fa-solid fa-image"></i>
+                                    </button>
+                                </div>
                             </div>
                             <!-- 메시지 입력
                             <div>
