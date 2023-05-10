@@ -1,21 +1,22 @@
 <template>
     <div class="h-screen">
         <!-- 상단 -->
-        <div class="flex p-2 items-center bg-mainblue">
-            <!-- 닫기 버튼 -->
-            <button class="fa-solid fa-arrow-left text-white text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
-            <!-- 화면명 -->
-            <div class="flex-col pl-4 font-bold text-2xl text-white">
-                미션 이름
+        <div class="items-center bg-mainblue">
+            <div class="flex p-2 items-center">
+                <!-- 닫기 버튼 -->
+                <button class="fa-solid fa-arrow-left text-white text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
+                <!-- 화면명 -->
+                <div class="flex-col pl-4 font-bold text-2xl text-white">
+                    미션 이름
+                </div>
+                <div class="flex-col pl-4 font-bold text-lg text-white">
+                    D-day
+                </div>
             </div>
-            <div class="flex-col pl-4 font-bold text-lg text-white">
-                D-day
+            <!-- 사진 입력 -->
+            <div class="flex items-center w-full h-56 bg-mainblue">
+                <i class="fa-solid fa-users-viewfinder m-auto text-5xl text-white"></i>
             </div>
-        </div>
-        <!-- 사진 -->
-        <div class="flex flex-col w-full h-1/5 sm:h-1/4 xs:bg-mainblue">
-            <i class="fa-solid fa-users-viewfinder m-auto text-5xl text-white"></i>
-            <div class="m-auto text-3xl text-white font-bold">미션 이름</div>
         </div>
         <!-- 상세 입력 -->
         <div class="lg:w-1/2 lg:m-auto lg:mt-10 m-10 h-3/5 sm:h-2/5">
@@ -53,24 +54,24 @@
         </div>
         <!-- 하단 버튼 -->
         <div v-if="isCreator" class="flex absolute inset-x-0 bottom-0 px-6 py-3">
-            <button class="w-1/5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+            <button class="w-1/5 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                 <i class="fa-solid fa-share-nodes"></i>
             </button>
-            <button class="w-1/5 py-1 ml-5 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+            <button class="w-1/5 py-1 ml-5 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                 <i class="fa-solid fa-trash"></i>
             </button>
-            <div v-if="isPayer" class="w-3/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white text-center">
+            <div v-if="isPayer" class="w-3/5 ml-5 py-1 bg-skyblue hover:bg-opacity-70 text-lg font-semibold rounded-lg text-white text-center">
                 <button v-if="isHaveParticipant" @click="showRewardMissionModal = true" >
                     보상 주기
                 </button>
-                <button v-if="isComplete">
+                <button v-else-if="isComplete">
                     보상 지급 완료
                 </button>
                 <button v-else>
                     수정
                 </button>
             </div>
-            <div v-else class="w-3/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white text-center">
+            <div v-else class="w-3/5 ml-5 py-1 bg-skyblue hover:bg-opacity-70 text-lg font-semibold rounded-lg text-white text-center">
                 <button v-if="isComplete">
                     보상 수령 완료
                 </button>
@@ -80,13 +81,13 @@
             </div>
         </div>
         <div v-else class="flex absolute inset-x-0 bottom-0 px-6 py-3">
-            <button class="w-1/5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
-                <i class="fa-solid fa-trash"></i>
+            <button class="w-1/5 py-1 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
+                <i class="fa-solid fa-share-nodes"></i>
             </button>
             <button v-if="isComplete" class="w-4/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
                 미션 완료
             </button>
-            <button v-else @click="showEnterFundModal = true" class="w-4/5 ml-5 py-1 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg text-white">
+            <button v-else @click="showEnterFundModal = true" class="w-4/5 ml-5 py-1 bg-skyblue hover:bg-opacity-70 text-lg font-semibold rounded-lg text-white">
                 참여
             </button>
         </div>
@@ -109,7 +110,7 @@ import RewardMissionModal from './RewardMissionModal.vue'
             return{
                 isCreator: false,          //생성자인지 아닌지 구분
                 isPayer: false,            //지급자인지 수령자인지 구분
-                isHaveParticipant: false,  //참여자가 있는지 구분
+                isHaveParticipant: true,  //참여자가 있는지 구분
                 isComplete: false,          //완료된 미션인지 구분
                 showEnterFundModal: false,
                 showRewardMissionModal:false,

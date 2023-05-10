@@ -2,7 +2,7 @@
     <div aria-labelledby="modal-title" role="dialog" aria-modal="true" @click="$emit('close-modal')">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
         <div class="fixed inset-0">
-            <div class="flex items-end justify-center text-center sm:p-3">
+            <div class="flex items-end justify-center text-center px-3 py-1">
                 <div @click.stop class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:w-full sm:max-w-lg">
                     <div class="inline-block overflow-hidden shadow-xl transform transition-all align-middle max-w-lg w-full bg-white rounded-lg text-left"
                         role="dialog" 

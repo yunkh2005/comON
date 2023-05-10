@@ -1,16 +1,18 @@
 <template>
     <!-- 상단 -->
-    <div class="flex p-2 items-center bg-mainblue">
-        <!-- 닫기 버튼 -->
-        <button class="fa-solid fa-arrow-left text-white text-xl p-2 h-12 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
-        <!-- 화면명 -->
-        <div class="pl-4 font-bold text-2xl text-white">
-            미션 생성
+    <div class="items-center bg-mainblue">
+        <div class="flex p-2 items-center">
+            <!-- 닫기 버튼 -->
+            <button class="fa-solid fa-arrow-left text-white text-xl p-2 h-12 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
+            <!-- 화면명 -->
+            <div class="pl-4 font-bold text-2xl text-white">
+                미션 생성
+            </div>
         </div>
-    </div>
-    <!-- 사진 입력 -->
-    <div class="flex items-center w-full h-56 bg-mainblue">
-        <i class="fa-solid fa-users-viewfinder m-auto text-5xl text-white"></i>
+        <!-- 사진 입력 -->
+        <div class="flex items-center w-full h-56 bg-mainblue">
+            <i class="fa-solid fa-users-viewfinder m-auto text-5xl text-white"></i>
+        </div>
     </div>
     <!-- 상세 입력 -->
     <div class="divide-y-2 divide-gray-300 lg:w-1/2 lg:m-auto lg:mt-10 m-10">
@@ -55,7 +57,7 @@ export default {
     data(){
         return{
             showCheckCreateMissionModal: false,
-            isPayer: true,  //지급자, 수령자 구분
+            isPayer: false,  //지급자, 수령자 구분
             todayDate: new Date().toISOString().split("T")[0],
             startDate: new Date().toISOString().split("T")[0],
         }
