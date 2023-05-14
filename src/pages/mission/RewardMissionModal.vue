@@ -13,32 +13,40 @@
                         <button @click="$emit('close-modal')" class="fas fa-times float-right text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
                         <div v-if="!enterYn">
                             <!-- 안내 멘트 -->
-                            <div class="text-center text-lg font-extrabold pt-16">
-                                모금에 참여하시겠습니까?
-                            </div>
-                            <!-- 금액 입력-->
-                            <div class="flex justify-center text-2xl py-10">
-                                <input v-model="amount" type="number" class="text-center md:w-1/3 w-1/2 rounded focus:ring-2 focus:border-primary focus:outline-none" placeholder="입력하세요" :step="1000" :min="100">
-                                <div>원</div>
+                            <div>
+                                <div class="text-center text-lg font-extrabold pt-16">
+                                보상을 설정해주세요
+                                </div>
+                                <div class="flex justify-center font-extrabold pt-10">
+                                    <div class="mr-3 text-lg">대상:</div>
+                                    <select class="w-1/3 rounded-md ring-1 ring-inset ring-gray-700 focus:ring-mainblue text-sm">
+                                        <option>이름</option>
+                                        <option>이름</option>
+                                        <option>이름</option>
+                                    </select>
+                                </div>
+                                <div class="flex justify-center pt-5">
+                                    <div class="mr-3 text-lg font-extrabold">보상:</div>
+                                    <div class="w-1/3 text-lg">10,000원</div>
+                                </div>
                             </div>
                             <!-- 버튼 -->
                             <div class="flex place-content-center p-10 cursor-pointer">
-                                <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
+                                <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-100 hover:bg-skyblue text-lg font-semibold rounded-lg">
                                     취소
                                 </button>
-                                <button @click="amount ? enterYn = true : enterYn = false" class="w-1/2 ml-5 p-4 text-center bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
-                                    참여
+                                <button @click="enterYn = true" class="w-1/2 ml-5 p-4 text-center bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                                    보내기
                                 </button>
                             </div>
                         </div>
                         <div v-else>
                             <div class="text-center text-lg font-extrabold pt-16">
-                                참여하셨습니다
+                                보상을 지급했습니다.
                             </div>
-                            <div class="text-center text-lg font-extrabold py-10 text-gray-500">참여 금액: {{ amount }}</div>
                             <div class="flex place-content-center p-10 cursor-pointer">
-                                <button @click="$emit('close-modal')" class="w-1/2 m-auto p-4 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
-                                    확인
+                                <button @click="$emit('close-modal')" class="w-1/2 m-auto p-4 bg-mainyellow hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                                확인
                                 </button>
                             </div>
                         </div>
@@ -54,7 +62,6 @@ export default {
     data(){
         return{
             enterYn: false,
-            amount: 0,
         }
     },
     methods: {
