@@ -2,7 +2,7 @@
     <div aria-labelledby="modal-title" role="dialog" aria-modal="true" @click="$emit('close-modal')">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-        <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class="fixed inset-0 z-10 overflow-y-auto px-5">
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <div @click.stop class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                     <div class="inline-block overflow-hidden shadow-xl transform transition-all align-middle max-w-lg w-full bg-white rounded-lg text-left"
@@ -23,54 +23,43 @@
                             </div>
 
                             <!-- 메시지 입력-->
-                            <div>
-                                <div class="flex-1 flex justify-center text-2xl mb-9 ">
+                            <div class="mx-5">
+                                <div class="flex-row items-center text-2xl mb-9 ring-1 ring-gray-300">
                                     <textarea v-model="allowanceMessage" rows="10"
-                                        class="w-5/6 rounded ring-1 ring-gray-700 text-sm resize-none"
+                                        class="w-full rounded ring-gray-700 text-sm resize-none"
                                         placeholder=" 메시지를 입력하세요">
                                     </textarea>
-                                    
-                                </div>
-                                <!-- 사진 버튼-->
-                                <div class="flex justify-right ">
-                                    <button
-                                        class="w-1/8 ml-2 p-2 text-center bg-skyblue hover:bg-mainblue font-semibold rounded-lg">
-                                        <i class="fa-solid fa-image"></i>
-                                    </button>
+                                    <div class="grid grid-cols-2 border-t border-gray-300">
+                                        <button
+                                            class="ml-2 mx-1 p-2 text-center text-gray-400 font-semibold hover:bg-gray-100">
+                                        <i class="fa-solid fa-camera"></i>
+                                        </button>
+                                        <button
+                                            class="mr-2 mx-1 p-2 text-center text-gray-400 font-semibold hover:bg-gray-100">
+                                            <i class="fa-solid fa-folder-plus"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- 메시지 입력
-                            <div>
-                                <div class="flex justify-center text-2xl mb-9">
-                                <textarea v-model="allowanceMessage" rows="10" 
-                                class="w-5/6 rounded ring-1 ring-gray-700 text-sm" placeholder=" 메시지를 입력하세요">
-                                </textarea>
-                                </div>
 
-                                  사진 버튼
-                                <div class="flex justify-right ">
-                                    <button class="w-1/8 ml-2 p-2 text-center bg-skyblue  hover:bg-mainblue text-lg font-semibold rounded-lg">
-                                        <i class="fa-solid fa-image"></i>
-                                    </button>
-                                </div>
-                            </div> -->
-                           
                             <!-- 버튼 -->
-                            <div class="flex e-content-center p-1plac0 cursor-pointer">
-                                <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-300  hover:bg-mainblue text-lg font-semibold rounded-lg">
+                            <div class="flex place-content-center p-10">
+                                <button @click="$emit('close-modal')"
+                                    class="w-1/2 ml-5 p-4 text-center ring-1 ring-gray-100 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                                     취소
                                 </button>
-                                <button @click="allowanceMessage ? enterYn = true : enterYn = false" class="w-1/2 ml-5 p-4 text-center bg-skyblue  hover:bg-mainblue text-lg font-semibold rounded-lg">
+                                <button @click="allowanceMessage ? enterYn = true : enterYn = false"
+                                    class="w-1/2 ml-5 p-4 text-center ring-1 ring-skyblue bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
                                     전송
                                 </button>
                             </div>
                         </div>
                         <div v-else class="flex flex-col">
-                            <button class="fas fa-times text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
-                            <div class="text-center text-lg font-extrabold py-10">
-                                메시지를 전송했습니다.
+                            <div class="text-center text-lg font-extrabold py-7">
+                                메시지가 전송되었습니다.
                             </div>
-                            <button @click="$emit('close-modal')" class="w-1/2 m-auto mb-4 p-4 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg">
+                            <i class="fa-solid fa-hands-clapping text-8xl text-center mb-7"></i>
+                            <button @click="$emit('close-modal')" class="w-1/2 m-auto mb-10 p-4 bg-mainyellow hover:opacity-70 text-white text-lg font-semibold rounded-lg">
                                 확인
                             </button>
                         </div>

@@ -31,19 +31,16 @@
     <!-- 중앙 내용 -->
     <div class="absolute inset-0 mx-5 mt-32 mb-10 overflow-y-auto">
         <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 5" :key="message">
-            <!-- 보낸사람 사진 -->
-            <div class="w-1/5 self-center pl-3 text-4xl text-center">
-                <i class="fa-solid fa-user"></i>
-            </div>
-             <!-- 보낸사람 이름 -->
-            <div class="grid grid-cols-2 font-bold">
-                    <div class="text-2xl">
-                        이름
-                    </div>
+            <!-- 사용자 프로필 사진 -->
+            <div class="w-1/5 self-center pl-3 text-center">
+                <i class="fa-solid fa-circle-user text-4xl"></i>
+                <div class="font-bold">
+                    이름
+                </div>
             </div>
             <div class="w-3/5 self-center">
                 <!-- 받은 메세지 -->
-                <span class="text-xs">
+                <span class="text-s">
                     받은 메세지
                 </span>
             </div>
