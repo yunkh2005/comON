@@ -1,7 +1,7 @@
 <template>
     <div class="h-screen overflow-auto">
         <!-- 상단 -->
-        <div class="items-center">
+        <div class="items-center bg-mainblue text-white">
             <div class="flex p-2 items-center">
                 <!-- 닫기 버튼 -->
                 <button class="fa-solid fa-arrow-left text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
@@ -10,21 +10,20 @@
                     수입 추가
                 </div>
             </div>
+            <div class="flex justify-end mx-3 py-14 text-2xl font-bold">
+                <div class="underline mr-2">0</div>
+                <div>원</div>
+            </div>
         </div>
-        <div class="flex justify-end mx-3 mt-8 mb-16 text-2xl font-bold">
-            <div class="underline text-mainblue mr-2">0</div>
-            <div>원</div>
-        </div>
-        <div class="border-y-2"></div>
         <!-- 상세 입력 -->
-        <div class="m-10 mb-20 h-3/5 divide-y divide-gray-500">
+        <div class="m-10 mb-20 h-3/5 divide-y divide-gray-500 text-mainblue">
             <div class="flex mb-5 pt-9">
                 <div class="font-bold text-2xl w-1/3">내역명</div>
                 <input type="text" class="rounded w-1/2 focus:ring-2 focus:border-primary focus:outline-none" placeholder="입력하세요"/>
             </div>
             <div class="flex mb-5 pt-9">
                 <div class="font-bold text-2xl w-1/3">유형</div>
-                <select class="w-1/2 rounded-md ring-1 ring-inset ring-gray-700 focus:ring-mainblue text-sm">
+                <select class="w-1/2 rounded-md ring-1 ring-inset ring-gray-700 focus:ring-mainblue text-sm text-gray-400">
                     <option selected>선택하세요</option>
                     <option>유형1</option>
                     <option>유형2</option>
@@ -56,7 +55,7 @@
             </div>
             <div class="flex mb-5 pt-9">
                 <div class="font-bold text-2xl w-1/3">공개여부</div>
-                <select class="w-1/2 rounded-md ring-1 ring-inset ring-gray-700 focus:ring-mainblue text-sm" placeholder="선택하세요">
+                <select class="w-1/2 rounded-md ring-1 ring-inset ring-gray-700 focus:ring-mainblue text-sm text-gray-400" placeholder="선택하세요">
                     <option>공개</option>
                     <option>비공개</option>
                 </select>    
