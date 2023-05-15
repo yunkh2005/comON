@@ -24,25 +24,21 @@
 
                             <!-- 메시지 입력-->
                             <div class="mx-5">
-                                <div class="flex-row items-center text-2xl mb-9 ring-1 ring-black">
+                                <div class="flex-row items-center text-2xl mb-9 ring-1 ring-gray-300">
                                     <textarea v-model="allowanceMessage" rows="10"
                                         class="w-full rounded ring-gray-700 text-sm resize-none"
                                         placeholder=" 메시지를 입력하세요">
                                     </textarea>
-                                    <div class="grid grid-cols-2 border-t border-black">
+                                    <div class="grid grid-cols-2 border-t border-gray-300">
                                         <button
-                                            class="ml-2 mx-1 p-2 text-center font-semibold hover:bg-gray-100">
+                                            class="ml-2 mx-1 p-2 text-center text-gray-400 font-semibold hover:bg-gray-100">
                                         <i class="fa-solid fa-camera"></i>
                                         </button>
                                         <button
-                                            class="mr-2 mx-1 p-2 text-center font-semibold hover:bg-gray-100">
+                                            class="mr-2 mx-1 p-2 text-center text-gray-400 font-semibold hover:bg-gray-100">
                                             <i class="fa-solid fa-folder-plus"></i>
                                         </button>
                                     </div>
-                                </div>
-                                <!-- 사진 버튼-->
-                                <div class="flex justify-center">
-                                    
                                 </div>
                             </div>
 
@@ -59,13 +55,10 @@
                             </div>
                         </div>
                         <div v-else class="flex flex-col">
-                            <button class="fas fa-times text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
-                            <div class="text-center text-lg font-extrabold py-10 mb-10 ">
+                            <div class="text-center text-lg font-extrabold py-7">
                                 메시지가 전송되었습니다.
                             </div>
-                            <!-- <div class="flex justify-center p-10 ">
-                                    <i class="fa-light fa-hands-clapping"></i>
-                            </div>-->
+                            <i class="fa-solid fa-hands-clapping text-8xl text-center mb-7"></i>
                             <button @click="$emit('close-modal')" class="w-1/2 m-auto mb-10 p-4 bg-mainyellow hover:opacity-70 text-white text-lg font-semibold rounded-lg">
                                 확인
                             </button>
