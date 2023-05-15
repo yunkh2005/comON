@@ -2,7 +2,7 @@
     <div aria-labelledby="modal-title" role="dialog" aria-modal="true" @click="$emit('close-modal')">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-        <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class="fixed inset-0 z-10 overflow-y-auto px-5">
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <div @click.stop class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                     <div class="inline-block overflow-hidden shadow-xl transform transition-all align-middle max-w-lg w-full bg-white rounded-lg text-left"
@@ -23,23 +23,29 @@
                             </div>
 
                             <!-- 메시지 입력-->
-                            <div>
-                                <div class="flex-1 flex justify-center text-2xl mb-9 ">
+                            <div class="mx-5">
+                                <div class="flex-row items-center text-2xl mb-9 ring-1 ring-black">
                                     <textarea v-model="allowanceMessage" rows="10"
-                                        class="w-5/6 rounded ring-1 ring-gray-700 text-sm resize-none"
+                                        class="w-full rounded ring-gray-700 text-sm resize-none"
                                         placeholder=" 메시지를 입력하세요">
                                     </textarea>
-                                    
+                                    <div class="grid grid-cols-2 border-t border-black">
+                                        <button
+                                            class="ml-2 mx-1 p-2 text-center font-semibold hover:bg-gray-100">
+                                        <i class="fa-solid fa-camera"></i>
+                                        </button>
+                                        <button
+                                            class="mr-2 mx-1 p-2 text-center font-semibold hover:bg-gray-100">
+                                            <i class="fa-solid fa-folder-plus"></i>
+                                        </button>
+                                    </div>
                                 </div>
                                 <!-- 사진 버튼-->
                                 <div class="flex justify-center">
-                                    <button
-                                        class="w-1/8 ml-2 p-2 text-center bg-mainyellow hover:text-white text-s font-semibold rounded-lg">
-                                        사진추가 <i class="fa-solid fa-image"></i>
-                                    </button>
+                                    
                                 </div>
                             </div>
-                            <!-- 버튼 -->
+
                             <!-- 버튼 -->
                             <div class="flex place-content-center p-10">
                                 <button @click="$emit('close-modal')"
