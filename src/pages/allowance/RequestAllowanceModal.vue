@@ -32,6 +32,7 @@
                                     
                                 </div>
                                 <!-- 사진 버튼-->
+<<<<<<< HEAD
                                 <div class="flex justify-right ">
                                     <button
                                         class="w-1/8 ml-2 p-2 text-center bg-skyblue hover:bg-mainblue font-semibold rounded-lg">
@@ -61,6 +62,26 @@
                                     취소
                                 </button>
                                 <button @click="allowanceMessage ? enterYn = true : enterYn = false" class="w-1/2 ml-5 p-4 text-center bg-skyblue  hover:bg-mainblue text-lg font-semibold rounded-lg">
+=======
+                                <div class="flex justify-center">
+                                    <button
+                                        class="w-1/8 ml-2 p-2 text-center bg-mainyellow hover:text-white text-s font-semibold rounded-lg">
+                                        사진추가 <i class="fa-solid fa-image"></i>
+                                    </button>
+                                </div>
+                            </div>
+                           
+                           
+                            <!-- 버튼 -->
+                            <!-- 버튼 -->
+                            <div class="flex place-content-center p-10">
+                                <button @click="$emit('close-modal')"
+                                    class="w-1/2 ml-5 p-4 text-center ring-1 ring-gray-100 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
+                                    취소
+                                </button>
+                                <button @click="allowanceMessage ? enterYn = true : enterYn = false"
+                                    class="w-1/2 ml-5 p-4 text-center ring-1 ring-skyblue bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
+>>>>>>> soo
                                     전송
                                 </button>
                             </div>
@@ -68,9 +89,19 @@
                         <div v-else class="flex flex-col">
                             <button class="fas fa-times text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
                             <div class="text-center text-lg font-extrabold py-10">
+<<<<<<< HEAD
                                 메시지를 전송했습니다.
                             </div>
                             <button @click="$emit('close-modal')" class="w-1/2 m-auto mb-4 p-4 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg">
+=======
+                                메시지를 전송했습니다
+                                <div class="flex justify-center p-10">
+                                    <i class="fa-light fa-hands-clapping"></i>
+                                </div>
+                            </div>
+                            
+                            <button @click="$emit('close-modal')" class="w-1/2 m-auto mb-4 p-4 bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
+>>>>>>> soo
                                 확인
                             </button>
                         </div>
