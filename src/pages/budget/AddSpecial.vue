@@ -41,12 +41,27 @@
     </div>
     <!-- 하단 버튼 -->
     <div class="absolute inset-x-0 bottom-0 px-6 py-3">
-        <button class="w-full py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+        <button @click="showTypeAddModal = true" class="w-full py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
             저장
         </button>
     </div>
+    <!-- 팝업 -->
+    <TypeAddModal v-if="showTypeAddModal" @close-modal="showTypeAddModal = false"></TypeAddModal>
 </template>
 <script>
+import TypeAddModal from './TypeAddModal.vue';
+
+export default {
+    component: {
+        TypeAddModal,
+    },
+    data() {
+        return {
+            showTypeAddModal: false,
+        };
+    },
+    components: { TypeAddModal }
+}
 </script>
 <style>
 </style>

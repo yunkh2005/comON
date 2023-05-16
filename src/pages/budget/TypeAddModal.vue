@@ -10,8 +10,6 @@
                         aria-modal="true" 
                         aria-labelledby="modal-headline">
                         <div v-if="!enterYn">
-                            <!-- 닫기 버튼 -->
-                            <button @click="$emit('close-modal')" class="fas fa-times float-right text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
                             <!-- 안내 멘트 -->
                             <div class="text-center text-lg font-extrabold py-10">
                                 예산 유형을 추가해주세요
@@ -38,18 +36,17 @@
                                 <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center ring-1 ring-gray-100 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                                     취소
                                 </button>
-                                <button @click="amount ? enterYn = true : enterYn = false" class="w-1/2 ml-5 p-4 text-center ring-1 ring-skyblue bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
+                                <button @click="enterYn = true" class="w-1/2 ml-5 p-4 text-center ring-1 ring-skyblue bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
                                     추가
                                 </button>
                             </div>
                         </div>
                         <div v-else class="flex flex-col">
                             <button class="fas fa-times text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
-                            <div class="text-center text-lg font-extrabold pt-10">
+                            <div class="text-center text-lg font-extrabold pt-10 pb-10">
                                 추가하였습니다
                             </div>
-                            <div class="text-center text-lg font-extrabold py-10 text-gray-500">참여 금액: {{ amount }}</div>
-                            <button @click="$emit('close-modal')" class="w-1/2 m-auto mb-4 p-4 bg-skyblue hover:bg-mainblue text-lg font-semibold rounded-lg">
+                            <button @click="$emit('close-modal')" class="w-1/2 m-auto mb-4 p-4 bg-skyblue text-white hover:bg-opacity-70 text-lg font-semibold rounded-lg">
                                 확인
                             </button>
                         </div>
@@ -65,7 +62,6 @@ export default {
     data(){
         return{
             enterYn: false,
-            amount: 0,
         }
     },
     methods: {
