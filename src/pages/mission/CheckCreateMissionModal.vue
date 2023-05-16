@@ -14,31 +14,44 @@
                         <div v-if="!enterYn">
                             <!-- 안내 멘트 -->
                             <div class="text-center text-lg font-extrabold pt-16">
-                                모금에 참여하시겠습니까?
+                                미션을 생성하시겠습니까?
                             </div>
-                            <!-- 금액 입력-->
-                            <div class="flex justify-center text-2xl py-10">
-                                <input v-model="amount" type="number" class="text-center md:w-1/3 w-1/2 rounded focus:ring-2 focus:border-primary focus:outline-none" placeholder="입력하세요" :step="1000" :min="100">
-                                <div>원</div>
+                            <div class="pt-10 divide-y-2 divide-gray-300">
+                                <div class="flex justify-between w-2/3 m-auto pt-7">
+                                    <div class="font-bold md:text-lg w-1/3 ">미션 이름</div>
+                                    <div>미션이름입니다.</div>
+                                </div>
+                                <div class="flex justify-between w-2/3 m-auto pt-7">
+                                    <div class="font-bold md:text-lg w-1/3 ">보상</div>
+                                    <div>100,000,000 원</div>
+                                </div>
+                                <div class="flex justify-between w-2/3 m-auto pt-7">
+                                    <div class="font-bold md:text-lg w-1/3 ">설명</div>
+                                    <div>설명입니다.</div>
+                                </div>
+                                <div class="flex justify-between w-2/3 m-auto pt-7">
+                                    <div class="font-bold md:text-lg w-1/3 ">기간</div>
+                                    <div class="text-xs md:text-base">2023/03/01 ~ 2023/03/31</div>
+                                </div>
+                                <div class="flex justify-between w-2/3 m-auto"></div>
                             </div>
                             <!-- 버튼 -->
                             <div class="flex place-content-center p-10 cursor-pointer">
-                                <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
+                                <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-100 hover:bg-skyblue text-lg font-semibold rounded-lg">
                                     취소
                                 </button>
-                                <button @click="amount ? enterYn = true : enterYn = false" class="w-1/2 ml-5 p-4 text-center bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
-                                    참여
+                                <button @click="enterYn = true" class="w-1/2 ml-5 p-4 text-center bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                                    생성
                                 </button>
                             </div>
                         </div>
                         <div v-else>
                             <div class="text-center text-lg font-extrabold pt-16">
-                                참여하셨습니다
+                                미션을 생성했습니다.
                             </div>
-                            <div class="text-center text-lg font-extrabold py-10 text-gray-500">참여 금액: {{ amount }}</div>
                             <div class="flex place-content-center p-10 cursor-pointer">
-                                <button @click="$emit('close-modal')" class="w-1/2 m-auto p-4 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
-                                    확인
+                                <button @click="$emit('close-modal')" class="w-1/2 m-auto p-4 bg-mainyellow hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                                확인
                                 </button>
                             </div>
                         </div>
@@ -54,7 +67,6 @@ export default {
     data(){
         return{
             enterYn: false,
-            amount: 0,
         }
     },
     methods: {

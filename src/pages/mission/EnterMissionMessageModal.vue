@@ -10,18 +10,13 @@
                         aria-modal="true" 
                         aria-labelledby="modal-headline">
                         <div v-if="!enterYn">
-                            <!-- 닫기 버튼 -->
-                            <button @click="$emit('close-modal')" class="fas fa-times float-right text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
-                            <!-- 안내 멘트 -->
-                            <div class="flex justify-center font-extrabold py-10">
-                                <div class="mr-3 text-lg">받는 이:</div>
-                                <select class="w-1/3 rounded-md ring-1 ring-inset ring-gray-700 focus:ring-mainblue text-sm">
-                                    <option>이름</option>
-                                    <option>이름</option>
-                                    <option>이름</option>
-                                </select>
+                            <div class="my-8 font-bold text-xl text-center m-16">
+                                미션 참여 인증 메시지를 전송하세요 
                             </div>
-
+                            <div class="flex justify-center text-xl font-bold mb-5">
+                                <i class="fa-solid fa-circle-user pt-1"></i>
+                                <div class="ml-3">이름</div>
+                            </div>
                             <!-- 메시지 입력-->
                             <div class="mx-5">
                                 <div class="flex-row items-center text-2xl mb-9 ring-1 ring-gray-300">

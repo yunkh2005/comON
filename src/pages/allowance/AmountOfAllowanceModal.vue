@@ -23,10 +23,17 @@
                             </div>
                             <!-- 버튼 -->
                             <div class="flex place-content-center p-10 cursor-pointer">
+<<<<<<< HEAD
+                                <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-300  hover:bg-mainblue text-lg font-semibold rounded-lg">
+                                    취소
+                                </button>
+                                <button @click="amount ? enterYn = true : enterYn = false" class="w-1/2 ml-5 p-4 text-center bg-skyblue  hover:bg-mainblue text-lg font-semibold rounded-lg">
+=======
                                 <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center ring-1 ring-gray-100 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                                     취소
                                 </button>
                                 <button @click="amount ? enterYn = true : enterYn = false" class="w-1/2 ml-5 p-4 text-center ring-1 ring-skyblue bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
+>>>>>>> soo
                                     보내기
                                 </button>
                             </div>

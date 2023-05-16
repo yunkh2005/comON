@@ -30,14 +30,28 @@
                     모금에 참여해주세요.
                 </div>
             </div>
-            <button class="w-1/10 self-center pr-3 text-xl">
+            <button @click="showFundInfoModal = true" class="w-1/10 self-center pr-3 text-xl">
                 <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
             </button>
         </div>
     </div>
+    <!-- 팝업 -->
+    <div>
+        <FundInfoModal v-if="showFundInfoModal" @close-modal="showFundInfoModal = false"></FundInfoModal>
+    </div>
 </template>
 <script>
+import FundInfoModal from './FundInfoModal.vue';
+
 export default {
+    data() {
+        return {
+            showFundInfoModal: false,
+        }
+    },
+    components: {
+        FundInfoModal,
+    }
 }
 </script>
 <style></style>

@@ -20,11 +20,11 @@
         <!-- 용돈 총 금액-->
         <div class="pt-20 mx-5">
             <div class="flex justify-between px-3 py-1 bg-mainyellow rounded-lg text-2xl text-white">
-                <div class="font-bold text-center">
+                <div class="font-bold text-center sm:text-lg">
                     <div>받은</div>
                     <div>용돈</div>
                 </div>
-                <div class="self-center">
+                <div class="self-center sm:text-lg">
                     <span>
                         100,000,000,000,000
                     </span>
@@ -34,11 +34,11 @@
                 </div>
             </div>
             <div class="flex justify-between mt-1 px-3 py-1 bg-mainyellow rounded-lg text-2xl text-white">
-                <div class="font-bold text-center">
+                <div class="font-bold text-center sm:text-lg">
                     <div>준</div>
                     <div>용돈</div>
                 </div>
-                <div class="self-center text-gray-100">
+                <div class="self-center text-gray-100  sm:text-lg">
                     <span>
                         100,000,000,000,000
                     </span>
@@ -49,64 +49,127 @@
             </div>
         </div>
 
-        <!-- 받은 메시지 -->
-        <div class="flex">
-            <div class="mx-5 my-4 py-1 justify-start text-2xl font-bold">
-                받은 메시지
+        <!-- 최근 메시지 -->
+        <div class="flex overflow-y-auto">
+            <div class="mx-5 my-4 py-1 justify-start text-2xl font-bold sm:text-lg">
+                최근 메시지
             </div>
-            <!-- 메시지 정보 -->
-            <div class="absolute h-60 w-full mt-14 overflow-y-auto">
-                <div class="flex justify-between mx-5 my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
+            <!-- 최근 메시지 정보-->
+            <div class="absolute w-full mt-14 pb-24">
+                <!-- 첫번째 최근 메시지 -->
+                <div class="flex justify-between mx-5 my-1 py-4 bg-gray-100 rounded-lg">
                     <!-- 메시지 첨부 사진 -->
                     <div class="w-1/4 self-center pl-3 text-4xl text-center">
                         <i class="fa-solid fa-users-viewfinder"></i>
                     </div>
                     <div class="w-3/5 self-center">
-                        <div class="h-full text-xl font-bold">
+                        <div class="h-full text-xl font-bold sm:text-lg">
                             <span>발신자:</span>
                             <span class="pl-1">가족 이름</span>
                         </div>
-                        <div class="w-full">
+                        <div class="w-full sm:text-sm">
                             메시지 내용 한줄 미리보기
                         </div>
-                        <div class="text-sm font-bold">
+                        <div class="text-sm font-bold sm:text-xs">
                             YY-MM-DD AM12:00
                         </div>
                     </div>
-                    <button class="w-1/10 self-center pr-3 text-xl">
-                        <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-                    </button>
+                    <div class="w-1/10 self-center pr-3 text-xl">
+                        <i class="px-2 py-1 fa-solid fa-chevron-right"></i>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- 보낸 메시지 -->
-        <div class="flex mt-56">
-            <div class="flex-col mx-5 my-4 py-1 justify-start text-2xl font-bold">
-                보낸 메시지
-            </div>
-            <div class="absolute h-60 w-full mt-14 overflow-y-auto">
-                <div class="flex justify-between mx-5 my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
+                <!-- 두번째 최근 메시지 -->
+                <div class="flex justify-between mx-5 my-3 py-4 bg-gray-100 rounded-lg">
                     <!-- 메시지 첨부 사진 -->
                     <div class="w-1/4 self-center pl-3 text-4xl text-center">
                         <i class="fa-solid fa-users-viewfinder"></i>
                     </div>
                     <div class="w-3/5 self-center">
-                        <div class="h-full text-xl font-bold">
+                        <div class="h-full text-xl font-bold sm:text-lg">
                             <span>수신자:</span>
                             <span class="pl-1">가족 이름</span>
                         </div>
-                        <div class="w-full">
+                        <div class="w-full sm:text-sm">
                             메시지 내용 한줄 미리보기
                         </div>
-                        <div class="text-sm font-bold">
+                        <div class="text-sm font-bold sm:text-xs">
                             YY-MM-DD AM12:00
                         </div>
                     </div>
-                    <button class="w-1/10 self-center pr-3 text-xl">
-                        <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-                    </button>
-                </div>  
+                    <div class="w-1/10 self-center pr-3 text-xl">
+                        <i class="px-2 py-1 fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- 세번째 최근 메시지 -->
+                <div class="flex justify-between mx-5 my-3 py-4 bg-gray-100 rounded-lg">
+                    <!-- 메시지 첨부 사진 -->
+                    <div class="w-1/4 self-center pl-3 text-4xl text-center">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+                    <div class="w-3/5 self-center">
+                        <div class="h-full text-xl font-bold sm:text-lg">
+                            <span>수신자:</span>
+                            <span class="pl-1">가족 이름</span>
+                        </div>
+                        <div class="w-full  sm:text-sm">
+                            메시지 내용 한줄 미리보기
+                        </div>
+                        <div class="text-sm font-bold sm:text-xs">
+                            YY-MM-DD AM12:00
+                        </div>
+                    </div>
+                    <div class="w-1/10 self-center pr-3 text-xl">
+                        <i class="px-2 py-1 fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- 네번째 최근 메시지 -->
+                <div class="flex justify-between mx-5 my-1 py-4 bg-gray-100 rounded-lg">
+                    <!-- 메시지 첨부 사진 -->
+                    <div class="w-1/4 self-center pl-3 text-4xl text-center">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+                    <div class="w-3/5 self-center">
+                        <div class="h-full text-xl font-bold sm:text-lg">
+                            <span>발신자:</span>
+                            <span class="pl-1">가족 이름</span>
+                        </div>
+                        <div class="w-full sm:text-sm">
+                            메시지 내용 한줄 미리보기
+                        </div>
+                        <div class="text-sm font-bold sm:text-xs">
+                            YY-MM-DD AM12:00
+                        </div>
+                    </div>
+                    <div class="w-1/10 self-center pr-3 text-xl">
+                        <i class="px-2 py-1 fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- 다섯번째 최근 메시지 -->
+                <div class="flex justify-between mx-5 my-1 py-4 bg-gray-100 rounded-lg">
+                    <!-- 메시지 첨부 사진 -->
+                    <div class="w-1/4 self-center pl-3 text-4xl text-center">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+                    <div class="w-3/5 self-center">
+                        <div class="h-full text-xl font-bold sm:text-lg">
+                            <span>발신자:</span>
+                            <span class="pl-1">가족 이름</span>
+                        </div>
+                        <div class="w-full sm:text-sm">
+                            메시지 내용 한줄 미리보기
+                        </div>
+                        <div class="text-sm font-bold sm:text-xs">
+                            YY-MM-DD AM12:00
+                        </div>
+                    </div>
+                    <div class="w-1/10 self-center pr-3 text-xl">
+                        <i class="px-2 py-1 fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
