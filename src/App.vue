@@ -1,13 +1,17 @@
+
 <template>
-	<FundMain></FundMain>
+	<router-View></router-View>
 </template>
 <script>
-import FundMain from './pages/fund/FundMain.vue';
+
 
 export default {
-	components: { 
-		FundMain,
-	}
+
 }
 </script>
 <style></style>
+
+	
+
+
+
