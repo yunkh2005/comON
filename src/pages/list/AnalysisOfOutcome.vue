@@ -95,7 +95,7 @@
                 </div>
             </div>
             <div class="absolute inset-x-0  px-6 py-3">
-            <button class="w-full py-1 ring-1 ring-gray-100 bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
+            <button class="w-full py-1 ring-1 ring-gray-100 bg-mainyellow hover:opacity-70 text-white text-lg font-semibold rounded-lg">
                 전체 유형 보기
             </button>
             </div>
