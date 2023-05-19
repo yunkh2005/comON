@@ -71,7 +71,7 @@
             <button class="w-1/5 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                 <i class="fa-solid fa-share-nodes"></i>
             </button>
-            <button class="w-1/5 py-1 ml-5 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
+            <button @click="showDeleteFundModal = true" class="w-1/5 py-1 ml-5 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                 <i class="fa-solid fa-trash"></i>
             </button>
             <button class="w-1/5 py-1 ml-5 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
@@ -93,22 +93,26 @@
     <!-- 팝업 -->
     <EnterFundModal v-if="showEnterFundModal" @close-modal="showEnterFundModal = false"></EnterFundModal>
     <RequestFundModal v-if="showRequestFundModal" @close-modal="showRequestFundModal = false"></RequestFundModal>
+    <DeleteFundModal v-if="showDeleteFundModal" @close-modal="showDeleteFundModal = false"></DeleteFundModal>
 </template>
 
 <script>
 import EnterFundModal from './EnterFundModal.vue'
 import RequestFundModal from './RequestFundModal.vue';
+import DeleteFundModal from './DeleteFundModal.vue';
 
     export default {
         components: {
             EnterFundModal,
             RequestFundModal,
+            DeleteFundModal,
         },
         data(){
             return{
                 isCreator: true,
                 showEnterFundModal: false,
                 showRequestFundModal: false,
+                showDeleteFundModal: false,
             }
         },
         methods: {

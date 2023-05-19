@@ -21,10 +21,32 @@
             <div v-for="message in 100" :key="message">유형</div>
         </div>
     </div>
+    <div class="flex absolute inset-x-0 bottom-0 px-6 py-3">
+        <button @click="showCategoryAdd = true"  class="w-1/5 py-1 ring-1 ring-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+        <button class="w-1/5 py-1 ml-5 ring-1 ring-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
+            <i class="fa-solid fa-trash"></i>
+        </button>
+        <button class="w-3/5 ml-5 py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+            저장
+        </button>
+    </div>
+    <!-- 팝업 -->
+    <CategoryAdd v-if="showCategoryAdd" @close-modal="showCategoryAdd = false"></CategoryAdd>
 </template>
 <script>
+import CategoryAdd from './CategoryAdd.vue'
+
 export default {
-    
+    components:{
+        CategoryAdd
+    },
+    data() {
+        return{
+            showCategoryAdd: false,
+        }
+    }    
 }
 </script>
 <style>
