@@ -5,7 +5,7 @@
         <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
         <!-- 화면명 -->
         <div class="flex-col pl-4 font-bold text-2xl">
-            보낸메세지
+            메세지
         </div>
     </div>
 
@@ -17,7 +17,7 @@
         </button>
     </div>
 
-   <!-- 검색어 입력 창 -->
+   <!-- 검색어 입력 창 
    <div class="flex items-center px-5 py-5 cursor-pointer">
         <input 
             placeholder="검색어를 입력하세요."
@@ -26,6 +26,17 @@
         <button class="w-1/12 p-1 bg-gray-100 hover:bg-gray-300 rounded-r-full text-lg font-semibold text-center">
             <i class="fa-solid fa-magnifying-glass left-0 text-sm text-light"></i>
         </button>
+    </div>-->
+    <!-- 선택 버튼 -->
+    <div class="over-y-auto">
+        <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
+        <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white font-semibold rounded-l-full">
+            수신
+        </button>
+        <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white text-2xl font-semibold rounded-r-full">
+            발신
+        </button>
+        </div>
     </div>
 
     <!-- 중앙 내용 -->

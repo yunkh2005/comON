@@ -2,44 +2,50 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 //용돈
 import AllowanceMain from '../pages/allowance/AllowanceMain.vue'
-import AmountOfAllowanceModal from '../pages/allowance/AmountOfAllowanceModal.vue'
-import DetailReceiveAllowanceModal from '../pages/allowance/DetailReceiveAllowanceModal.vue'
-import DetailSendAllowanceModal from '../pages/allowance/DetailSendAllowanceModal.vue'
 import MessageSendAllowance from '../pages/allowance/MessageSendAllowance.vue'
 import MessageReceiveAllowance from '../pages/allowance/MessageReceiveAllowance.vue'
 import MoneyAllowance from '../pages/allowance/MoneyAllowance.vue'
-import MonthlyPictureAllowance from '../pages/allowance/MonthlyPictureAllowance.vue'
-import RequestAllowanceModal from '../pages/allowance/RequestAllowanceModal.vue'
+import MonthlyPictureAllowance from '../pages/allowance/MonthlyPictureAllowance.vue's
 
-//예산 CategoryAdd EmptyMonthly EmptySpecial MonthlyMain Monthlyplan SpecialMain
+//예산 CategoryAdd EmptyMonthly EmptySpecial MonthlyMain Monthlyplan SpecialMain 
+//AddSpecial DetailMonthlyType SpecialSearch 
+import AddSpecial from '../pages/budget/AddSpecial.vue'
 import CategoryAdd from '../pages/budget/CategoryAdd.vue'
+import DetailMonthlyType from '../pages/budget/DetailMonthlyType.vue'
 import EmptyMonthly from '../pages/budget/EmptyMonthly.vue'
 import EmptySpecial from '../pages/budget/EmptySpecial.vue'
 import MonthlyMain from '../pages/budget/MonthlyMain.vue'
 import Monthlyplan from '../pages/budget/Monthlyplan.vue'
 import SpecialMain from '../pages/budget/SpecialMain.vue'
+import SpecialSearch from '../pages/budget/SpecialSearch.vue'
 
 //모금 CompletedFundMain CreateFund DetailFund EnterFundModal FundInfo FundMain FundSearch MyCompletedFund MyFund RequestFundModal
+//FundInfoModal
 import CompletedFundMain from '../pages/Fund/CompletedFundMain.vue'
 import CreateFund from '../pages/Fund/CreateFund.vue'
 import DetailFund from '../pages/Fund/DetailFund.vue'
-import EnterFundModal from '../pages/Fund/EnterFundModal.vue'
 import FundInfo from '../pages/Fund/FundInfo.vue'
 import FundMain from '../pages/Fund/FundMain.vue'
 import FundSearch from '../pages/Fund/FundSearch.vue'
 import MyCompletedFund from '../pages/Fund/MyCompletedFund.vue'
 import MyFund from '../pages/Fund/MyFund.vue'
-import RequestFundModal from '../pages/Fund/RequestFundModal.vue'
+
 
 // 내역 AnalysisOfIncome AnalysisOfOutcome ListMain ListModal ListModalMonthly ListSearch TypeAddModal TypeSpecialAddModal
+//AddIncome AddOutcome DateList DetailMyList DetailDateList IncomeTypeList MyList OutcomeTypeList
+import AddIncome from '../pages/list/AddIncome.vue'
+import AddOutcome from '../pages/list/AddOutcome.vue'
 import AnalysisOfIncome from '../pages/list/AnalysisOfIncome.vue'
 import AnalysisOfOutcome from '../pages/list/AnalysisOfOutcome.vue'
+import DateList from '../pages/list/DateList.vue'
+import DetailMyList from '../pages/list/DetailMyList.vue'
+import DetailDateList from '../pages/list/DateList.vue'
+import IncomeTypeList from '../pages/list/DateList.vue'
 import ListMain from '../pages/list/ListMain.vue'
-import ListModal from '../pages/list/ListModal.vue'
-import ListModalMonthly from '../pages/list/ListModalMonthly.vue'
 import ListSearch from '../pages/list/ListSearch.vue'
-import TypeAddModal from '../pages/list/TypeAddModal.vue'
-import TypeSpecialAddModal from '../pages/list/TypeSpecialAddModal.vue'
+import MyList from '../pages/list/MyList.vue'
+import OutcomeTypeList from '../pages/list/OutcomeTypeList.vue'
+
 
 
 //미션 CompletedMissionMain MissionInfo MissionMain MissionSearch MyCompletedMission MyMission
