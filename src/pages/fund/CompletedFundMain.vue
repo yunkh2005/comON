@@ -1,7 +1,7 @@
 <template>
     <!-- 상단 중앙 진행, 완료 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
-        <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
+        <button @click="$emit('close-modal')" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
             진행
         </button>
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-r-full">
