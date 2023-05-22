@@ -1,4 +1,6 @@
 <template>
+    <SendMessage v-if="showSendMessage" @close-modal="showSendMessage = false"></SendMessage>
+    <div v-else>
     <!-- 상단 -->
     <div class="flex p-2 items-center">
         <!-- 닫기 버튼 -->
@@ -22,7 +24,7 @@
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
             수신
         </button>
-        <button
+        <button  @click="showSendMessage = true"
             class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
             발신
         </button>
@@ -52,9 +54,19 @@
             </button>
         </div>
     </div>
+</div>
 </template>
 <script>
+import SendMessage from './SendMessage.vue';
 export default {
+    components: {
+        SendMessage,
+    },
+    data() {
+        return{
+            showSendMessage: false,
+        }
+    }
 }
 </script>
 <style></style>

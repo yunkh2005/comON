@@ -1,4 +1,6 @@
 <template>
+    <MyCompletedMission v-if="showMyCompletedMission" @close-modal="showMyCompletedMission = false"></MyCompletedMission>
+    <div v-else>
     <!-- 상단 -->
     <div class="flex p-2 items-center">
         <!-- 닫기 버튼 -->
@@ -15,7 +17,7 @@
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
             진행
         </button>
-        <button
+        <button @click="showMyCompletedMission = true"
             class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
             완료
         </button>
@@ -63,9 +65,19 @@
             </button>
         </div>
     </div>
+</div>
 </template>
 <script>
+import MyCompletedMission from './MyCompletedMission.vue';
 export default {
+    components: {
+        MyCompletedMission,
+    },
+    data() {
+        return{
+            showMyCompletedMission: false,
+        }
+    }
 }
 </script>
 <style></style>

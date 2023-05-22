@@ -1,11 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 //용돈
+//ReceiveMessage SendMessage
 import AllowanceMain from '../pages/allowance/AllowanceMain.vue'
 import MessageSendAllowance from '../pages/allowance/MessageSendAllowance.vue'
 import MessageReceiveAllowance from '../pages/allowance/MessageReceiveAllowance.vue'
 import MoneyAllowance from '../pages/allowance/MoneyAllowance.vue'
-import MonthlyPictureAllowance from '../pages/allowance/MonthlyPictureAllowance.vue's
+import MonthlyPictureAllowance from '../pages/allowance/MonthlyPictureAllowance.vue'
+import ReceiveMessage from '../pages/allowance/ReceiveMessage.vue'
+import SendMessage from '../pages/allowance/SendMessage.vue'
+
+
 
 //예산 CategoryAdd EmptyMonthly EmptySpecial MonthlyMain Monthlyplan SpecialMain 
 //AddSpecial DetailMonthlyType SpecialSearch 
@@ -39,8 +44,8 @@ import AnalysisOfIncome from '../pages/list/AnalysisOfIncome.vue'
 import AnalysisOfOutcome from '../pages/list/AnalysisOfOutcome.vue'
 import DateList from '../pages/list/DateList.vue'
 import DetailMyList from '../pages/list/DetailMyList.vue'
-import DetailDateList from '../pages/list/DateList.vue'
-import IncomeTypeList from '../pages/list/DateList.vue'
+import DetailDateList from '../pages/list/DetailDateList.vue'
+import IncomeTypeList from '../pages/list/IncomeTypeList.vue'
 import ListMain from '../pages/list/ListMain.vue'
 import ListSearch from '../pages/list/ListSearch.vue'
 import MyList from '../pages/list/MyList.vue'
@@ -49,7 +54,10 @@ import OutcomeTypeList from '../pages/list/OutcomeTypeList.vue'
 
 
 //미션 CompletedMissionMain MissionInfo MissionMain MissionSearch MyCompletedMission MyMission
+//CreateMission DetailMission
 import CompletedMissionMain from '../pages/mission/CompletedMissionMain.vue'
+import CreateMission from '../pages/mission/CreateMission.vue'
+import DetailMission from '../pages/mission/DetailMission.vue'
 import MissionInfo from '../pages/mission/MissionInfo.vue'
 import MissionMain from '../pages/mission/MissionMain.vue'
 import MissionSearch from '../pages/mission/MissionSearch.vue'
@@ -58,52 +66,61 @@ import MyMission from '../pages/mission/MyMission.vue'
 
 //import ButtomTab from '../component/ButtomTab.vue'
 
+        
 const routes = [
     { path: '/', component: FundMain},
-    //용돈
-    { path: '/allowanceMain', component: AllowanceMain },
-    { path: '/amountOfAllowanceModal', component: AmountOfAllowanceModal },
-    { path: '/detailReceiveAllowanceModal', component: DetailReceiveAllowanceModal },
-    { path: '/detailSendAllowanceModal', component: DetailSendAllowanceModal },
+    //용돈 //ReceiveMessage SendMessage
+    { path: '/allowanceMain', component: AllowanceMain},
     { path: '/messageSendAllowance', component: MessageSendAllowance },
     { path: '/messageReceiveAllowance', component: MessageReceiveAllowance },
     { path: '/moneyAllowance', component: MoneyAllowance },
     { path: '/monthlyPictureAllowance', component: MonthlyPictureAllowance },
-    { path: '/requestAllowanceModal', component: RequestAllowanceModal },
+    { path: '/receiveMessage', component: ReceiveMessage },
+    { path: '/sendMessage', component: SendMessage },
 
-    //예산
+    //예산 AddSpecial DetailMonthlyType SpecialSearch
+    { path: '/addSpecial', component: AddSpecial },
     { path: '/categoryAdd', component: CategoryAdd },
+    { path: '/detailMonthlyType', component: DetailMonthlyType },
     { path: '/emptyMonthly', component: EmptyMonthly },
     { path: '/emptySpecial', component: EmptySpecial },
-    { path: '/monthlyMain', component: MonthlyMain },
+    { path: '/monthlyMain', component: MonthlyMain},
     { path: '/monthlyplan', component: Monthlyplan },
     { path: '/specialMain', component: SpecialMain },
+    { path: '/specialSearch', component: SpecialSearch },
     
     //모금 
     { path: '/completedFundMain', component: CompletedFundMain },
     { path: '/createFund', component: CreateFund },
     { path: '/detailFund', component: DetailFund },
-    { path: '/enterFundModal', component: EnterFundModal },
     { path: '/fundInfo', component: FundInfo },
-    { path: '/fundMain', component: FundMain },
+    { path: '/fundMain', component: FundMain},
     { path: '/fundSearch', component: FundSearch },
     { path: '/myCompletedFund', component: MyCompletedFund },
     { path: '/myFund', component: MyFund },
-    { path: '/requestFundModal', component: RequestFundModal },
 
     //내역 
+    //AddIncome AddOutcome DateList DetailMyList DetailDateList 
+    //IncomeTypeList MyList OutcomeTypeList
+    { path: '/addIncome', component: AddIncome },
+    { path: '/addOutcome', component: AddOutcome },
     { path: '/analysisOfIncome',component: AnalysisOfIncome },
     { path: '/analysisOfOutcome', component: AnalysisOfOutcome },
+    { path: '/dateList', component: DateList },
+    { path: '/detailMyList', component: DetailMyList },
+    { path: '/detailDateList', component: DetailDateList },
+    { path: '/incomeTypeList', component: IncomeTypeList },
     { path: '/listMain', component: ListMain },
-    { path: '/listModal', component: ListModal },
-    { path: '/listModalMonthly', component: ListModalMonthly },
     { path: '/listSearch', component: ListSearch },
-    { path: '/typeAddModal', component: TypeAddModal },
-    { path: '/typeSpecialAddModal', component: TypeSpecialAddModal },
+    { path: '/myList', component: MyList },
+    { path: '/outcomeTypeList', component: OutcomeTypeList },
+    
 
 
-    //미션 
+    //미션 //CreateMission DetailMission
     { path: '/completedMissionMain', component: CompletedMissionMain },
+    { path: '/createMission', component: CreateMission },
+    { path: '/detailMission', component: DetailMission },
     { path: '/missionInfo', component: MissionInfo },
     { path: '/missionMain', component: MissionMain },
     { path: '/missionSearch', component: MissionSearch },

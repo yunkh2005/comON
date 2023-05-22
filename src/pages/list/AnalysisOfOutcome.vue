@@ -5,30 +5,11 @@
         <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
         <!-- 화면명 -->
         <div class="flex-col pl-4 font-bold text-2xl">
-<<<<<<< HEAD
-            지출 유형 전체보기
-=======
              월별 유형 분석
->>>>>>> soo
         </div>
     </div>
 
     <div class="over-y-auto">
-<<<<<<< HEAD
-        <!-- 안내 문구 -->
-        <div class="flex ml-5 mb-2 font-bold text-2xl text-mainblue">
-            <span>MM</span>
-            <span>월 지출</span>
-        </div>
-
-        <!-- 그래프 -->
-        <div class="flex h-52 mx-5 bg-mainblue text-white">
-            그래프
-        </div>
-
-        <!-- 수입 유형 -->
-        <div class="w-full mt-3 text-lg sm:text-base">
-=======
         <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
         <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white font-semibold rounded-l-full">
             수입
@@ -70,27 +51,6 @@
                 </div>
                 <div class="justify-self-end">
                     <span class="pr-1">100,000,000,000</span>
-<<<<<<< HEAD
-                    <span class="font-bold">원</span>
-                    <button class="ml-2 px-1 rounded-full hover:bg-skyblue hover:opacity-50">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- 전체 유형 -->
-            <div class="mx-5 my-3 grid grid-cols-3 items-center border-t border-mainblue text-2xl sm:text-xl">
-                <div class="mt-1 font-bold">
-                    전체 유형
-                </div>
-                <div class="justify-self-end col-span-2">
-                    <span class="pr-1">100,000,000,000</span>
-                    <span class="font-bold">원</span>
-                </div>
-            </div>
-        </div>
-    </div>
-=======
                     <span class="font-bold">원</span>   
                 </div>
             </div>

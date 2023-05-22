@@ -11,10 +11,12 @@
 
     <!-- 상단 우측 버튼 -->
     <div class="fixed top-0 right-0 p-3">
+        <router-link to="monthlyPictureAllowance">
         <button class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">
             <!-- 조르기 사진 모아보긴 -->
             <i class="px-2 py-1 fa-solid fa-image font-bold text-2xl"></i>
         </button>
+        </router-link>
     </div>
 
    <!-- 검색어 입력 창 
@@ -35,9 +37,11 @@
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
             수신
         </button>
+        <router-link to="messageSendAllowance">
         <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
             발신
         </button>
+        </router-link>
         </div>
     </div>
 

@@ -1,14 +1,17 @@
 <template>
+    <CompletedMissionMain v-if="showCompletedMissionMain" @close-completed="showCompletedMissionMain = false"></CompletedMissionMain>
+    <div v-else>
     <!-- 상단 중앙 진행, 완료 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
             진행
         </button>
-        <button
+        <button @click="showCompletedMissionMain = true"
             class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
             완료
         </button>
     </div>
+    
 
     <!-- 상단 우측 검색, 알림 버튼 -->
     <div class="fixed top-0 right-0 px-3 py-6">
@@ -82,20 +85,24 @@
     <ButtomTab></ButtomTab>
     <!-- 미션 생성시 유형 선택 팝업 -->
     <SelectMissionTypeModal v-if="showSelectMissionTypeModal" @close-modal="showSelectMissionTypeModal = false"></SelectMissionTypeModal>
+</div>
 </template>
 <script>
 import ButtomTab from '../../components/public/ButtomTab.vue';
 import SelectMissionTypeModal from './SelectMissionTypeModal.vue';
+import CompletedMissionMain from './CompletedMissionMain.vue';
 
 export default {
     data() {
         return {
             showSelectMissionTypeModal: false,
+            showCompletedMissionMain:false,
         }
     },
     components: {
         ButtomTab,
         SelectMissionTypeModal,
+        CompletedMissionMain,
     }
 }
 </script>
