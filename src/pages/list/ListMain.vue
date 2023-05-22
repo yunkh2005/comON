@@ -12,22 +12,24 @@
                 </router-link>
             </div>
         </top>
-        <div class="bg-mainblue mx-5 rounded-md text-white p-4 text-xl">
-            <div class="flex justify-between mx-6 mb-3">
-                <div class="font-bold">수입</div>
-                <div>100,000,000,000,000 원</div>
+        <router-link to="/analysisOfIncome">
+            <div class="bg-mainblue mx-5 rounded-md text-white p-4 text-xl">
+                <div class="flex justify-between mx-6 mb-3">
+                    <div class="font-bold">수입</div>
+                    <div>100,000,000,000,000 원</div>
+                </div>
+                <div class="flex justify-between mx-6">
+                    <div class="font-bold">지출</div>
+                    <div>100,000,000,000,000 원</div>
+                </div>
             </div>
-            <div class="flex justify-between mx-6">
-                <div class="font-bold">지출</div>
-                <div>100,000,000,000,000 원</div>
-            </div>
-        </div>
-        <div class="p-4 mt-5">
-            <img src="../../components/asset/Calendar.png"/>
-        </div>
+        </router-link>
+        <router-link to="/dateList">
+            <img src="../../components/asset/Calendar.png" class="p-4 mt-5"/>
+        </router-link>
         <!-- 하단 우측 버튼 -->
         <div class="fixed bottom-0 right-0 pb-20 justify-items-end">
-            <router-link to="/analysisOfIncome" class="flex flex-row cursor-pointer place-content-end p-3">
+            <router-link to="/myList" class="flex flex-row cursor-pointer place-content-end p-3">
                 <i class="px-3 py-2 fa-solid fa-wallet bg-skyblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
             </router-link>
             <div @click="showSelectListTypeModal = true" class="flex flex-row cursor-pointer place-content-end p-3">

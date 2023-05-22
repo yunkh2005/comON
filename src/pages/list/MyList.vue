@@ -1,48 +1,45 @@
 <template>
     <!-- 상단 -->
-    <div class="flex p-2 items-center bg-mainblue text-white">
-        <!-- 닫기 버튼 -->
-        <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
-        <!-- 화면명 -->
-        <div class="flex-col pl-4 font-bold text-2xl">
-            <span>yy</span>
-            <span class="pr-1">년</span>
-            <span>mm</span>
-            <span class="pr-1">월</span>
-            <span>dd</span>
-            <span>일 내역</span>
+    <div class="bg-mainblue text-white">
+        <div class="flex p-2 items-center">
+            <!-- 닫기 버튼 -->
+            <button @click="$router.go(-1)" class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
+            <!-- 화면명 -->
+            <div class="flex-col pl-4 font-bold text-2xl">
+                내 월별 내역
+            </div>
+        </div>
+        <div class="m-3 flex justify-between">
+            <!-- 월 이동 버튼 -->
+            <div class="flex text-white sm:text-xl md:text-3xl font-bold p-5">
+                <span>MM</span>
+                <span class="pr-2">월</span>
+                <span ><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+
+            <!-- 금액 안내 -->
+            <div class="pb-5 col-span-2 flex flex-col text-white pr-3">
+                <div class="flex justify-end md:text-2xl font-bold">
+                    <span class="pr-1">총 건수:</span>
+                    <span class="pr-1">NNN</span>
+                    <span>건</span>
+                </div>
+                <!-- 수입 -->
+                <div class="pt-2 flex justify-end font-bold sm:text-sm md:text-xl">
+                    <span class="pr-2">수입</span>
+                    <span class="pr-1 font-normal">100,000,000,000,000,000</span>
+                    <span>원</span>
+                </div>
+                <!-- 지출 -->
+                <div class="flex justify-end font-bold sm:text-sm md:text-xl">
+                    <span class="pr-2">지출</span>
+                    <span class="pr-1 font-normal">100,000,000,000,000,000</span>
+                    <span>원</span>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="grid grid-cols-3 px-5 pb-3 items-center bg-mainblue">
-        <!-- 월 이동 버튼 -->
-        <button class="flex text-white text-3xl font-bold">
-            <span>MM</span>
-            <span class="pr-2">월</span>
-            <span ><i class="fa-solid fa-chevron-down"></i></span>
-        </button>
-
-        <!-- 금액 안내 -->
-        <div class="pb-5 col-span-2 flex flex-col text-white pr-3">
-            <div class="flex justify-end text-2xl font-bold">
-                <span class="pr-1">총 건수:</span>
-                <span class="pr-1">NNN</span>
-                <span>건</span>
-            </div>
-            <!-- 수입 -->
-            <div class="pt-2 flex justify-end text-xl font-bold">
-                <span class="pr-2">수입</span>
-                <span class="pr-1 font-normal">100,000,000,000,000,000</span>
-                <span>원</span>
-            </div>
-            <!-- 지출 -->
-            <div class="flex justify-end text-xl font-bold">
-                <span class="pr-2">지출</span>
-                <span class="pr-1 font-normal">100,000,000,000,000,000</span>
-                <span>원</span>
-            </div>
-        </div>
-    </div>
 
     <!-- 중앙 내용 -->
     <div class="absolute inset-0 mx-5 mt-52 mb-10 overflow-y-auto">

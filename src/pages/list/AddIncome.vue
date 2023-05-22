@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="flex justify-end mx-3 py-14 text-2xl font-bold">
-                <div class="underline mr-2">0</div>
+                <input type="text" class="rounded w-1/2 bg-transparent text-end" placeholder="0"/>
                 <div>원</div>
             </div>
         </div>

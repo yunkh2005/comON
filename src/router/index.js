@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+
 //용돈
 //ReceiveMessage SendMessage
 import AllowanceMain from '../pages/allowance/AllowanceMain.vue'
@@ -40,6 +41,8 @@ import MyFund from '../pages/Fund/MyFund.vue'
 //AddIncome AddOutcome DateList DetailMyList DetailDateList IncomeTypeList MyList OutcomeTypeList
 import AddIncome from '../pages/list/AddIncome.vue'
 import AddOutcome from '../pages/list/AddOutcome.vue'
+import AllTypeOfIncome from '../pages/list/AllTypeOfIncome .vue'
+import AllTypeOfOutcome from '../pages/list/AllTypeOfOutcome.vue'
 import AnalysisOfIncome from '../pages/list/AnalysisOfIncome.vue'
 import AnalysisOfOutcome from '../pages/list/AnalysisOfOutcome.vue'
 import DateList from '../pages/list/DateList.vue'
@@ -75,7 +78,7 @@ const routes = [
     { path: '/monthlyPictureAllowance', component: MonthlyPictureAllowance },
     { path: '/receiveMessage', component: ReceiveMessage },
     { path: '/sendMessage', component: SendMessage },
-
+    
     //예산 AddSpecial DetailMonthlyType SpecialSearch
     { path: '/addSpecial', component: AddSpecial },
     { path: '/categoryAdd', component: CategoryAdd },
@@ -96,12 +99,14 @@ const routes = [
     { path: '/fundSearch', component: FundSearch },
     { path: '/myCompletedFund', component: MyCompletedFund },
     { path: '/myFund', component: MyFund },
-
+    
     //내역 
     //AddIncome AddOutcome DateList DetailMyList DetailDateList 
     //IncomeTypeList MyList OutcomeTypeList
     { path: '/addIncome', component: AddIncome },
     { path: '/addOutcome', component: AddOutcome },
+    { path: '/allTypeOfIncome', component:AllTypeOfIncome },
+    { path: '/allTypeOfOutcome', component:AllTypeOfOutcome },
     { path: '/analysisOfIncome',component: AnalysisOfIncome },
     { path: '/analysisOfOutcome', component: AnalysisOfOutcome },
     { path: '/dateList', component: DateList },

@@ -2,7 +2,7 @@
     <!-- 상단 -->
     <div class="flex p-2 items-center">
         <!-- 닫기 버튼 -->
-        <button @click=$router.go(-1) class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
+        <router-link to="/listmain" class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></router-link>
         <!-- 화면명 -->
         <div class="flex-col pl-4 font-bold text-2xl">
              월별 유형 분석
@@ -14,9 +14,9 @@
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
             수입
         </button>
-        <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
+        <router-link to="/analysisOfOutcome" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
             지출
-        </button>
+        </router-link>
         </div>
    
     
@@ -53,11 +53,13 @@
                     <span class="font-bold">원</span>   
                 </div>
             </div>
-            <div class="absolute inset-x-0  px-6 py-3">
-                <router-link to="/fundMain" class="w-full py-1 ring-1 ring-gray-100 bg-mainyellow hover:opacity-70 text-white text-lg font-semibold rounded-lg">
-                    전체 유형 보기
-                </router-link>
-            </div>
+            <router-link to="/allTypeOfIncome">
+                <div class="absolute inset-x-0  px-6 py-3">
+                    <div class="w-full text-center py-1 ring-1 ring-gray-100 bg-mainyellow hover:opacity-70 text-white text-lg font-semibold rounded-lg">
+                        전체 유형 보기
+                    </div>
+                </div>
+            </router-link>
         </div>   
     </div>
     </div>

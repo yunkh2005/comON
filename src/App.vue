@@ -2,7 +2,6 @@
 	<router-View></router-View>
 </template>
 
-
 <script>
 //import {ref , onBeforeMount } from 'vue'
 //import router from './router'
