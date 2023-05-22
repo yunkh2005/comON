@@ -103,6 +103,14 @@
             </div>
         </div>
     </div>
+    
+    <!-- 하단 우측 수정 버튼 -->
+    <div class="fixed bottom-0 right-0 pb-20 justify-items-end">
+        <!-- 수정 버튼 -->
+        <div class="flex flex-row cursor-pointer place-content-end p-3">
+            <i class="px-3 py-2 fa-solid fa-pen bg-mainblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
+        </div>
+    </div>
 
     <!-- 하단 탭 -->
     <ButtomTab></ButtomTab>
