@@ -11,9 +11,11 @@
 
     <!-- 상단 우측 검색, 알림 버튼 -->
     <div class="fixed top-0 right-0 px-3 py-6">
+        <router-link to="fundSearch">
         <button class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">
             <i class="px-2 py-1 fa-solid fa-magnifying-glass text-2xl"></i>
         </button>
+        </router-link>
         <button class="flex-col cursor-pointer place-content-end hover:bg-mainyellow hover:bg-opacity-20 rounded-full">
             <i class="px-2 py-1 fa-solid fa-bell text-2xl"></i>
         </button>
@@ -48,28 +50,31 @@
                     그래프
                 </div>
             </div>
+            <router-link to="detailFund">
             <button class="w-1/10 self-center pr-3 text-xl">
                 <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
             </button>
+            </router-link>
         </div>
     </div>
 
     <!-- 하단 우측 내 모금, 추가 버튼 -->
     <div class="fixed bottom-0 right-0 pb-20 justify-items-end">
         <!-- 내 모금 버튼 -->
-        <div class="flex flex-row cursor-pointer place-content-end p-3">
+        <router-link to="myFund" class="flex flex-row cursor-pointer place-content-end p-3">
             <i class="px-3 py-2 fa-solid fa-user bg-skyblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
-        </div>
+        </router-link>
         <!-- 모금 추가 버튼 -->
-        <div class="flex flex-row cursor-pointer place-content-end p-3">
+        <router-link to="createFund" class="flex flex-row cursor-pointer place-content-end p-3">
             <i class="px-3 py-2 fa-solid fa-plus bg-mainblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
-        </div>
+        </router-link>
     </div>
 
     <!-- 하단 탭 -->
     <ButtomTab></ButtomTab>
 </template>
 <script>
+
 import ButtomTab from '../../components/public/ButtomTab.vue';
 
 export default {

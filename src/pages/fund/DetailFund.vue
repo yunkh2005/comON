@@ -117,6 +117,7 @@ import DeleteFundModal from './DeleteFundModal.vue';
         },
         methods: {
         },
+        props:['']
 }
 </script>
 
