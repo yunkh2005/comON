@@ -51,8 +51,6 @@ import ListSearch from '../pages/list/ListSearch.vue'
 import MyList from '../pages/list/MyList.vue'
 import OutcomeTypeList from '../pages/list/OutcomeTypeList.vue'
 
-
-
 //미션 CompletedMissionMain MissionInfo MissionMain MissionSearch MyCompletedMission MyMission
 //CreateMission DetailMission
 import CompletedMissionMain from '../pages/mission/CompletedMissionMain.vue'

@@ -4,7 +4,7 @@
         <div class="items-center bg-mainblue text-white">
             <div class="flex p-2 items-center">
                 <!-- 닫기 버튼 -->
-                <button class="fa-solid fa-arrow-left text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
+                <router-link to="listmain" class="fa-solid fa-arrow-left text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></router-link>
                 <!-- 화면명 -->
                 <div class="flex-col pl-4 font-bold text-2xl">
                     수입 추가
