@@ -1,16 +1,6 @@
 <template>
     <SendMessage v-if="showSendMessage" @close-modal="showSendMessage = false"></SendMessage>
     <div v-else>
-<<<<<<< HEAD
-        <!-- 상단 -->
-        <div class="flex p-2 items-center">
-            <!-- 닫기 버튼 -->
-            <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
-            <!-- 화면명 -->
-            <div class="flex-col pl-4 font-bold text-2xl">
-                내 메세지
-            </div>
-=======
     <!-- 상단 -->
     <div class="flex p-2 items-center">
         <!-- 닫기 버튼 -->
@@ -18,16 +8,8 @@
         <!-- 화면명 -->
         <div class="flex-col pl-4 font-bold text-2xl">
             내 메세지
->>>>>>> suesue
         </div>
-
-<<<<<<< HEAD
-        <!-- 상단 우측 버튼 -->
-        <div class="fixed top-0 right-0 p-3">
-            <button class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">
-                <!-- 조르기 사진 모아보기 -->
-                <i class="px-2 py-1 fa-solid fa-images font-bold text-2xl"></i>
-=======
+     </div>
     <!-- 상단 우측 버튼 -->
     <div class="fixed top-0 right-0 p-3">
         <button class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">
@@ -68,7 +50,6 @@
             <!-- 받은 사진 -->
             <button class="w-1/10 self-center pr-3 text-xl">
                 <i class="fa-solid fa-image text-5xl"></i>
->>>>>>> suesue
             </button>
         </div>
 

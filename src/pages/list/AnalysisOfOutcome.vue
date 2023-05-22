@@ -14,7 +14,7 @@
         <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white font-semibold rounded-l-full">
             수입
         </button>
-        <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white text-2xl font-semibold rounded-r-full">
+        <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-r-full">
             지출
         </button>
     </div>
@@ -43,7 +43,6 @@
         <div class="w-full mt-3 text-lg sm:text-base">
             <!-- 그래프 -->
             <div class="flex h-52 mx-5 bg-mainblue text-white font-bold">그래프</div>
->>>>>>> soo
             <!-- 유형 -->
             <div class="px-5 py-1 grid grid-cols-2 items-center" v-for="message in 10" :key="message">
                 <div class="text-xl sm:text-lg font-bold">
@@ -63,8 +62,6 @@
     </div>
             
     </div>
-    
->>>>>>> soo
 </template>
 <script>
 export default {

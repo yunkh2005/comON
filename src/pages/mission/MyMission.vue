@@ -1,17 +1,6 @@
 <template>
     <MyCompletedMission v-if="showMyCompletedMission" @close-modal="showMyCompletedMission = false"></MyCompletedMission>
     <div v-else>
-<<<<<<< HEAD
-        <!-- 상단 -->
-        <div class="flex p-2 items-center">
-            <!-- 닫기 버튼 -->
-            <button
-                class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
-            <!-- 화면명 -->
-            <div class="flex-col pl-4 font-bold text-2xl">
-                내 미션
-            </div>
-=======
     <!-- 상단 -->
     <div class="flex p-2 items-center">
         <!-- 닫기 버튼 -->
@@ -20,15 +9,9 @@
         <!-- 화면명 -->
         <div class="flex-col pl-4 font-bold text-2xl">
             내 미션
->>>>>>> suesue
         </div>
+    </div>
 
-<<<<<<< HEAD
-        <!-- 상단 중앙 진행, 완료 선택 버튼 -->
-        <div class="flex left-0 top-0 bg-white w-full px-24 py-3">
-            <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
-                진행
-=======
     <!-- 상단 중앙 진행, 완료 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24 py-3">
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
@@ -79,7 +62,6 @@
             </div>
             <button class="w-1/10 self-center pr-3 text-xl">
                 <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
->>>>>>> suesue
             </button>
             <button
                 @click="showMyCompletedMission = true"
