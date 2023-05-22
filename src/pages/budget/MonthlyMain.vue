@@ -67,42 +67,40 @@
     </div>
 
     
-    <!-- 중앙 내용 -->
-    <div class="absolute inset-0 mt-80 pt-2 mb-20 overflow-y-auto">
-        <div class="flex mx-5 my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
-            <!-- 유형 아이콘 -->
-            <div class="flex items-center mx-2">
-                <i class="fa-solid fa-circle-info text-3xl p-4 bg-gray-200 rounded-full"></i>
+    <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
+            <!-- 모금 설명 사진 -->
+            <div class="w-1/5 self-center pl-3 text-4xl text-center">
+                <i class="fa-solid fa-users-viewfinder"></i>
             </div>
-            <div class="w-full">
-                <!-- 유형 이름 -->
-                <div class="text-2xl font-bold">
-                    지출 유형 이름
+            <div class="w-3/5 self-center">
+                <!-- 내역 이름 -->
+                <div class="grid grid-cols-2 font-bold">
+                    <div class="text-2xl lg:text-lg">
+                        내역 이름
+                    </div>
+                    <div class="pl-1 self-center font-bold">
+                        <span>
+                            시간
+                        </span>
+                        <span>
+                            12:00
+                        </span>
+                    </div>
                 </div>
                 <!-- 목표 금액 -->
-                <div class="pt-1 pr-1 font-bold text-end">
-                    <span class="underline text-2xl">
-                        100,000,000,000,000
-                    </span>
-                    <span class="text-xl">
-                        원
-                    </span>
-                </div>
-                <!-- 계획 금액 -->
-                <div class="pr-2 text-end">
+                <div class="pt-1">
                     <span>
-                        계획:
+                        100,000,000,000,000,000
                     </span>
-                    <span class="text-lg">
-                        100,000,000,000,000
-                    </span>
-                    <span>
+                    <span class="text-lg font-bold">
                         원
                     </span>
                 </div>
             </div>
+            <button class="w-1/10 self-center pr-3 text-xl">
+                <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+            </button>
         </div>
-    </div>
     
     <!-- 하단 우측 수정 버튼 -->
     <div class="fixed bottom-0 right-0 pb-20 justify-items-end">

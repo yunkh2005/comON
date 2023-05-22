@@ -31,7 +31,7 @@
 
     <!-- 중앙 내용 -->
     <div class="absolute inset-0 mx-5 mt-32 mb-10 overflow-y-auto">
-        <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
+        <div @click="showDetailReceiveAllowanceModal = true" class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
             <!-- 보낸사람 정보 -->
             <div class="w-1/5 self-center pl-3 text-4xl text-center">
                 <i class="fa-solid fa-user"></i>
@@ -64,43 +64,22 @@
                 발신
             </button>
         </div>
-
-        <!-- 중앙 내용 -->
-        <div class="absolute inset-0 mx-5 mt-32 mb-10 overflow-y-auto">
-            <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
-                <!-- 보낸사람 정보 -->
-                <div class="w-1/5 self-center pl-3 text-4xl text-center">
-                    <i class="fa-solid fa-user"></i>
-                    <div class="text-xs font-bold">
-                        가족 이름
-                    </div>
-                </div>
-                        
-                <div class="w-3/5 self-center">
-                    <!-- 받은 메세지 -->
-                    <span class="text-xs">
-                        받은 메세지
-                    </span>
-                </div>
-                    
-                <!-- 받은 사진 -->
-                <button class="w-1/10 self-center pr-3 text-xl">
-                    <i class="fa-solid fa-image text-5xl"></i>
-                </button>
-            </div>
-        </div>
     </div>
+    <DetailReceiveAllowanceModal v-if="showDetailReceiveAllowanceModal" @close-modal="showDetailReceiveAllowanceModal = false"></DetailReceiveAllowanceModal>
 </div>
 </template>
 <script>
 import SendMessage from './SendMessage.vue';
+import DetailReceiveAllowanceModal from './DetailReceiveAllowanceModal.vue';
 export default {
     components: {
         SendMessage,
+        DetailReceiveAllowanceModal,
     },
     data() {
         return{
             showSendMessage: false,
+            showDetailReceiveAllowanceModal: false,
         }
     }
 }

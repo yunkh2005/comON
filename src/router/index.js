@@ -24,6 +24,7 @@ import MonthlyMain from '../pages/budget/MonthlyMain.vue'
 import Monthlyplan from '../pages/budget/Monthlyplan.vue'
 import SpecialMain from '../pages/budget/SpecialMain.vue'
 import SpecialSearch from '../pages/budget/SpecialSearch.vue'
+import DetailSpecial from '../pages/budget/DetailSpecial.vue'
 
 //모금 CompletedFundMain CreateFund DetailFund EnterFundModal FundInfo FundMain FundSearch MyCompletedFund MyFund RequestFundModal
 //FundInfoModal
@@ -89,6 +90,7 @@ const routes = [
     { path: '/monthlyplan', component: Monthlyplan },
     { path: '/specialMain', component: SpecialMain },
     { path: '/specialSearch', component: SpecialSearch },
+    { path: '/detailSpecial', component: DetailSpecial },
     
     //모금 
     { path: '/completedFundMain', component: CompletedFundMain },
