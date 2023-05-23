@@ -74,7 +74,7 @@
                             YY-MM-DD AM12:00
                         </div>
                     </div>
-                    <router-link to="messageReceoveAllowance" class="w-1/10 self-center pr-3 text-xl">
+                    <router-link to="messageReceiveAllowance" class="w-1/10 self-center pr-3 text-xl">
                         <i class="px-2 py-1 fa-solid fa-chevron-right"></i>
                     </router-link>
                 </div>

@@ -19,9 +19,11 @@
             <i class="px-2 py-1 fa-solid fa-magnifying-glass text-2xl"></i>
         </button>
         </router-link>
+        <router-link to="fundInfo">
         <button class="flex-col cursor-pointer place-content-end hover:bg-mainyellow hover:bg-opacity-20 rounded-full">
             <i class="px-2 py-1 fa-solid fa-bell text-2xl"></i>
         </button>
+        </router-link>
     </div>
 
     <!-- 중앙 내용 -->
@@ -35,7 +37,7 @@
                 <!-- 모금 이름 -->
                 <div class="grid grid-cols-2 font-bold">
                     <div class="text-2xl">
-                        모금 이름
+                        모금명
                     </div>
                     <div class="pl-1 self-center text-mainyellow font-bold">
                         <span>
@@ -64,9 +66,9 @@
                 </div>
             </div>
             <router-link to="/detailFund">
-            <botton class="w-1/10 self-center pr-3 text-xl">
+            <button class="w-1/10 self-center pr-3 text-xl">
                 <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-            </botton>
+            </button>
             </router-link>
         </div>
     </div>

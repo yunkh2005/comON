@@ -2,9 +2,12 @@
     <MyCompletedFund v-if="showMyCompletedFund" @close-modal="showMyCompletedFund = false"></MyCompletedFund>
     <div v-else>
     <!-- 상단 -->
+
         <div class="flex p-2 items-center">
         <!-- 닫기 버튼 -->
+        <router-link to="fundMain">
         <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
+        </router-link>
         <!-- 화면명 -->
         <div class="flex-col pl-4 font-bold text-2xl">
             내 모금

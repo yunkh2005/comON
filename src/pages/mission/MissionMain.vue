@@ -15,12 +15,16 @@
 
     <!-- 상단 우측 검색, 알림 버튼 -->
     <div class="fixed top-0 right-0 px-3 py-6">
+        <router-link to="missionSearch">
         <button class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">
             <i class="px-2 py-1 fa-solid fa-magnifying-glass text-2xl"></i>
         </button>
+        </router-link>
+        <router-info to="missionInfo">
         <button class="flex-col cursor-pointer place-content-end hover:bg-mainyellow hover:bg-opacity-20 rounded-full">
             <i class="px-2 py-1 fa-solid fa-bell text-2xl"></i>
         </button>
+        </router-info>
     </div>
 
     <!-- 중앙 내용 -->
@@ -36,7 +40,7 @@
             <div class="w-3/5 self-center">
                 <!-- 미션 이름 -->
                 <div class="text-2xl font-bold">
-                    미션 이름
+                    미션명
                 </div>
                 <!-- 보상 금액 -->
                 <div class="pt-1 font-bold">
@@ -63,28 +67,35 @@
                     </span>
                 </div>
             </div>
+            <router-link to="detailMission">
             <button class="w-1/10 self-center pr-3 text-xl">
                 <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
             </button>
+            </router-link>
         </div>
     </div>
 
     <!-- 하단 우측 내 미션, 추가 버튼 -->
     <div class="fixed bottom-0 right-0 pb-20 justify-items-end">
         <!-- 내 미션 버튼 -->
+        <router-link to="myMission">
         <div class="flex flex-row cursor-pointer place-content-end p-3">
             <i class="px-3 py-2 fa-solid fa-medal bg-skyblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
         </div>
-        <!-- 모금 추가 버튼 -->
-        <div @click="showSelectMissionTypeModal = true" class="flex flex-row cursor-pointer place-content-end p-3">
+        </router-link>
+        <!-- 미션 추가 버튼 -->
+        <router-link to="createMission">
+        <div class="flex flex-row cursor-pointer place-content-end p-3">
             <i class="px-3 py-2 fa-solid fa-plus bg-mainblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
         </div>
+        </router-link>
     </div>
 
     <!-- 하단 탭 -->
     <ButtomTab></ButtomTab>
-    <!-- 미션 생성시 유형 선택 팝업 -->
+    <!-- 미션 생성시 유형 선택 팝업 @click="showSelectMissionTypeModal = true" 
     <SelectMissionTypeModal v-if="showSelectMissionTypeModal" @close-modal="showSelectMissionTypeModal = false"></SelectMissionTypeModal>
+         -->
 </div>
 </template>
 <script>

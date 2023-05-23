@@ -6,10 +6,10 @@
 				<i class="fa-solid fa-list-ul text-2xl place-content-center"></i>
 				<div class="text-xs font-bold">내역</div>
 			</router-link>
-			<router-link to="/budgetmain" class="hover:bg-skyblue hover:bg-opacity-20 rounded-full px-4 py-2">
+			<div class="hover:bg-skyblue hover:bg-opacity-20 rounded-full px-4 py-2">
 				<i class="fa-solid fa-receipt text-2xl"></i>
 				<div class="text-xs font-bold">예산</div>
-			</router-link>
+			</div>
 			<router-link to="/fundmain" class="hover:bg-skyblue hover:bg-opacity-20 rounded-full px-4 py-2">
 				<i class="fa-solid fa-user-group text-2xl"></i>
 				<div class="text-xs font-bold">모금</div>
