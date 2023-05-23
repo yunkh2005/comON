@@ -14,7 +14,8 @@ import SendMessage from '../pages/allowance/SendMessage.vue'
 
 
 //예산 CategoryAdd EmptyMonthly EmptySpecial MonthlyMain Monthlyplan SpecialMain 
-//AddSpecial DetailMonthlyType SpecialSearch 
+//AddSpecial DetailMonthlyType SpecialSearch
+import BudgetMain from '../pages/budget/BudgetMain.vue' 
 import AddSpecial from '../pages/budget/AddSpecial.vue'
 import CategoryAdd from '../pages/budget/CategoryAdd.vue'
 import DetailMonthlyType from '../pages/budget/DetailMonthlyType.vue'
@@ -81,6 +82,7 @@ const routes = [
     { path: '/sendMessage', component: SendMessage },
     
     //예산 AddSpecial DetailMonthlyType SpecialSearch
+    { path: '/budgetMain', component: BudgetMain },
     { path: '/addSpecial', component: AddSpecial },
     { path: '/categoryAdd', component: CategoryAdd },
     { path: '/detailMonthlyType', component: DetailMonthlyType },

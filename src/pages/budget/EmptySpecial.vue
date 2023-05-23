@@ -1,19 +1,20 @@
 <template lang="">
     <!-- 상단 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
-        <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
-            월별
-        </button>
-        <button
-            class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-r-full">
+        <div v-if="isMonthlyEmpty"
+            class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
+            <router-link to="/emptyMonthly"> <!--월별 예산이 비었다면-->
+                월별
+            </router-link>
+        </div>
+        <div v-else
+            class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
+            <router-link to="/monthlyMain">
+                월별
+            </router-link>
+        </div>
+        <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-r-full">
             특별
-        </button>
-    </div>
-
-    <!-- 상단 우측 버튼 -->
-    <div class="fixed top-0 right-0 px-3 py-6">
-        <button class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">
-            <i class="px-2 py-1 fa-solid fa-magnifying-glass text-2xl"></i>
         </button>
     </div>
 
@@ -30,12 +31,14 @@
             </div>
         </div>
         <!-- 계획 하러가기 버튼 -->
-        <button class="w-1/2 p-2 m-3 self-center bg-mainyellow rounded-full text-white text-xl ">
+        <router-link to="addSpecial">
+            <button class="w-1/2 p-2 m-3 self-center bg-mainyellow rounded-full text-white text-xl ">
             <div class="ml-2 font-bold text-center">
                 계획하기
                 <i class="fa-solid fa-chevron-right pl-1"></i>
             </div>
-        </button>
+            </button>
+        </router-link>
     </div>
     <!-- 하단 탭 -->
     <ButtomTab></ButtomTab>
@@ -48,6 +51,11 @@ export default {
     components: {
         ButtomTab,
         TopButton,
+    },
+    data() {
+        return {
+            isMonthlyEmpty: false,
+        }
     }
 }
 </script>

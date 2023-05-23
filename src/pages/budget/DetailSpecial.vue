@@ -4,7 +4,7 @@
         <div class="items-center bg-mainblue">
             <div class="flex p-2 items-center">
                 <!-- 닫기 버튼 -->
-                <button class="fa-solid fa-arrow-left text-white text-xl p-2 h-12 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
+                <button @click="$router.go(-1)" class="fa-solid fa-arrow-left text-white text-xl p-2 h-12 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
                 <!-- 화면명 -->
                 <div class="pl-4 font-bold text-2xl text-white">
                     특별 예산
@@ -57,7 +57,7 @@
             <button class="w-1/5 py-1 bg-gray-100 hover:bg-skyblue text-lg font-semibold rounded-lg hover:text-white">
                 <i class="fa-solid fa-share-nodes"></i>
             </button>
-            <button class="w-4/5 ml-5 py-1 bg-skyblue hover:opacity-70 text-lg font-semibold rounded-lg text-white">
+            <button @click="$router.push('/addSpecial')" class="w-4/5 ml-5 py-1 bg-skyblue hover:opacity-70 text-lg font-semibold rounded-lg text-white">
                 수정
             </button>
         </div>

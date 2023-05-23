@@ -4,10 +4,16 @@
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
             월별
         </button>
-        <button
-            class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
-            특별
-        </button>
+        <div v-if="isSpecialEmpty" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
+            <router-link to="/emptySpecial">
+                특별
+            </router-link>
+        </div>
+        <div v-else class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
+            <router-link to="/specialMain">
+                특별
+            </router-link>
+        </div>
     </div>
 
     <!-- 월 이동 버튼 -->
@@ -40,12 +46,14 @@
             </div>
         </div>
         <!-- 계획 하러가기 버튼 -->
-        <button class="w-1/2 p-2 m-3 self-center bg-mainyellow rounded-full text-white text-xl ">
-            <div class="ml-2 font-bold text-center">
-                계획하기
-                <i class="fa-solid fa-chevron-right pl-1"></i>
-            </div>
-        </button>
+        <router-link to="/monthlyplan">
+            <button class="w-1/2 p-2 m-3 self-center bg-mainyellow rounded-full text-white text-xl ">
+                <div class="ml-2 font-bold text-center">
+                    계획하기
+                    <i class="fa-solid fa-chevron-right pl-1"></i>
+                </div>
+            </button>
+        </router-link>
     </div>
 
     <!-- 하단 탭 -->
@@ -57,7 +65,12 @@ import ButtomTab from '../../components/public/ButtomTab.vue';
 export default {
     components: { 
 		ButtomTab,
-	}
+	},
+    data() {
+        return {
+            isSpecialEmpty: true,
+        }
+    }
 }
 </script>
 <style lang="">
