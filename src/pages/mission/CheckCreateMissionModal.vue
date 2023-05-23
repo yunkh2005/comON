@@ -18,8 +18,8 @@
                             </div>
                             <div class="pt-10 divide-y-2 divide-gray-300">
                                 <div class="flex justify-between w-2/3 m-auto pt-7">
-                                    <div class="font-bold md:text-lg w-1/3 ">미션 이름</div>
-                                    <div>미션이름입니다.</div>
+                                    <div class="font-bold md:text-lg w-1/3 ">미션명</div>
+                                    <div>미션명입니다.</div>
                                 </div>
                                 <div class="flex justify-between w-2/3 m-auto pt-7">
                                     <div class="font-bold md:text-lg w-1/3 ">보상</div>

@@ -10,7 +10,7 @@ import MoneyAllowance from '../pages/allowance/MoneyAllowance.vue'
 import MonthlyPictureAllowance from '../pages/allowance/MonthlyPictureAllowance.vue'
 import ReceiveMessage from '../pages/allowance/ReceiveMessage.vue'
 import SendMessage from '../pages/allowance/SendMessage.vue'
-
+import DetailAllowanceModal from '../pages/allowance/DetailAllowanceModal.vue'
 
 
 //예산 CategoryAdd EmptyMonthly EmptySpecial MonthlyMain Monthlyplan SpecialMain 
@@ -80,7 +80,8 @@ const routes = [
     { path: '/monthlyPictureAllowance', component: MonthlyPictureAllowance },
     { path: '/receiveMessage', component: ReceiveMessage },
     { path: '/sendMessage', component: SendMessage },
-    
+    { path: '/detailAllowanceModal', component: DetailAllowanceModal },
+
     //예산 AddSpecial DetailMonthlyType SpecialSearch
     { path: '/budgetMain', component: BudgetMain },
     { path: '/addSpecial', component: AddSpecial },

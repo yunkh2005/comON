@@ -29,7 +29,7 @@
             <div class="w-3/5 self-center">
                 <!-- 모금 이름 -->
                 <div class="text-2xl font-bold">
-                    모금 이름
+                    모금명
                 </div>
                 <!-- 목표 금액 -->
                 <div class="pt-1 font-bold">

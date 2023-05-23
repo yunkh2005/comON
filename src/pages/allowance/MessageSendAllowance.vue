@@ -2,7 +2,9 @@
     <!-- 상단 -->
     <div class="flex p-2 items-center">
         <!-- 닫기 버튼 -->
+        <router-link to="allowanceMain">
         <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
+        </router-link>
         <!-- 화면명 -->
         <div class="flex-col pl-4 font-bold text-2xl">
             메세지
@@ -10,12 +12,14 @@
     </div>
 
     <!-- 상단 우측 버튼 -->
+    <router-link to="monthlyPictureAllowance">
     <div class="fixed top-0 right-0 p-3">
         <button class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">
             <!-- 조르기 사진 모아보긴 -->
             <i class="px-2 py-1 fa-solid fa-image font-bold text-2xl"></i>
         </button>
     </div>
+    </router-link>
 
    <!-- 검색어 입력 창 
    <div class="flex items-center px-5 py-5 cursor-pointer">
@@ -30,9 +34,13 @@
     <!-- 선택 버튼 -->
     <div class="over-y-auto">
         <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
-        <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white font-semibold rounded-l-full">
-            수신
-        </button>
+        <router-link to="messageReceiveAllowance">
+            <div class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white font-semibold rounded-l-full">
+                <button>
+                    수신
+                </button>
+            </div>
+        </router-link>
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white text-2xl font-semibold rounded-r-full">
             발신
         </button>
