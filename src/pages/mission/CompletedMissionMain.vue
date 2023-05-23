@@ -74,16 +74,11 @@
         <div class="flex flex-row cursor-pointer place-content-end p-3">
             <i class="px-3 py-2 fa-solid fa-medal bg-skyblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
         </div>
-<<<<<<< HEAD
-        <!-- 모금 추가 버튼 -->
-        <div @click="showSelectMissionTypeModal = true" class="flex flex-row cursor-pointer place-content-end p-3">
-=======
         </router-link>
 
         <!-- 미션 추가 버튼 -->
         <router-link to="createMission">
         <div class="flex flex-row cursor-pointer place-content-end p-3">
->>>>>>> main
             <i class="px-3 py-2 fa-solid fa-plus bg-mainblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
         </div>
         </router-link>

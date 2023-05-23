@@ -1,16 +1,6 @@
 <template>
     <CompletedMissionMain v-if="showCompletedMissionMain" @close-completed="showCompletedMissionMain = false"></CompletedMissionMain>
     <div v-else>
-<<<<<<< HEAD
-        <!-- 상단 중앙 진행, 완료 선택 버튼 -->
-        <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
-            <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
-                진행
-            </button>
-            <button @click="showCompletedMissionMain = true"
-                class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
-                완료
-=======
     <!-- 상단 중앙 진행, 완료 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
@@ -80,22 +70,9 @@
             <router-link to="detailMission">
             <button class="w-1/10 self-center pr-3 text-xl">
                 <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
->>>>>>> main
             </button>
             </router-link>
         </div>
-<<<<<<< HEAD
-    
-        <!-- 상단 우측 검색, 알림 버튼 -->
-        <div class="fixed top-0 right-0 px-3 py-6">
-            <button class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">
-                <i class="px-2 py-1 fa-solid fa-magnifying-glass text-2xl"></i>
-            </button>
-            <button class="flex-col cursor-pointer place-content-end hover:bg-mainyellow hover:bg-opacity-20 rounded-full">
-                <i class="px-2 py-1 fa-solid fa-bell text-2xl"></i>
-            </button>
-        </div>
-=======
     </div>
 
     <!-- 하단 우측 내 미션, 추가 버튼 -->
@@ -113,7 +90,6 @@
         </div>
         </router-link>
     </div>
->>>>>>> main
 
         <!-- 중앙 내용 -->
         <div class="absolute inset-0 mx-5 mt-20 mb-20 overflow-y-auto">
@@ -174,12 +150,8 @@
     <ButtomTab></ButtomTab>
     <!-- 미션 생성시 유형 선택 팝업 @click="showSelectMissionTypeModal = true" 
     <SelectMissionTypeModal v-if="showSelectMissionTypeModal" @close-modal="showSelectMissionTypeModal = false"></SelectMissionTypeModal>
-<<<<<<< HEAD
-    </div>
-=======
          -->
 </div>
->>>>>>> main
 </template>
 <script>
 import ButtomTab from '../../components/public/ButtomTab.vue';

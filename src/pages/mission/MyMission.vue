@@ -66,7 +66,7 @@
             <button class="w-1/10 self-center pr-3 text-xl">
                 <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
             </button>
-<<<<<<< HEAD
+            </router-link>
             <button
                 @click="showMyCompletedMission = true"
                 class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
@@ -115,9 +115,6 @@
                     <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
                 </button>
             </div>
-=======
-            </router-link>
->>>>>>> main
         </div>
     </div>
 </div>
