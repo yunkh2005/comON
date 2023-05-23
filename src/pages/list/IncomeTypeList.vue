@@ -1,6 +1,5 @@
 <template>
-    <!-- 상단 -->
-    <div class="items-center">
+    <div class="flex flex-col bg-mainblue text-white">
         <div class="flex p-2 items-center">
             <!-- 닫기 버튼 -->
             <button class="fa-solid fa-arrow-left text-xl p-2 h-12 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
@@ -9,21 +8,20 @@
                 수입 유형 1 내역
             </div>
         </div>
-    </div>
-    <!-- 요약 -->
-    <div class="my-5 mx-3">
-        <div class="flex justify-end">
-            <div >총 건수:</div>
-            <div class="font-bold mx-2">NN</div>
-            <span>건</span>
+        <!-- 요약 -->
+        <div class="my-5 mx-3">
+            <div class="flex justify-end">
+                <div >총 건수:</div>
+                <div class="font-bold mx-2">NN</div>
+                <span>건</span>
+            </div>
+            <div class="text-right">
+                총 100,000,000,000,000원
+            </div>
         </div>
-        <div class="text-right">
-            총 100,000,000,000,000원
-        </div>
     </div>
-    <div class="border-y-2 my-5"></div>
     <!-- 일별 내역 -->
-    <div class="mx-3">
+    <div class="mx-3 mt-3">
         <div class="text-xl font-bold text-mainblue mb-2">DD일</div>
         <div class="border-y-2 border-mainblue"></div>
         <div class="flex my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">

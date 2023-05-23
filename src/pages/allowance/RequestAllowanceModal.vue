@@ -10,8 +10,6 @@
                         aria-modal="true" 
                         aria-labelledby="modal-headline">
                         <div v-if="!enterYn">
-                            <!-- 닫기 버튼 -->
-                            <button @click="$emit('close-modal')" class="fas fa-times float-right text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
                             <!-- 안내 멘트 -->
                             <div class="flex justify-center font-extrabold py-10">
                                 <div class="mr-3 text-lg">받는 이:</div>

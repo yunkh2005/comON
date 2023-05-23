@@ -1,13 +1,30 @@
 <template>
-	<FundMain></FundMain>
+	<router-View></router-View>
 </template>
+
 <script>
-import FundMain from './pages/fund/FundMain.vue';
+//import {ref , onBeforeMount } from 'vue'
+//import router from './router'
 
 export default {
-	components: { 
-		FundMain,
-	}
+	/*setup() {
+		const routes = ref([])
+		
+		onBeforeMount(() => {
+			routes.value = router.options.routes
+
+		})
+		return{routes}
+	} */
 }
+		
+	
+
+
 </script>
 <style></style>
+
+	
+
+
+

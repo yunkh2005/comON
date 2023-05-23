@@ -1,7 +1,7 @@
 <template>
     <!-- 상단 중앙 진행, 완료 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
-        <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
+        <button @click="$emit('close-completed')" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
             진행
         </button>
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-r-full">
@@ -68,20 +68,29 @@
             <i class="px-3 py-2 fa-solid fa-medal bg-skyblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
         </div>
         <!-- 모금 추가 버튼 -->
-        <div class="flex flex-row cursor-pointer place-content-end p-3">
+        <div @click="showSelectMissionTypeModal = true" class="flex flex-row cursor-pointer place-content-end p-3">
             <i class="px-3 py-2 fa-solid fa-plus bg-mainblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
         </div>
     </div>
 
     <!-- 하단 탭 -->
     <ButtomTab></ButtomTab>
+    <!-- 미션 생성시 유형 선택 팝업 -->
+    <SelectMissionTypeModal v-if="showSelectMissionTypeModal" @close-modal="showSelectMissionTypeModal = false"></SelectMissionTypeModal>
 </template>
 <script>
 import ButtomTab from '../../components/public/ButtomTab.vue';
+import SelectMissionTypeModal from './SelectMissionTypeModal.vue';
 
 export default {
+    data() {
+        return {
+            showSelectMissionTypeModal: false,
+        }
+    },
     components: { 
 		ButtomTab,
+        SelectMissionTypeModal,
 	}
 }
 </script>

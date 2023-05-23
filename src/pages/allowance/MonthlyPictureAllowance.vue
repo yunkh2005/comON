@@ -11,7 +11,7 @@
             </div>
         </div>
     
-<<<<<<< HEAD
+
     <!-- 월 이동 버튼 -->
     <div class="flex absolute bg-white w-full mt-30 py-1">
         <!-- 이전 월 이동 버튼 -->
@@ -27,23 +27,24 @@
             <i class="fa-solid fa-chevron-right px-2 text-xl hover:bg-gray-300 rounded-full"></i>
         </button>
     </div>
-=======
-        <div class="flex absolute bg-white w-full mt-6 py-1">
-            <!-- 이전 월 이동 버튼 -->
+
+ <!--      <div class="flex absolute bg-white w-full mt-6 py-1">
+             이전 월 이동 버튼 
             <button class="w-1/3">
                 <i class="fa-solid fa-chevron-left px-2 text-xl hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-            </button>
-            <!-- 월 안내 -->
+            </button>s
+             월 안내 
             <button class="w-1/3 font-extrabold text-2xl text-center hover:bg-skyblue hover:bg-opacity-20 rounded-full">
                 <span>MM</span>
                 <span>월</span>
             </button>
-            <!-- 이후 월 이동 버튼 -->
+             이후 월 이동 버튼 
             <button class="w-1/3 ">
                 <i class="fa-solid fa-chevron-right px-2 text-xl hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
             </button>
         </div>
->>>>>>> soo
+    --> 
+
     <!-- 중앙 내용 -->
     <div class="absolute inset-0 mx-5 mt-32 mb-20 overflow-y-auto bg-gray-100 text-center">
         <!-- 안내 문구 -->
