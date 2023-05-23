@@ -4,7 +4,7 @@
         <div class="items-center bg-mainblue text-white">
             <div class="flex p-2 items-center">
                 <!-- 닫기 버튼 -->
-                <button class="fa-solid fa-arrow-left text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
+                <button @click="$router.go(-1)" class="fa-solid fa-arrow-left text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
                 <!-- 화면명 -->
                 <div class="flex-col pl-4 font-bold text-2xl">
                     내 상세 내역
@@ -52,7 +52,7 @@
             <button @click="showDeleteListModal = true" class="w-1/5 py-1 bg-gray-100 hover:bg-skyblue text-lg font-semibold rounded-lg hover:text-white">
                 <i class="fa-solid fa-trash"></i>
             </button>
-            <button class="w-4/5 ml-5 py-1 bg-skyblue hover:opacity-70 text-lg font-semibold rounded-lg text-white">
+            <button @click="$router.push('/modifyList')" class="w-4/5 ml-5 py-1 bg-skyblue hover:opacity-70 text-lg font-semibold rounded-lg text-white">
                 수정
             </button>
         </div>

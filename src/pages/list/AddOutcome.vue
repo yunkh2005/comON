@@ -71,21 +71,28 @@
         </div>
         <!-- 하단 버튼 -->
         <div class="absolute inset-x-0 bottom-0 px-6 py-3">
-            <button class="w-full py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+            <button @click="showSaveListModal = true" class="w-full py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
                 저장
             </button>
         </div>
     </div>    
+    <SaveListModal v-if="showSaveListModal" @close-modal="showSaveListModal = false"></SaveListModal>
 </template>
 
 
 <script>
-    export default {    
-        data() {
-            return{
-            } 
+import SaveListModal from './SaveListModal.vue';
+
+export default{
+    components: {
+        SaveListModal,
+    },
+    data() {
+        return {
+            showSaveListModal: false,
         }
     }
+}
 </script>
 
 

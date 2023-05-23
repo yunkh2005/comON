@@ -9,11 +9,11 @@
         </div>
     </div>
 
-    <div class="over-y-auto">
+    <div class="over-y-auto mt-5">
         <!-- 안내 문구 -->
         <div class="flex ml-5 mb-2 font-bold text-2xl text-mainblue">
             <span></span>
-            <span>월 지출</span>
+            <span>MM월 지출</span>
         </div>
 
         <!-- 그래프 -->
@@ -31,9 +31,11 @@
                 <div class="justify-self-end">
                     <span class="pr-1">100,000,000,000</span>
                     <span class="font-bold">원</span>
-                    <button class="ml-2 px-1 rounded-full hover:bg-skyblue hover:opacity-50">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
+                    <router-link to="/outcomeTypeList">
+                        <button class="ml-2 px-1 rounded-full hover:bg-skyblue hover:opacity-50">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </router-link>
                 </div>
             </div>
 

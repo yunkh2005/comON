@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <div class="over-y-auto">
+        <div class="over-y-auto mt-5">
             <!-- 안내 문구 -->
             <div class="flex ml-5 mb-2 font-bold text-2xl text-mainblue">
                 <span>MM</span>
@@ -32,9 +32,11 @@
                     <div class="justify-self-end">
                         <span class="pr-1">100,000,000,000</span>
                         <span class="font-bold">원</span>
-                        <button class="ml-2 px-1 rounded-full hover:bg-skyblue hover:opacity-50">
+                        <router-link to="/incomeTypeList">
+                            <button class="ml-2 px-1 rounded-full hover:bg-skyblue hover:opacity-50">
                             <i class="fa-solid fa-chevron-right"></i>
-                        </button>
+                            </button>
+                        </router-link>
                     </div>
                 </div>
 
@@ -54,7 +56,6 @@
 </template>
 <script>
 export default {
-    
 }
 </script>
 <style>
