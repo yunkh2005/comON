@@ -10,11 +10,12 @@ import MoneyAllowance from '../pages/allowance/MoneyAllowance.vue'
 import MonthlyPictureAllowance from '../pages/allowance/MonthlyPictureAllowance.vue'
 import ReceiveMessage from '../pages/allowance/ReceiveMessage.vue'
 import SendMessage from '../pages/allowance/SendMessage.vue'
-
+import DetailAllowanceModal from '../pages/allowance/DetailAllowanceModal.vue'
 
 
 //예산 CategoryAdd EmptyMonthly EmptySpecial MonthlyMain Monthlyplan SpecialMain 
-//AddSpecial DetailMonthlyType SpecialSearch 
+//AddSpecial DetailMonthlyType SpecialSearch
+import BudgetMain from '../pages/budget/BudgetMain.vue' 
 import AddSpecial from '../pages/budget/AddSpecial.vue'
 import CategoryAdd from '../pages/budget/CategoryAdd.vue'
 import DetailMonthlyType from '../pages/budget/DetailMonthlyType.vue'
@@ -54,6 +55,7 @@ import ListMain from '../pages/list/ListMain.vue'
 import ListSearch from '../pages/list/ListSearch.vue'
 import MyList from '../pages/list/MyList.vue'
 import OutcomeTypeList from '../pages/list/OutcomeTypeList.vue'
+import ModifyList from '../pages/list/ModifyList.vue'
 
 //미션 CompletedMissionMain MissionInfo MissionMain MissionSearch MyCompletedMission MyMission
 //CreateMission DetailMission
@@ -79,8 +81,10 @@ const routes = [
     { path: '/monthlyPictureAllowance', component: MonthlyPictureAllowance },
     { path: '/receiveMessage', component: ReceiveMessage },
     { path: '/sendMessage', component: SendMessage },
-    
+    { path: '/detailAllowanceModal', component: DetailAllowanceModal },
+
     //예산 AddSpecial DetailMonthlyType SpecialSearch
+    { path: '/budgetMain', component: BudgetMain },
     { path: '/addSpecial', component: AddSpecial },
     { path: '/categoryAdd', component: CategoryAdd },
     { path: '/detailMonthlyType', component: DetailMonthlyType },
@@ -119,6 +123,7 @@ const routes = [
     { path: '/listSearch', component: ListSearch },
     { path: '/myList', component: MyList },
     { path: '/outcomeTypeList', component: OutcomeTypeList },
+    { path: '/modifyList', component: ModifyList },
     
 
 

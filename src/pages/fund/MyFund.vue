@@ -4,13 +4,14 @@
         <!-- 상단 -->
         <div class="flex p-2 items-center">
             <!-- 닫기 버튼 -->
-            <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
+            <router-link to="fundMain">
+                <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
+            </router-link>
             <!-- 화면명 -->
             <div class="flex-col pl-4 font-bold text-2xl">
                 내 모금
             </div>
         </div>
-
 
         <!-- 상단 중앙 진행, 완료 선택 버튼 -->
         <div class="flex left-0 top-0 bg-white w-full px-24 py-3">

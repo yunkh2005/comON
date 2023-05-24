@@ -4,9 +4,11 @@
     <!-- 상단 -->
     <div class="flex p-2 items-center">
         <!-- 닫기 버튼 -->
+        <router-link to="missionMain">
         <button
             class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
-        <!-- 화면명 -->
+        </router-link>
+            <!-- 화면명 -->
         <div class="flex-col pl-4 font-bold text-2xl">
             내 미션
         </div>
@@ -60,9 +62,11 @@
                     </span>
                 </div>
             </div>
+            <router-link to="detailMission">
             <button class="w-1/10 self-center pr-3 text-xl">
                 <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
             </button>
+            </router-link>
             <button
                 @click="showMyCompletedMission = true"
                 class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">

@@ -4,10 +4,16 @@
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
             월별
         </button>
-        <button
-            class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
-            특별
-        </button>
+        <div v-if="isSpecialEmpty" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
+            <router-link to="/emptySpecial">
+                특별
+            </router-link>
+        </div>
+        <div v-else class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
+            <router-link to="/specialMain">
+                특별
+            </router-link>
+        </div>
     </div>
 
     <!-- 월 이동 버튼 -->
@@ -72,43 +78,50 @@
             <div class="w-1/5 self-center pl-3 text-4xl text-center">
                 <i class="fa-solid fa-users-viewfinder"></i>
             </div>
-            <div class="w-3/5 self-center">
+            <div class="w-3/5 text-end">
                 <!-- 내역 이름 -->
                 <div class="grid grid-cols-2 font-bold">
                     <div class="text-2xl lg:text-lg">
-                        내역 이름
+                        유형명
                     </div>
                     <div class="pl-1 self-center font-bold">
                         <span>
-                            시간
+                            100,000
                         </span>
                         <span>
-                            12:00
+                            원
                         </span>
                     </div>
                 </div>
                 <!-- 목표 금액 -->
                 <div class="pt-1">
                     <span>
-                        100,000,000,000,000,000
+                        계획금액: 
+                    </span>
+                    <span>
+                        100,000,000,000
                     </span>
                     <span class="text-lg font-bold">
                         원
                     </span>
                 </div>
             </div>
-            <button class="w-1/10 self-center pr-3 text-xl">
-                <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-            </button>
+            <router-link to="/detailMonthlyType">
+                <button class="self-center pr-3 pt-4 text-xl">
+                    <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+                </button>
+            </router-link>
         </div>
     
     <!-- 하단 우측 수정 버튼 -->
-    <div class="fixed bottom-0 right-0 pb-20 justify-items-end">
-        <!-- 수정 버튼 -->
-        <div class="flex flex-row cursor-pointer place-content-end p-3">
-            <i class="px-3 py-2 fa-solid fa-pen bg-mainblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
+    <router-link to="monthlyPlan">
+        <div class="fixed bottom-0 right-0 pb-20 justify-items-end">
+            <!-- 수정 버튼 -->
+            <div class="flex flex-row cursor-pointer place-content-end p-3">
+                <i class="px-3 py-2 fa-solid fa-pen bg-mainblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
+            </div>
         </div>
-    </div>
+    </router-link>
 
     <!-- 하단 탭 -->
     <ButtomTab></ButtomTab>
@@ -119,7 +132,12 @@ import ButtomTab from '../../components/public/ButtomTab.vue';
 export default {
     components: { 
 		ButtomTab,
-	}
+	},
+    data() {
+        return{
+            isSpecialEmpty: false,
+        }
+    }
 }
 </script>
 <style></style>

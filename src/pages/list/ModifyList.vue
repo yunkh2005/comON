@@ -4,14 +4,14 @@
         <div class="items-center bg-mainblue text-white">
             <div class="flex p-2 items-center">
                 <!-- 닫기 버튼 -->
-                <router-link to="listmain" class="fa-solid fa-arrow-left text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></router-link>
+                <button @click="$router.go(-1)" class="fa-solid fa-arrow-left text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
                 <!-- 화면명 -->
                 <div class="flex-col pl-4 font-bold text-2xl">
-                    수입 추가
+                    내역 수정
                 </div>
             </div>
             <div class="flex justify-end mx-3 py-14 text-2xl font-bold">
-                <input type="text" class="rounded w-1/2 bg-transparent text-end" placeholder="0"/>
+                <input type="text" class="rounded bg-transparent text-end" placeholder="100,000,000,000,000"/>
                 <div>원</div>
             </div>
         </div>
@@ -19,12 +19,12 @@
         <div class="m-10 mb-20 h-3/5 divide-y divide-gray-500 text-mainblue">
             <div class="flex mb-5 pt-9">
                 <div class="font-bold text-2xl w-1/3">내역명</div>
-                <input type="text" class="rounded w-1/2 focus:ring-2 focus:border-primary focus:outline-none" placeholder="입력하세요"/>
+                <input type="text" class="rounded w-1/2 focus:ring-2 focus:border-primary focus:outline-none" placeholder="내역명"/>
             </div>
             <div class="flex mb-5 pt-9">
                 <div class="font-bold text-2xl w-1/3">유형</div>
                 <select class="w-1/2 rounded-md ring-1 ring-inset ring-gray-700 focus:ring-mainblue text-sm text-gray-400">
-                    <option selected>선택하세요</option>
+                    <option selected>유형</option>
                     <option>유형1</option>
                     <option>유형2</option>
                     <option>유형3</option>
@@ -62,11 +62,11 @@
             </div>
             <div class="flex mb-5 pt-9">
                 <div class="font-bold text-2xl w-1/3">태그</div>
-                <input type="text" class="rounded w-1/2 focus:ring-2 focus:border-primary focus:outline-none" placeholder="입력하세요 (3개 이하)"/>
+                <input type="text" class="rounded w-1/2 focus:ring-2 focus:border-primary focus:outline-none" placeholder="#태그1 #태그2 #태그3"/>
             </div>
             <div class="flex mb-5 pt-9">
                 <div class="font-bold text-2xl w-1/3">메모</div>
-                <input type="text" class="rounded w-1/2 focus:ring-2 focus:border-primary focus:outline-none" placeholder="입력하세요"/>
+                <input type="text" class="rounded w-1/2 focus:ring-2 focus:border-primary focus:outline-none" placeholder="메모"/>
             </div>
         </div>
         <!-- 하단 버튼 -->

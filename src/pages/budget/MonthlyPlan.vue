@@ -4,7 +4,7 @@
         <div class="bg-mainblue text-white">
             <div class="flex p-2 items-center">
                 <!-- 닫기 버튼 -->
-                <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
+                <button @click="$router.go(-1)" class="fa-solid fa-arrow-left text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
                 <!-- 화면명 -->
                 <div class="flex-col pl-4 font-bold text-xl">
                     월별 예산 계획
@@ -59,22 +59,25 @@
         <button class="w-1/5 py-1 ml-5 ring-1 ring-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
             <i class="fa-solid fa-trash"></i>
         </button>
-        <button class="w-3/5 ml-5 py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+        <button @click="showEnterBudgetPlanModal = true" class="w-3/5 ml-5 py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
             저장
         </button>
     </div>
     <!-- 팝업 -->
     <CategoryAdd v-if="showCategoryAdd" @close-modal="showCategoryAdd = false"></CategoryAdd>
+    <EnterBudgetPlanModal v-if="showEnterBudgetPlanModal" @close-modal="showEnterBudgetPlanModal = false"></EnterBudgetPlanModal>
 </template>
 <script>
 import CategoryAdd from './CategoryAdd.vue'
-
+import EnterBudgetPlanModal from './EnterBudgetPlanModal.vue'
 export default {
     components:{
-        CategoryAdd
+        CategoryAdd,
+        EnterBudgetPlanModal,
     },
     data() {
         return{
+            showEnterBudgetPlanModal: false,
             showCategoryAdd: false,
         }
     }    

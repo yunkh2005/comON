@@ -29,7 +29,7 @@
             <div class="w-3/5 self-center">
                 <!-- 미션 이름 -->
                 <div class="text-2xl font-bold">
-                    미션 이름
+                    명
                 </div>
                 <!-- 보상 금액 -->
                 <div class="pt-1 font-bold">

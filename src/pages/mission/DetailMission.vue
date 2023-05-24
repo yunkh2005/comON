@@ -4,7 +4,9 @@
         <div class="items-center bg-mainblue">
             <div class="flex p-2 items-center">
                 <!-- 닫기 버튼 -->
+                <router-link to="missionMain">
                 <button class="fa-solid fa-arrow-left text-white text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
+                </router-link>
                 <!-- 화면명 -->
                 <div class="flex-col pl-4 font-bold text-2xl text-white">
                     미션 이름

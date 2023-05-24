@@ -52,7 +52,7 @@
         <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
             <!-- 모금 설명 사진 -->
             <div class="w-1/5 self-center pl-3 text-4xl text-center">
-                <i class="fa-solid fa-users-viewfinder"></i>
+                <i class="fa-solid fa-circle-user"></i>
             </div>
             <div class="w-3/5 self-center">
                 <!-- 내역 이름 -->
@@ -62,7 +62,7 @@
                     </div>
                     <div class="pl-1 self-center font-bold">
                         <span>
-                            시간
+                            PM
                         </span>
                         <span>
                             12:00
@@ -79,9 +79,11 @@
                     </span>
                 </div>
             </div>
-            <button class="w-1/10 self-center pr-3 text-xl">
-                <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-            </button>
+            <router-link to="/detailMyList">
+                <button class="w-1/10 self-center pr-3 pt-4 text-xl">
+                    <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+                </button>
+            </router-link>
         </div>
     </div>
 </template>

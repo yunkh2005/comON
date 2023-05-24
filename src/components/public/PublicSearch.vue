@@ -10,11 +10,12 @@
     </div>
 
     <!-- 검색어 입력 창 -->
-    <div class="flex items-center px-5 pb-5 cursor-pointer">
+    <div class="flex items-center px-5 pb-5 cursor-pointer w-full">
         <input 
             placeholder="검색어를 입력하세요."
             type="text"
             class="w-full p-2 bg-gray-200 focus:outline-none rounded-full text-center">
+            <i class="fa-solid fa-magnifying-glass absolute right-10"></i>
     </div>
 
     <!-- 선택 버튼 -->

@@ -2,7 +2,7 @@
     <div aria-labelledby="modal-title" role="dialog" aria-modal="true" @click="$emit('close-modal')">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-        <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class="fixed inset-0 z-10 px-10 overflow-y-auto">
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <div @click.stop class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                     <div class="inline-block overflow-hidden shadow-xl transform transition-all align-middle max-w-lg w-full bg-white rounded-lg text-left"
@@ -17,15 +17,11 @@
                             <div>
                                 <div class="flex justify-center pt-5 mb-3">
                                     <div class=" font-bold text-xl w-1/5">아이콘</div> 
-                                    <input type="text" class="rounded focus:ring-2 focus:border-primary focus:outline-none" placeholder="선택해주세요"
-                                        />
-                                        
-                                        
+                                    <input type="text" class="rounded focus:ring-2 focus:border-primary focus:outline-none" placeholder="선택해주세요"/>  
                                 </div>
                                 <div class="flex justify-center pt-5 mb-3">
                                     <div class=" font-bold text-xl w-1/5">유형명</div>
-                                        <input type="text" class="rounded focus:ring-2 focus:border-primary focus:outline-none" placeholder="선택해주세요"
-                                        />
+                                        <input type="text" class="rounded focus:ring-2 focus:border-primary focus:outline-none" placeholder="선택해주세요"/>
                                 </div>
                                 
                                 
@@ -42,13 +38,14 @@
                             </div>
                         </div>
                         <div v-else class="flex flex-col">
-                            <button class="fas fa-times text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
                             <div class="text-center text-lg font-extrabold pt-10 pb-10">
                                 추가하였습니다
                             </div>
-                            <button @click="$emit('close-modal')" class="w-1/2 m-auto mb-4 p-4 bg-skyblue text-white hover:bg-opacity-70 text-lg font-semibold rounded-lg">
-                                확인
-                            </button>
+                            <div @click="$emit('close-modal')" class="w-1/2 m-auto mb-4 p-4 bg-mainyellow text-white hover:bg-opacity-70 text-lg font-semibold rounded-lg text-center">
+                                <button>
+                                    확인
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
