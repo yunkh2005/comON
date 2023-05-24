@@ -26,6 +26,51 @@
             완료
         </button>
     </div>
+
+    <!-- 중앙 내용 -->
+    <div class="absolute inset-0 mx-5 mt-32 mb-20 overflow-y-auto">
+        <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
+            <!-- 모금 설명 사진 -->
+            <div class="w-1/5 self-center pl-3 text-4xl text-center">
+                <i class="fa-solid fa-users-viewfinder"></i>
+            </div>
+            <div class="w-3/5 self-center">
+                <!-- 모금 이름 -->
+                <div class="grid grid-cols-2 font-bold">
+                    <div class="text-2xl">
+                        모금 이름
+                    </div>
+                    <div class="pl-1 self-center text-mainyellow font-bold">
+                        <span>
+                            D-
+                        </span>
+                        <span>
+                            DAY
+                        </span>
+                    </div>
+                </div>
+                <!-- 목표 금액 -->
+                <div class="pt-1 font-bold">
+                    <span class="text-lg">
+                        목표:
+                    </span>
+                    <span class="text-xl">
+                        100,000,000
+                    </span>
+                    <span class="text-lg">
+                        원
+                    </span>
+                </div>
+                <!-- 그래프 -->
+                <div class="text-center">
+                    그래프
+                </div>
+            </div>
+            <button class="w-1/10 self-center pr-3 text-xl">
+                <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+            </button>
+        </div>
+    </div>
 </template>
 <script>
 export default {
