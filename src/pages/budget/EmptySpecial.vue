@@ -54,7 +54,7 @@ export default {
     },
     data() {
         return {
-            isMonthlyEmpty: false,
+            isMonthlyEmpty: true,
         }
     }
 }

@@ -1,7 +1,7 @@
 <template>
     <div class="h-screen overflow-scroll">
         <!-- 상단 -->
-        <div class="items-center bg-mainblue">
+        <div class="items-center bg-mainblue  text-white">
             <div class="flex p-2 items-center">
                 <!-- 닫기 버튼 -->
                 <button @click="$router.go(-1)" class="fa-solid fa-arrow-left text-white text-xl p-2 h-12 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
@@ -10,9 +10,9 @@
                     특별 예산 계획
                 </div>
             </div>
-            <div class="flex justify-end w-full h-16 bg-mainblue text-white text-2xl pr-3">
-                <div class="underline mr-1">100,000,000,000,000</div>
-                <div>원</div>
+            <div class="pr-2 py-8 border-b border-gray-100 text-end font-bold text-2xl">
+                <input v-model="a" type="text" class="rounded bg-transparent text-end" placeholder="0"/>
+                    <span class="pl-1">원</span>
             </div>
         </div>
         <!-- 상세 입력 -->
@@ -44,27 +44,27 @@
     </div>
     <!-- 하단 버튼 -->
     <div class="absolute inset-x-0 bottom-0 px-6 py-3">
-        <button @click="showEnterBudgetPlanModal = true" class="w-full py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+        <button @click="showSaveSpecialPlanModal = true" class="w-full py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
             저장
         </button>
     </div>
     <!-- 팝업 -->
     <TypeAddModal v-if="showTypeAddModal" @close-modal="showTypeAddModal = false"></TypeAddModal>
-    <EnterBudgetPlanModal v-if="showEnterBudgetPlanModal" @close-modal="EnterBudgetPlanModal = false"></EnterBudgetPlanModal>
+    <SaveSpecialPlanModal v-if="showSaveSpecialPlanModal" @close-modal="showSaveSpecialPlanModal = false"></SaveSpecialPlanModal>
 </template>
 <script>
 import TypeAddModal from './TypeAddModal.vue';
-import EnterBudgetPlanModal from './EnterBudgetPlanModal.vue'
+import SaveSpecialPlanModal from './SaveSpecialPlanModal.vue'
 
 export default {
     components: {
         TypeAddModal,
-        EnterBudgetPlanModal,
+        SaveSpecialPlanModal,
     },
     data() {
         return {
             showTypeAddModal: false,
-            showEnterBudgetPlanModal: false,
+            showSaveSpecialPlanModal: false,
         }
     },
 }
