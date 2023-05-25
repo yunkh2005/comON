@@ -37,7 +37,8 @@ import FundMain from '../pages/Fund/FundMain.vue'
 import FundSearch from '../pages/Fund/FundSearch.vue'
 import MyCompletedFund from '../pages/Fund/MyCompletedFund.vue'
 import MyFund from '../pages/Fund/MyFund.vue'
-
+import CompletedFundSearch from '../pages/fund/CompletedFundSearch.vue'
+import ModifyFund from '../pages/fund/ModifyFund.vue'
 
 // 내역 AnalysisOfIncome AnalysisOfOutcome ListMain ListModal ListModalMonthly ListSearch TypeAddModal TypeSpecialAddModal
 //AddIncome AddOutcome DateList DetailMyList DetailDateList IncomeTypeList MyList OutcomeTypeList
@@ -103,8 +104,10 @@ const routes = [
     { path: '/fundInfo', component: FundInfo },
     { path: '/fundMain', component: FundMain},
     { path: '/fundSearch', component: FundSearch },
+    { path: '/completedFundSearch', component: CompletedFundSearch },
     { path: '/myCompletedFund', component: MyCompletedFund },
     { path: '/myFund', component: MyFund },
+    { path: '/modifyFund', component: ModifyFund },
     
     //내역 
     //AddIncome AddOutcome DateList DetailMyList DetailDateList 

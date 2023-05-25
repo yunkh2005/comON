@@ -1,12 +1,9 @@
 <template>
-    <MyCompletedFund v-if="showMyCompletedFund" @close-modal="showMyCompletedFund = false"></MyCompletedFund>
-    <div v-else>
+    <div>
         <!-- 상단 -->
         <div class="flex p-2 items-center">
             <!-- 닫기 버튼 -->
-            <router-link to="fundMain">
-                <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
-            </router-link>
+            <button @click="$router.push('/fundMain')" class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
             <!-- 화면명 -->
             <div class="flex-col pl-4 font-bold text-2xl">
                 내 모금
@@ -18,7 +15,7 @@
             <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
                 진행
             </button>
-            <button @click="showMyCompletedFund = true" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
+            <button @click="$router.push('myCompletedFund')" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
                 완료
             </button>
         </div>
@@ -58,29 +55,28 @@
                         </span>
                     </div>
                     <!-- 그래프 -->
-                    <div class="text-center">
-                        그래프
+                    <div class="ring-1 ring-black mt-3">
+                        <div class="w-4/5 bg-skyblue text-white text-center">80,000,000원</div>
                     </div>
                 </div>
-                <router-link to="detailFund">
-                    <button class="w-1/10 self-center pr-3 text-xl">
-                        <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-                    </button>
-                </router-link>
+                <div>
+                    <router-link to="/detailFund">
+                        <button class="w-1/10 self-center pr-3 pt-8 text-xl">
+                            <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+                        </button>
+                    </router-link>
+                </div>
             </div>
         </div>
     </div>
 </template>
 <script>
-import MyCompletedFund from './MyCompletedFund.vue';
 
 export default {
     components: { 
-        MyCompletedFund
     },
     data(){
         return{
-            showMyCompletedFund: false,
         }
     }
 }

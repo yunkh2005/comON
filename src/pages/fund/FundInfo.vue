@@ -18,7 +18,7 @@
             <div class="w-1/5 self-center pl-3 text-center">
                 <i class="fa-solid fa-circle-user text-4xl"></i>
                 <div class="font-bold">
-                    참여자
+                    이름
                 </div>
             </div>
             <div class="w-3/5 self-center">
