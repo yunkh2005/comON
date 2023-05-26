@@ -2,11 +2,7 @@
         <!-- 상단 -->
         <div class="flex p-2 items-center">
         <!-- 닫기 버튼 -->
-        <router-link to="allowanceMain">
-        <button
-            class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full">
-        </button>
-        </router-link>
+        <button @click="$router.go(-1)" class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
         <!-- 화면명 -->
             <div class="flex-col pl-4 font-bold text-2xl">
                 월별 사진
@@ -29,23 +25,6 @@
             <i class="fa-solid fa-chevron-right px-2 text-xl hover:bg-gray-300 rounded-full"></i>
         </button>
     </div>
-
- <!--      <div class="flex absolute bg-white w-full mt-6 py-1">
-             이전 월 이동 버튼 
-            <button class="w-1/3">
-                <i class="fa-solid fa-chevron-left px-2 text-xl hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-            </button>s
-             월 안내 
-            <button class="w-1/3 font-extrabold text-2xl text-center hover:bg-skyblue hover:bg-opacity-20 rounded-full">
-                <span>MM</span>
-                <span>월</span>
-            </button>
-             이후 월 이동 버튼 
-            <button class="w-1/3 ">
-                <i class="fa-solid fa-chevron-right px-2 text-xl hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-            </button>
-        </div>
-    --> 
 
     <!-- 중앙 내용 -->
     <div class="absolute inset-0 mx-5 mt-32 mb-20 overflow-y-auto bg-gray-100 text-center">

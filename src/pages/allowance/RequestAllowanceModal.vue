@@ -11,13 +11,9 @@
                         aria-labelledby="modal-headline">
                         <div v-if="!enterYn">
                             <!-- 안내 멘트 -->
-                            <div class="flex justify-center font-extrabold py-10">
-                                <div class="mr-3 text-lg">받는 이:</div>
-                                <select class="w-1/3 rounded-md ring-1 ring-inset ring-gray-700 focus:ring-mainblue text-sm">
-                                    <option>이름</option>
-                                    <option>이름</option>
-                                    <option>이름</option>
-                                </select>
+                            <div class="flex justify-center font-extrabold py-10 mr-3 text-lg">
+                                <div class="mr-3 text-lg">수신자:</div>
+                                <div>이름</div>
                             </div>
 
                             <!-- 메시지 입력-->
@@ -56,7 +52,7 @@
                             <div class="text-center text-lg font-extrabold py-7">
                                 메시지가 전송되었습니다.
                             </div>
-                            <i class="fa-solid fa-hands-clapping text-8xl text-center mb-7"></i>
+                            <i class="fa-solid fa-hands-clapping text-7xl text-center mb-7"></i>
                             <button @click="$emit('close-modal')" class="w-1/2 m-auto mb-10 p-4 bg-mainyellow hover:opacity-70 text-white text-lg font-semibold rounded-lg">
                                 확인
                             </button>

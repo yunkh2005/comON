@@ -21,35 +21,20 @@
         </router-link>
     </div>
 
-   <!-- 검색어 입력 창 
-   <div class="flex items-center px-5 py-5 cursor-pointer">
-        <input 
-            placeholder="검색어를 입력하세요."
-            type="text"
-            class="w-11/12 p-2 bg-gray-100 focus:outline-none rounded-l-full text-sm text-center">
-        <button class="w-1/12 p-1 bg-gray-100 hover:bg-gray-300 rounded-r-full text-lg font-semibold text-center">
-            <i class="fa-solid fa-magnifying-glass left-0 text-sm text-light"></i>
-        </button>
-    </div>
-    -->
-    
     <!-- 선택 버튼 -->
     <div class="over-y-auto">
         <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
             수신
         </button>
-        <router-link to="messageSendAllowance">
-        <button class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
+        <button @click="$router.push('messageSendAllowance')" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
             발신
         </button>
-        </router-link>
         </div>
     </div>
 
     <!-- 중앙 내용 -->
-    <div class="absolute inset-0 mx-5 mt-32 mb-10 overflow-y-auto">
-        
+    <div @click="showDetailReceiveAllowanceModal= true" class="absolute inset-0 mx-5 mt-32 mb-10 overflow-y-auto">
         <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 5" :key="message">
             <!-- 사용자 프로필 사진 -->
             <div class="w-1/5 self-center pl-3 text-center">
@@ -70,11 +55,20 @@
                 <i class="fa-solid fa-image text-5xl"></i>
             </button>
         </div>
-        
     </div>
+    <DetailReceiveAllowanceModal v-if="showDetailReceiveAllowanceModal" @close-modal="showDetailReceiveAllowanceModal = false"></DetailReceiveAllowanceModal>
 </template>
 <script>
+import DetailReceiveAllowanceModal from './DetailReceiveAllowanceModal.vue';
 export default {
+    components:{
+        DetailReceiveAllowanceModal,
+    },
+    data() {
+        return {
+            showDetailReceiveAllowanceModal: false,
+        }
+    }
 }
 </script>
 <style></style>
