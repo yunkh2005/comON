@@ -1,18 +1,16 @@
 <template>
-    <CompletedFundMain v-if="showCompletedFundMain" @close-modal="showCompletedFundMain = false"></CompletedFundMain>
-    <div v-else>
+    <div>
         <!-- 상단 중앙 진행, 완료 선택 버튼 -->
         <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
             <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
                 진행
             </button>
-            <button @click="showCompletedFundMain =true" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
+            <router-link to="/completedFundMain" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
                 완료
-            </button>
+            </router-link>
         </div>
-
-        <!-- 상단 우측 검색, 알림 버튼 -->
-        <div class="fixed top-0 right-0 px-3 py-6">
+            <!-- 상단 우측 검색, 알림 버튼 -->
+            <div class="fixed top-0 right-0 px-3 py-6">
             <router-link to="fundSearch">
                 <button class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">
                     <i class="px-2 py-1 fa-solid fa-magnifying-glass text-2xl"></i>
@@ -38,35 +36,41 @@
                         <div class="text-2xl">
                             모금명
                         </div>
-                        <!-- 목표 금액 -->
-                        <div class="pt-1 font-bold">
-                            <span class="text-lg">
-                                목표:
-                            </span>
-                            <span class="text-xl">
-                                100,000,000
-                            </span>
-                            <span class="text-lg">
-                                원
-                            </span>
-                        </div>
-                        <!-- 그래프 -->
-                        <div class="text-center">
-                            그래프
-                        </div>
                     </div>
+                    <!-- 목표 금액 -->
+                    <div class="pt-1 font-bold">
+                        <span class="text-lg">
+                            목표:
+                        </span>
+                        <span class="text-xl">
+                            100,000,000
+                        </span>
+                        <span class="text-lg">
+                            원
+                        </span>
+                    </div>
+                    <!-- 그래프 -->
+                    <div class="ring-1 ring-black mt-3">
+                        <div class="w-4/5 bg-skyblue text-white text-center">80,000,000원</div>
+                    </div>
+                </div>
+                <div>
                     <router-link to="/detailFund">
-                    <botton class="w-1/10 self-center pr-3 text-xl">
-                        <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-                    </botton>
+                        <button class="w-1/10 self-center pr-3 pt-8 text-xl">
+                            <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+                        </button>
                     </router-link>
                 </div>
-                <router-link to="/detailFund">
-                <button class="w-1/10 self-center pr-3 text-xl">
-                    <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-                </button>
-                </router-link>
             </div>
+        </div>
+        <!-- 하단 우측 버튼 -->
+        <div class="fixed bottom-0 right-0 pb-20 justify-items-end">
+            <router-link to="/myFund" class="flex flex-row cursor-pointer place-content-end p-3">
+                <i class="px-3 py-2 fa-solid fa-circle-user bg-skyblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
+            </router-link>
+            <router-link to="/createFund" class="flex flex-row cursor-pointer place-content-end p-3">
+                <i class="px-3 py-2 fa-solid fa-plus bg-mainblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
+            </router-link>
         </div>
 
         <!-- 하단 탭 -->
@@ -75,16 +79,13 @@
 </template>
 <script>
 import ButtomTab from '../../components/public/ButtomTab.vue';
-import CompletedFundMain from './CompletedFundMain.vue';
 
 export default {
     components: { 
 		ButtomTab,
-        CompletedFundMain,
 	},
     data(){
         return{
-            showCompletedFundMain: false,
         }
     }
 }

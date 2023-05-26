@@ -37,7 +37,7 @@
             <div class="w-3/5 self-center">
                 <!-- 예산 이름 -->
                 <div class="text-2xl font-bold">
-                    예산 이름
+                    예산명
                 </div>
                 <!-- 목표 금액 -->
                 <div class="pt-1 font-bold">

@@ -18,36 +18,45 @@
                 <!-- 모금 이름 -->
                 <div class="text-lg px-5">
                     <div>
-                    <span class="text-xl font-bold">
-                        참가자
+                    <span class="text-xl font-bold text-mainblue">
+                        이름
                     </span>
                     <span>님이</span>
                     </div>
                     <div class="px-1">
                         <span class="text-xl font-bold">"</span>
-                        <span class="text-xl font-bold">
+                        <span class="text-xl font-bold text-mainblue">
                             미션명
                         </span>
-                        
                         <span class="text-xl font-bold">"</span>
                     </div>
                     <div>
                         <span>미션에 </span>
-                        <span class="font-bold">
+                        <span class="font-bold text-mainblue">
                             참여
                         </span>
                         <span>했습니다.</span>
                     </div>
                 </div>
             </div>
-            <button class="w-1/10 self-center pr-3 text-xl">
+            <button @click="showReceiveMissionDetailModal = true" class="w-1/10 self-center pr-3 text-xl">
                 <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
             </button>
         </div>
     </div>
+    <ReceiveMissionDetailModal v-if="showReceiveMissionDetailModal" @close-modal="showReceiveMissionDetailModal = false"></ReceiveMissionDetailModal>
 </template>
 <script>
+import ReceiveMissionDetailModal from './ReceiveMissionDetailModal.vue'
 export default {
+    components: {
+        ReceiveMissionDetailModal,
+    },
+    data() {
+        return {
+            showReceiveMissionDetailModal: false,
+        }
+    }
 }
 </script>
 <style></style>

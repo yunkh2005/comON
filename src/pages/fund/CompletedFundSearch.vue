@@ -16,15 +16,14 @@
             type="text"
             class="w-full p-2 bg-gray-200 focus:outline-none rounded-full text-center">
     </div>
-
-    <!-- 선택 버튼 -->
+    <!-- 상단 중앙 진행, 완료 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24">
-        <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
+        <router-link to="/fundSearch" class="text-center w-1/2 h-9 bg-gray-100 text-2xl font-semibold rounded-l-full">
             진행
-        </button>
-        <router-link to="completedfundSearch" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue text-2xl font-semibold rounded-r-full">
-            완료
         </router-link>
+        <button class="text-center w-1/2 h-9 bg-skyblue hover:bg-opacity-70 text-white hover:text-white text-2xl font-semibold rounded-r-full">
+            완료
+        </button>
     </div>
 
     <!-- 중앙 내용 -->
@@ -36,18 +35,8 @@
             </div>
             <div class="w-3/5 self-center">
                 <!-- 모금 이름 -->
-                <div class="grid grid-cols-2 font-bold">
-                    <div class="text-2xl">
-                        모금 이름
-                    </div>
-                    <div class="pl-1 self-center text-mainyellow font-bold">
-                        <span>
-                            D-
-                        </span>
-                        <span>
-                            DAY
-                        </span>
-                    </div>
+                <div class="text-2xl font-bold">
+                    모금 이름
                 </div>
                 <!-- 목표 금액 -->
                 <div class="pt-1 font-bold">
@@ -63,7 +52,7 @@
                 </div>
                 <!-- 그래프 -->
                 <div class="ring-1 ring-black mt-3">
-                    <div class="w-4/5 bg-skyblue text-white text-center">80,000,000원</div>
+                    <div class="bg-mainyellow text-white text-center">100%</div>
                 </div>
             </div>
             <router-link to="detailFund" class="w-1/10 self-center pr-3 text-xl">

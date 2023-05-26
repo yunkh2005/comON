@@ -2,7 +2,7 @@
     <!-- 상단 -->
     <div class="flex p-2 items-center">
         <!-- 닫기 버튼 -->
-        <button class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
+        <button @click="$router.push('/fundMain')" class="fa-solid fa-arrow-left text-primary text-xl p-2 h-12 w-12 hover:bg-skyblue hover:bg-opacity-20 rounded-full"></button>
         <!-- 화면명 -->
         <div class="flex-col pl-4 font-bold text-2xl">
             내 모금
@@ -11,7 +11,7 @@
 
     <!-- 상단 중앙 진행, 완료 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24 py-3">
-        <button @click="$emit('close-modal')" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
+        <button @click="$router.push('/myFund')" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
             진행
         </button>
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-r-full">
@@ -44,13 +44,17 @@
                     </span>
                 </div>
                 <!-- 그래프 -->
-                <div class="text-center">
-                    그래프
+                <div class="ring-1 ring-black mt-3">
+                    <div class="bg-mainyellow text-white text-center">100%</div>
                 </div>
             </div>
-            <button class="w-1/10 self-center pr-3 text-xl">
-                <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-            </button>
+            <div>
+                <router-link to="/detailFund">
+                    <button class="w-1/10 self-center pr-3 pt-8 text-xl">
+                        <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+                    </button>
+                </router-link>
+            </div>
         </div>
     </div>
 </template>

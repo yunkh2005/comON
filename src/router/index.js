@@ -8,10 +8,6 @@ import MessageSendAllowance from '../pages/allowance/MessageSendAllowance.vue'
 import MessageReceiveAllowance from '../pages/allowance/MessageReceiveAllowance.vue'
 import MoneyAllowance from '../pages/allowance/MoneyAllowance.vue'
 import MonthlyPictureAllowance from '../pages/allowance/MonthlyPictureAllowance.vue'
-import ReceiveMessage from '../pages/allowance/ReceiveMessage.vue'
-import SendMessage from '../pages/allowance/SendMessage.vue'
-import DetailAllowanceModal from '../pages/allowance/DetailAllowanceModal.vue'
-
 
 //예산 CategoryAdd EmptyMonthly EmptySpecial MonthlyMain Monthlyplan SpecialMain 
 //AddSpecial DetailMonthlyType SpecialSearch
@@ -37,7 +33,8 @@ import FundMain from '../pages/Fund/FundMain.vue'
 import FundSearch from '../pages/Fund/FundSearch.vue'
 import MyCompletedFund from '../pages/Fund/MyCompletedFund.vue'
 import MyFund from '../pages/Fund/MyFund.vue'
-
+import CompletedFundSearch from '../pages/fund/CompletedFundSearch.vue'
+import ModifyFund from '../pages/fund/ModifyFund.vue'
 
 // 내역 AnalysisOfIncome AnalysisOfOutcome ListMain ListModal ListModalMonthly ListSearch TypeAddModal TypeSpecialAddModal
 //AddIncome AddOutcome DateList DetailMyList DetailDateList IncomeTypeList MyList OutcomeTypeList
@@ -67,6 +64,8 @@ import MissionMain from '../pages/mission/MissionMain.vue'
 import MissionSearch from '../pages/mission/MissionSearch.vue'
 import MyCompletedMission from '../pages/mission/MyCompletedMission.vue'
 import MyMission from '../pages/mission/MyMission.vue'
+import CompletedMissionSearch from '../pages/mission/CompletedMissionSearch.vue'
+import ModifyMission from '../pages/mission/ModifyMission.vue'
 
 //import ButtomTab from '../component/ButtomTab.vue'
 
@@ -79,9 +78,6 @@ const routes = [
     { path: '/messageReceiveAllowance', component: MessageReceiveAllowance },
     { path: '/moneyAllowance', component: MoneyAllowance },
     { path: '/monthlyPictureAllowance', component: MonthlyPictureAllowance },
-    { path: '/receiveMessage', component: ReceiveMessage },
-    { path: '/sendMessage', component: SendMessage },
-    { path: '/detailAllowanceModal', component: DetailAllowanceModal },
 
     //예산 AddSpecial DetailMonthlyType SpecialSearch
     { path: '/budgetMain', component: BudgetMain },
@@ -103,8 +99,10 @@ const routes = [
     { path: '/fundInfo', component: FundInfo },
     { path: '/fundMain', component: FundMain},
     { path: '/fundSearch', component: FundSearch },
+    { path: '/completedFundSearch', component: CompletedFundSearch },
     { path: '/myCompletedFund', component: MyCompletedFund },
     { path: '/myFund', component: MyFund },
+    { path: '/modifyFund', component: ModifyFund },
     
     //내역 
     //AddIncome AddOutcome DateList DetailMyList DetailDateList 
@@ -136,6 +134,8 @@ const routes = [
     { path: '/missionSearch', component: MissionSearch },
     { path: '/myCompletedMission', component: MyCompletedMission },
     { path: '/myMission', component: MyMission },
+    { path: '/completedMissionSearch', component: CompletedMissionSearch },
+    { path: '/modifyMission', component: ModifyMission },
    
 ]
 

@@ -9,36 +9,32 @@
                         role="dialog" 
                         aria-modal="true" 
                         aria-labelledby="modal-headline">
-                        <div v-if="!enterYn">
+                            <div v-if="!enterYn">
                             <!-- 안내 멘트 -->
                             <div class="text-center text-lg font-extrabold pt-16">
-                                모금에 참여하시겠습니까?
-                            </div>
-                            <!-- 금액 입력-->
-                            <div class="flex justify-center text-2xl py-10">
-                                <input v-model="amount" type="number" class="text-center md:w-1/3 w-1/2 rounded focus:ring-2 focus:border-primary focus:outline-none" placeholder="입력하세요" :step="1000" :min="100">
-                                <div>원</div>
+                                예산을 저장하시겠습니까?
                             </div>
                             <!-- 버튼 -->
                             <div class="flex place-content-center p-10 cursor-pointer">
                                 <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                                     취소
                                 </button>
-                                <button @click="amount ? enterYn = true : enterYn = false" class="w-1/2 ml-5 p-4 text-center bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
-                                    참여
+                                <button @click="enterYn = true" class="w-1/2 ml-5 p-4 text-center bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
+                                    저장
                                 </button>
                             </div>
                         </div>
                         <div v-else>
                             <div class="text-center text-lg font-extrabold pt-16">
-                                참여하셨습니다
+                                저장했습니다
                             </div>
-                            <div class="text-center text-lg font-extrabold py-10 text-gray-500">참여 금액: {{ amount }}</div>
-                            <div class="flex place-content-center p-10 cursor-pointer">
-                                <button @click="$router.push('/fundMain')" class="w-1/2 m-auto p-4 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
-                                    확인
-                                </button>
-                            </div>
+                            <router-link to="/specialMain">
+                                <div class="flex place-content-center p-10 cursor-pointer">
+                                    <button class="w-1/2 m-auto p-4 bg-mainyellow hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                                        확인
+                                    </button>
+                                </div>
+                            </router-link>
                         </div>
                     </div>
                 </div>
@@ -48,17 +44,13 @@
 </template>
 
 <script>
-export default {
-    data(){
-        return{
-            enterYn: false,
-            amount: 0,
-        }
-    },
-    methods: {
-
+    export default {
+        data(){
+            return{
+                enterYn: false,
+            }
+        },
     }
-}
 </script>
 
 <style></style>

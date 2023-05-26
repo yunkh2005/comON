@@ -57,7 +57,7 @@
             <!-- 최근 메시지 정보-->
             <div class="absolute w-full mt-14 pb-24">
                 <!-- 첫번째 최근 메시지 -->
-                <div class="flex justify-between mx-5 my-1 py-4 bg-gray-100 rounded-lg">
+                <div @click="showDetailReceiveAllowanceModal = true" class="flex justify-between mx-5 my-1 py-4 bg-gray-100 rounded-lg">
                     <!-- 메시지 첨부 사진 -->
                     <div class="w-1/4 self-center pl-3 text-4xl text-center">
                         <i class="fa-solid fa-users-viewfinder"></i>
@@ -74,13 +74,13 @@
                             YY-MM-DD AM12:00
                         </div>
                     </div>
-                    <router-link to="messageReceiveAllowance" class="w-1/10 self-center pr-3 text-xl">
+                    <div class="w-1/10 self-center pr-3 text-xl">
                         <i class="px-2 py-1 fa-solid fa-chevron-right"></i>
-                    </router-link>
+                    </div>
                 </div>
 
                 <!-- 두번째 최근 메시지 -->
-                <div class="flex justify-between mx-5 my-3 py-4 bg-gray-100 rounded-lg">
+                <div @click="showDetailSendAllowanceModal = true" class="flex justify-between mx-5 my-3 py-4 bg-gray-100 rounded-lg">
                     <!-- 메시지 첨부 사진 -->
                     <div class="w-1/4 self-center pl-3 text-4xl text-center">
                         <i class="fa-solid fa-users-viewfinder"></i>
@@ -97,13 +97,13 @@
                             YY-MM-DD AM12:00
                         </div>
                     </div>
-                    <router-link to="messageSendAllowance" class="w-1/10 self-center pr-3 text-xl">
+                    <div class="w-1/10 self-center pr-3 text-xl">
                         <i class="px-2 py-1 fa-solid fa-chevron-right"></i>
-                    </router-link>
+                    </div>
                 </div>
 
                 <!-- 세번째 최근 메시지 -->
-                <div class="flex justify-between mx-5 my-3 py-4 bg-gray-100 rounded-lg">
+                <div @click="showDetailSendAllowanceModal = true" class="flex justify-between mx-5 my-3 py-4 bg-gray-100 rounded-lg">
                     <!-- 메시지 첨부 사진 -->
                     <div class="w-1/4 self-center pl-3 text-4xl text-center">
                         <i class="fa-solid fa-users-viewfinder"></i>
@@ -126,7 +126,7 @@
                 </div>
 
                 <!-- 네번째 최근 메시지 -->
-                <div class="flex justify-between mx-5 my-1 py-4 bg-gray-100 rounded-lg">
+                <div @click="showDetailReceiveAllowanceModal = true" class="flex justify-between mx-5 my-1 py-4 bg-gray-100 rounded-lg">
                     <!-- 메시지 첨부 사진 -->
                     <div class="w-1/4 self-center pl-3 text-4xl text-center">
                         <i class="fa-solid fa-users-viewfinder"></i>
@@ -149,7 +149,7 @@
                 </div>
 
                 <!-- 다섯번째 최근 메시지 -->
-                <div class="flex justify-between mx-5 my-1 py-4 bg-gray-100 rounded-lg">
+                <div @click="showDetailReceiveAllowanceModal = true" class="flex justify-between mx-5 my-1 py-4 bg-gray-100 rounded-lg">
                     <!-- 메시지 첨부 사진 -->
                     <div class="w-1/4 self-center pl-3 text-4xl text-center">
                         <i class="fa-solid fa-users-viewfinder"></i>
@@ -177,24 +177,34 @@
     <!-- 하단 우측 버튼 -->
     <div class="fixed bottom-0 right-0 pb-20 justify-items-end">
         <!-- 조르기 전체 기록 버튼 -->
-        <div class="flex flex-row cursor-pointer place-content-end p-3">
+        <div @click="$router.push('messageReceiveAllowance')" class="flex flex-row cursor-pointer place-content-end p-3">
             <i class="px-3 py-2 fa-solid fa-comments bg-skyblue hover:bg-opacity-50 rounded-full text-2xl text-white"></i>
         </div>
         <!-- 조르기 버튼 -->
-        <div class="flex flex-row cursor-pointer place-content-end p-3">
+        <div @click="$router.push('moneyAllowance')" class="flex flex-row cursor-pointer place-content-end p-3">
             <i class="px-3 py-2 fa-solid fa-comment-dollar bg-mainblue hover:bg-opacity-50 rounded-full text-3xl text-white"></i>
         </div>
     </div>
-
     <!-- 하단탭 -->
     <ButtomTab></ButtomTab>
+    <DetailReceiveAllowanceModal v-if="showDetailReceiveAllowanceModal" @close-modal="showDetailReceiveAllowanceModal = false"></DetailReceiveAllowanceModal>
+    <DetailSendAllowanceModal v-if="showDetailSendAllowanceModal" @close-modal="showDetailSendAllowanceModal = false"></DetailSendAllowanceModal>
 </template>
 <script>
 import ButtomTab from '../../components/public/ButtomTab.vue';
-
+import DetailReceiveAllowanceModal from './DetailReceiveAllowanceModal.vue';
+import DetailSendAllowanceModal from './DetailSendAllowanceModal.vue';
 export default {
     components: {
         ButtomTab,
+        DetailReceiveAllowanceModal,
+        DetailSendAllowanceModal,
+    },
+    data() {
+        return {
+            showDetailReceiveAllowanceModal: false,
+            showDetailSendAllowanceModal: false,
+        }
     }
 }
 </script>

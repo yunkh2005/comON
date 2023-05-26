@@ -12,7 +12,7 @@
                             <div v-if="!enterYn">
                             <!-- 안내 멘트 -->
                             <div class="text-center text-lg font-extrabold pt-16">
-                                예산을 저장하시겠습니까?
+                                유형을 삭제하시겠습니까?
                             </div>
                             <!-- 버튼 -->
                             <div class="flex place-content-center p-10 cursor-pointer">
@@ -20,21 +20,19 @@
                                     취소
                                 </button>
                                 <button @click="enterYn = true" class="w-1/2 ml-5 p-4 text-center bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
-                                    저장
+                                    삭제
                                 </button>
                             </div>
                         </div>
                         <div v-else>
                             <div class="text-center text-lg font-extrabold pt-16">
-                                저장했습니다
+                                삭제했습니다
                             </div>
-                            <router-link to="monthlyMain">
-                                <div class="flex place-content-center p-10 cursor-pointer">
-                                    <button class="w-1/2 m-auto p-4 bg-mainyellow hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
-                                        확인
-                                    </button>
-                                </div>
-                            </router-link>
+                            <div @click="$emit('close-modal')" class="flex place-content-center p-10 cursor-pointer">
+                                <button class="w-1/2 m-auto p-4 bg-mainyellow hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                                    확인
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

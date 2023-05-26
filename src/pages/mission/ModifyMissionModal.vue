@@ -9,29 +9,27 @@
                         role="dialog" 
                         aria-modal="true" 
                         aria-labelledby="modal-headline">
-                        <!-- 닫기 버튼 -->
-                        <button @click="$emit('close-modal')" class="fas fa-times float-right text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
-                        <div v-if="!isEnter">
+                            <div v-if="!enterYn">
                             <!-- 안내 멘트 -->
-                            <div class="text-center text-lg font-extrabold pt-16 pb-10">
-                                미션을 삭제하시겠습니까?
+                            <div class="text-center text-lg font-extrabold pt-16">
+                                미션을 수정하시겠습니까?
                             </div>
                             <!-- 버튼 -->
                             <div class="flex place-content-center p-10 cursor-pointer">
-                                <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-100 hover:bg-skyblue text-lg font-semibold rounded-lg">
+                                <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                                     취소
                                 </button>
-                                <button @click="isEnter = true" class="w-1/2 ml-5 p-4 text-center bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
-                                    삭제
+                                <button @click="enterYn = true" class="w-1/2 ml-5 p-4 text-center bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
+                                    수정
                                 </button>
                             </div>
                         </div>
                         <div v-else>
-                            <div class="text-center text-lg font-extrabold pt-16 pb-10">
-                                미션 삭제 완료
+                            <div class="text-center text-lg font-extrabold pt-16">
+                                미션을 수정했습니다
                             </div>
                             <div class="flex place-content-center p-10 cursor-pointer">
-                                <button @click="$emit('close-modal')" class="w-1/2 m-auto p-4 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                                <button @click="$router.push('/missionMain')" class="w-1/2 m-auto p-4 bg-mainyellow hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
                                     확인
                                 </button>
                             </div>
@@ -44,16 +42,13 @@
 </template>
 
 <script>
-export default {
-    data(){
-        return{
-            isEnter: false,
-        }
-    },
-    methods: {
-
+    export default {
+        data(){
+            return{
+                enterYn: false,
+            }
+        },
     }
-}
 </script>
 
 <style></style>

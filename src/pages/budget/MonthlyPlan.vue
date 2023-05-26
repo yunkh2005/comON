@@ -12,28 +12,26 @@
             </div>
             <!-- 금액 -->
             <div class="pr-2 py-8 border-b border-gray-100 text-end font-bold text-2xl">
-                    <span>100,000,000,000,000,000</span>
-                    <span>원</span>
+                <input v-model="a" type="text" class="rounded bg-transparent text-end" placeholder="0"/>
+                    <span class="pl-1">원</span>
             </div>
         </div>
 
-        <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 3" :key="message">
+        <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="name in categoryName" :key="name">
             <!-- 모금 설명 사진 -->
             <div class="w-2/5 self-center pl-3 text-4xl text-center">
                 <i class="fa-solid fa-users-viewfinder"></i>
             </div>
-            <div class="w-3/5">
+            <div class="w-4/5">
                 <!-- 내역 이름 -->
                 <div class="grid grid-cols-2 font-bold">
                     <div class="text-2xl lg:text-lg">
-                        유형
+                        {{ name }}
                     </div>
                 </div>
                 <!-- 목표 금액 -->
                 <div class="pt-1 text-end pr-5">
-                    <span>
-                        100,000,000,000,000,000
-                    </span>
+                    <input v-model="a" type="text" class="rounded bg-transparent text-end" placeholder="0"/>
                     <span class="text-lg font-bold">
                         원
                     </span>
@@ -56,29 +54,34 @@
         <button @click="showCategoryAdd = true"  class="w-1/5 py-1 ring-1 ring-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
             <i class="fa-solid fa-plus"></i>
         </button>
-        <button class="w-1/5 py-1 ml-5 ring-1 ring-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
+        <button @click="showDeleteCategoryModal = true" class="w-1/5 py-1 ml-5 ring-1 ring-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
             <i class="fa-solid fa-trash"></i>
         </button>
-        <button @click="showEnterBudgetPlanModal = true" class="w-3/5 ml-5 py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+        <button @click="showSaveMonthlyPlanModal = true" class="w-3/5 ml-5 py-1 ring-1 ring-gray-100 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
             저장
         </button>
     </div>
     <!-- 팝업 -->
     <CategoryAdd v-if="showCategoryAdd" @close-modal="showCategoryAdd = false"></CategoryAdd>
-    <EnterBudgetPlanModal v-if="showEnterBudgetPlanModal" @close-modal="showEnterBudgetPlanModal = false"></EnterBudgetPlanModal>
+    <SaveMonthlyPlanModal v-if="showSaveMonthlyPlanModal" @close-modal="showSaveMonthlyPlanModal = false"></SaveMonthlyPlanModal>
+    <DeleteCategoryModal v-if="showDeleteCategoryModal" @close-modal="showDeleteCategoryModal = false"></DeleteCategoryModal>
 </template>
 <script>
 import CategoryAdd from './CategoryAdd.vue'
-import EnterBudgetPlanModal from './EnterBudgetPlanModal.vue'
+import SaveMonthlyPlanModal from './SaveMonthlyPlanModal.vue'
+import DeleteCategoryModal from './DeleteCategoryModal.vue'
 export default {
     components:{
         CategoryAdd,
-        EnterBudgetPlanModal,
+        SaveMonthlyPlanModal,
+        DeleteCategoryModal,
     },
     data() {
         return{
-            showEnterBudgetPlanModal: false,
+            showSaveMonthlyPlanModal: false,
+            showDeleteCategoryModal: false,
             showCategoryAdd: false,
+            categoryName: ['식비', '카페/간식', '술/유흥'],
         }
     }    
 }

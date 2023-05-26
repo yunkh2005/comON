@@ -4,9 +4,7 @@
         <div class="items-center bg-mainblue">
             <div class="flex p-2 items-center">
                 <!-- 닫기 버튼 -->
-                <router-link to="fundMain">
-                <button class="fa-solid fa-arrow-left text-white text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
-                </router-link>
+                <button @click="$router.go(-1)" class="fa-solid fa-arrow-left text-white text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
                 <!-- 화면명 -->
                 <div class="flex-col pl-4 font-bold text-2xl text-white">
                     모금 이름
@@ -76,7 +74,7 @@
             <button @click="showDeleteFundModal = true" class="w-1/5 py-1 ml-5 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                 <i class="fa-solid fa-trash"></i>
             </button>
-            <button class="w-1/5 py-1 ml-5 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
+            <button @click="$router.push('modifyFund')" class="w-1/5 py-1 ml-5 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                 <i class="fa-solid fa-pen"></i>
             </button>
             <button @click="showEnterFundModal = true" class="w-2/5 ml-5 bg-skyblue hover:opacity-70 text-lg font-semibold rounded-lg text-white">

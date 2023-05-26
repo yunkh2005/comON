@@ -49,6 +49,11 @@
                         100,000,000,000,000,000
                     </div>
                 </div>
+                <router-link to="/detailMyList">
+                <button class="w-1/10 self-center pr-3 pt-8 text-xl">
+                    <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+                </button>
+            </router-link>
             </div>    
         </div>
     </div>

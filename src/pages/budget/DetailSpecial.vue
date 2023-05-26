@@ -19,7 +19,7 @@
         <div class="mx-10 mb-20">
             <div class="flex font-bold mb-5 pt-9">
                 <div class="text-2xl w-1/3">총액</div>
-                <div class="text-lg w-2/3 text-gray-700">내역명</div>
+                <div class="text-lg w-2/3 text-gray-700">100,000,000,000원</div>
             </div>
             <div class="flex w-full font-bold mb-5 pt-9">
                 <div class="text-2xl w-1/3">시작날짜</div>

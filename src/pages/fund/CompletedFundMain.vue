@@ -1,9 +1,9 @@
 <template>
     <!-- 상단 중앙 진행, 완료 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
-        <button @click="$emit('close-modal')" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
+        <router-link to="fundMain" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
             진행
-        </button>
+        </router-link>
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-r-full">
             완료
         </button>
@@ -46,14 +46,12 @@
                     </span>
                 </div>
                 <!-- 그래프 -->
-                <div class="text-center">
-                    그래프
+                <div class="ring-1 ring-black mt-3">
+                    <div class="bg-mainyellow text-white text-center">100%</div>
                 </div>
             </div>
-            <router-link to="detailFund">
-            <button class="w-1/10 self-center pr-3 text-xl">
+            <router-link to="detailFund" class="w-1/10 self-center pr-3 text-xl">
                 <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-            </button>
             </router-link>
         </div>
     </div>

@@ -73,16 +73,16 @@
     </div>
 
     
-    <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
+    <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="name in categoryName" :key="name">
             <!-- 모금 설명 사진 -->
-            <div class="w-1/5 self-center pl-3 text-4xl text-center">
+            <div class="w-1/4 self-center pl-3 text-4xl text-center">
                 <i class="fa-solid fa-users-viewfinder"></i>
             </div>
             <div class="w-3/5 text-end">
                 <!-- 내역 이름 -->
                 <div class="grid grid-cols-2 font-bold">
-                    <div class="text-2xl lg:text-lg">
-                        유형명
+                    <div class="text-2xl lg:text-lg text-start">
+                        {{ name }}
                     </div>
                     <div class="pl-1 self-center font-bold">
                         <span>
@@ -136,6 +136,7 @@ export default {
     data() {
         return{
             isSpecialEmpty: false,
+            categoryName: ['식비', '카페/간식', '술/유흥'],
         }
     }
 }

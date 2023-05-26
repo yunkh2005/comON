@@ -44,6 +44,11 @@
                     100,000,000,000,000,000
                 </div>
             </div>
+            <router-link to="/detailDateList">
+                <button class="pr-3 pt-8 text-xl">
+                    <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+                </button>
+            </router-link>
         </div>    
     </div>
 </template>   

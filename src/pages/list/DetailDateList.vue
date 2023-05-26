@@ -44,7 +44,7 @@
             </div>
         </div>
         <!-- 하단 버튼 -->
-        <div class="flex absolute inset-x-0 bottom-0 px-6 py-3">
+        <div v-if="isCreator" class="flex absolute inset-x-0 bottom-0 px-6 py-3">
             <button @click="showDeleteListModal = true" class="w-1/5 py-1 bg-gray-100 hover:bg-skyblue text-lg font-semibold rounded-lg hover:text-white">
                 <i class="fa-solid fa-trash"></i>
             </button>
@@ -63,6 +63,7 @@ export default {
     data(){
         return{
             showDeleteListModal: false,
+            isCreator: true,
         }
     },
     components: {
