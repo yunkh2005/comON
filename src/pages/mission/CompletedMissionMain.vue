@@ -1,7 +1,7 @@
 <template>
     <!-- 상단 중앙 진행, 완료 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24 py-6">
-        <button @click="$emit('close-completed')" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
+        <button @click="$router.push('/missionMain')" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-l-full">
             진행
         </button>
         <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-r-full">
@@ -24,7 +24,7 @@
     </div>
 
     <!-- 중앙 내용 -->
-    <div class="absolute inset-0 mx-5 mt-20 mb-20 overflow-y-auto">
+    <div class="inset-0 mx-5 mb-20 overflow-y-auto">
         <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
             <!-- 사용자 프로필 사진 -->
             <div class="w-1/5 self-center pl-3 text-center">
@@ -33,36 +33,33 @@
                     생성자
                 </div>
             </div>
-            <div class="w-3/5 self-center">
-                <!-- 미션 이름 -->
-                <div class="text-2xl font-bold">
-                    미션 이름
-                </div>
-                <!-- 보상 금액 -->
-                <div class="pt-1 font-bold">
-                    <span class="text-lg">
-                        보상:
-                    </span>
-                    <span class="text-xl">
-                        100,000,000
-                    </span>
-                    <span class="text-lg">
-                        원
-                    </span>
+            <div class="w-4/5 ml-3">
+                <div class="flex">
+                    <!-- 미션 이름 -->
+                    <div class="text-2xl font-bold mr-5">
+                        미션명
+                    </div>
+                    <div class="pt-1 font-bold">
+                        <span class="text-lg">
+                            보상:
+                        </span>
+                        <span class="text-xl">
+                            100,000
+                        </span>
+                        <span class="text-lg">
+                            원
+                        </span>
+                    </div>
                 </div>
                 <!-- 보상 정보 -->
-                <div class="mx-10 bg-mainyellow rounded text-white text-center font-bold">
+                <div class="w-2/5 mt-2 bg-mainyellow rounded text-white text-center font-bold">
                     참여 완료
                 </div>
-                <!-- 미참여 -->
-                <!-- <div class="mx-10 bg-gray-500 rounded text-white text-center font-bold">
-                    미참여
-                </div> -->
             </div>
             <router-link to="detailMission">
-            <button class="w-1/10 self-center pr-3 text-xl">
-                <i class="px-2 py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-            </button>
+                    <button class="pr-5 pt-4 text-xl">
+                        <i class="py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+                    </button>
             </router-link>
         </div>
     </div>

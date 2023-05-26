@@ -21,13 +21,15 @@
 
     <!-- 선택 버튼 -->
     <div class="flex left-0 top-0 bg-white w-full px-24">
-        <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
+        <router-link to="missionSearch" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue text-2xl font-semibold rounded-l-full">
             진행
-        </button>
-        <router-link to="completedMissionSearch" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue text-2xl font-semibold rounded-r-full">
-            완료
         </router-link>
+        <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-r-full">
+            완료
+        </button>
     </div>
+
+    <!-- 중앙 내용 -->
     <div class="inset-0 mx-5 pt-5 overflow-y-auto">
         <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
             <!-- 사용자 프로필 사진 -->
@@ -55,34 +57,16 @@
                         </span>
                     </div>
                 </div>
-                <div class="flex justify-between">
-                    <div>
-                        <!-- 보상 금액 -->
-                        <div class="pt-1 font-bold text-gray-500">
-                            <span class="text-lg">
-                                설명입니다.
-                            </span>
-                        </div>
-                        <!-- 기간 -->
-                        <div class="text-lg text-gray-500">
-                            <span class="font-bold">
-                                YY.MM.DD
-                            </span>
-                            <span>
-                                ~
-                            </span>
-                            <span class="font-bold">
-                                YY.MM.DD
-                            </span>
-                        </div>
-                    </div>
-                    <router-link to="detailMission">
-                        <button class="pr-5 text-xl">
-                            <i class="py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
-                        </button>
-                    </router-link>
+                <!-- 보상 정보 -->
+                <div class="w-2/5 mt-2 bg-mainyellow rounded text-white text-center font-bold">
+                    참여 완료
                 </div>
             </div>
+            <router-link to="detailMission">
+                    <button class="pr-5 pt-4 text-xl">
+                        <i class="py-1 fa-solid fa-chevron-right hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+                    </button>
+            </router-link>
         </div>
     </div>
 </template>

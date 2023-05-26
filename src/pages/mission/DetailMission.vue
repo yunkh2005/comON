@@ -4,9 +4,7 @@
         <div class="items-center bg-mainblue">
             <div class="flex p-2 items-center">
                 <!-- 닫기 버튼 -->
-                <router-link to="missionMain">
-                <button class="fa-solid fa-arrow-left text-white text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
-                </router-link>
+                <button @click="$router.go(-1)" class="fa-solid fa-arrow-left text-white text-xl p-2 w-12 hover:bg-white hover:bg-opacity-20 rounded-full"></button>
                 <!-- 화면명 -->
                 <div class="flex-col pl-4 font-bold text-2xl text-white">
                     미션 이름
@@ -69,7 +67,7 @@
                 <button v-else-if="isComplete">
                     보상 지급 완료
                 </button>
-                <button v-else>
+                <button v-else @click="$router.push('/modifyMission')">
                     수정
                 </button>
             </div>
@@ -77,7 +75,7 @@
                 <button v-if="isComplete">
                     보상 수령 완료
                 </button>
-                <button v-else>
+                <button v-else @click="$router.push('/modifyMission')">
                     수정
                 </button>
             </div>
@@ -113,7 +111,7 @@ import DeleteMissionModal from './DeleteMissionModal.vue'
         },
         data(){
             return{
-                isCreator: true,          //생성자인지 아닌지 구분
+                isCreator: false,          //생성자인지 아닌지 구분
                 isPayer: false,            //지급자인지 수령자인지 구분
                 isHaveParticipant: true,  //참여자가 있는지 구분
                 isComplete: false,          //완료된 미션인지 구분

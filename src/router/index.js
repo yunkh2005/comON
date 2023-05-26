@@ -68,6 +68,8 @@ import MissionMain from '../pages/mission/MissionMain.vue'
 import MissionSearch from '../pages/mission/MissionSearch.vue'
 import MyCompletedMission from '../pages/mission/MyCompletedMission.vue'
 import MyMission from '../pages/mission/MyMission.vue'
+import CompletedMissionSearch from '../pages/mission/CompletedMissionSearch.vue'
+import ModifyMission from '../pages/mission/ModifyMission.vue'
 
 //import ButtomTab from '../component/ButtomTab.vue'
 
@@ -139,6 +141,8 @@ const routes = [
     { path: '/missionSearch', component: MissionSearch },
     { path: '/myCompletedMission', component: MyCompletedMission },
     { path: '/myMission', component: MyMission },
+    { path: '/completedMissionSearch', component: CompletedMissionSearch },
+    { path: '/modifyMission', component: ModifyMission },
    
 ]
 
