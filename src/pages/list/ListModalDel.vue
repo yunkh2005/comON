@@ -15,7 +15,7 @@
                             
                             <!-- 안내 멘트 -->
                             <div class="justify-center text-center text-lg font-extrabold py-10">
-                                 내역을 삭제하시겠습니까?
+                                내역을 삭제하시겠습니까?
                             
                             <!-- 버튼 -->
                             <div class="flex place-content-center p-10 cursor-pointer">
