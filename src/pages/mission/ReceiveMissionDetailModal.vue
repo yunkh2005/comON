@@ -32,7 +32,7 @@
                                     class="w-1/2 p-4 text-center ring-1 ring-gray-100 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                                     확인
                                 </button>
-                                <button @click="$router.push('/detailMission')" class="w-1/2 ml-5 p-4 text-center ring-1 ring-skyblue bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
+                                <button @click="$router.push('/detailMission')" class="w-1/2 ml-5 p-4 text-center ring-1 ring-skyblue bg-skyblue hover:opacity-70 text-white md:text-lg font-semibold rounded-lg">
                                     미션 상세
                                 </button>
                             </div>

@@ -187,6 +187,7 @@
     </div>
     <!-- 하단탭 -->
     <ButtomTab></ButtomTab>
+    <MessageAlarm></MessageAlarm>
     <DetailReceiveAllowanceModal v-if="showDetailReceiveAllowanceModal" @close-modal="showDetailReceiveAllowanceModal = false"></DetailReceiveAllowanceModal>
     <DetailSendAllowanceModal v-if="showDetailSendAllowanceModal" @close-modal="showDetailSendAllowanceModal = false"></DetailSendAllowanceModal>
 </template>
@@ -194,11 +195,13 @@
 import ButtomTab from '../../components/public/ButtomTab.vue';
 import DetailReceiveAllowanceModal from './DetailReceiveAllowanceModal.vue';
 import DetailSendAllowanceModal from './DetailSendAllowanceModal.vue';
+import MessageAlarm from './MessageAlarm.vue';
 export default {
     components: {
         ButtomTab,
         DetailReceiveAllowanceModal,
         DetailSendAllowanceModal,
+        MessageAlarm,
     },
     data() {
         return {
