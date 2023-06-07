@@ -194,11 +194,13 @@
 import ButtomTab from '../../components/public/ButtomTab.vue';
 import DetailReceiveAllowanceModal from './DetailReceiveAllowanceModal.vue';
 import DetailSendAllowanceModal from './DetailSendAllowanceModal.vue';
+import MessageAlarm from './MessageAlarm.vue';
 export default {
     components: {
         ButtomTab,
         DetailReceiveAllowanceModal,
         DetailSendAllowanceModal,
+        MessageAlarm,
     },
     data() {
         return {

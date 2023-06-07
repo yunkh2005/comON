@@ -9,6 +9,7 @@
                         role="dialog" 
                         aria-modal="true" 
                         aria-labelledby="modal-headline">
+                        <div v-if="!isEmpty">
                             <div v-if="!enterYn">
                             <!-- 안내 멘트 -->
                             <div class="text-center text-lg font-extrabold pt-16">
@@ -34,6 +35,19 @@
                                 </router-link>
                             </div>
                         </div>
+                        </div>
+                        <div v-else>
+                            <!-- 안내 멘트 -->
+                            <div class="text-center text-lg font-extrabold pt-16">
+                                필수항목을 입력해주세요
+                            </div>
+                            <!-- 버튼 -->
+                            <div class="flex place-content-center p-10 cursor-pointer">
+                                <button @click="$emit('close-modal')" class="w-1/2 m-auto p-4 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                                    확인
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -46,6 +60,7 @@
         data(){
             return{
                 enterYn: false,
+                isEmpty: false,
             }
         },
     }

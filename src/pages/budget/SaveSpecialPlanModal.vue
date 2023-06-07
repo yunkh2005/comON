@@ -9,32 +9,46 @@
                         role="dialog" 
                         aria-modal="true" 
                         aria-labelledby="modal-headline">
+                        <div v-if="!isEmpty">
                             <div v-if="!enterYn">
-                            <!-- 안내 멘트 -->
-                            <div class="text-center text-lg font-extrabold pt-16">
-                                예산을 저장하시겠습니까?
+                                <!-- 안내 멘트 -->
+                                <div class="text-center text-lg font-extrabold pt-16">
+                                    예산을 저장하시겠습니까?
+                                </div>
+                                <!-- 버튼 -->
+                                <div class="flex place-content-center p-10 cursor-pointer">
+                                    <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
+                                        취소
+                                    </button>
+                                    <button @click="enterYn = true" class="w-1/2 ml-5 p-4 text-center bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
+                                        저장
+                                    </button>
+                                </div>
                             </div>
-                            <!-- 버튼 -->
-                            <div class="flex place-content-center p-10 cursor-pointer">
-                                <button @click="$emit('close-modal')" class="w-1/2 p-4 text-center bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
-                                    취소
-                                </button>
-                                <button @click="enterYn = true" class="w-1/2 ml-5 p-4 text-center bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
-                                    저장
-                                </button>
+                            <div v-else>
+                                <div class="text-center text-lg font-extrabold pt-16">
+                                    저장했습니다
+                                </div>
+                                <router-link to="/specialMain">
+                                    <div class="flex place-content-center p-10 cursor-pointer">
+                                        <button class="w-1/2 m-auto p-4 bg-mainyellow hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                                            확인
+                                        </button>
+                                    </div>
+                                </router-link>
                             </div>
                         </div>
                         <div v-else>
+                            <!-- 안내 멘트 -->
                             <div class="text-center text-lg font-extrabold pt-16">
-                                저장했습니다
+                                필수항목을 입력해주세요
                             </div>
-                            <router-link to="/specialMain">
-                                <div class="flex place-content-center p-10 cursor-pointer">
-                                    <button class="w-1/2 m-auto p-4 bg-mainyellow hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
-                                        확인
-                                    </button>
-                                </div>
-                            </router-link>
+                            <!-- 버튼 -->
+                            <div class="flex place-content-center p-10 cursor-pointer">
+                                <button @click="$emit('close-modal')" class="w-1/2 m-auto p-4 bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                                    확인
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -48,6 +62,7 @@
         data(){
             return{
                 enterYn: false,
+                isEmpty: false,
             }
         },
     }

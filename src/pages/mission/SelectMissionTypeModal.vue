@@ -15,10 +15,10 @@
                         </div>
                         <!-- 버튼 -->
                         <div class="flex place-content-center p-10 cursor-pointer">
-                            <button @click="$router.push('createMission')" class="w-1/2 p-4 text-center bg-skyblue hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                            <button @click="$router.push('createMission')" class="w-1/2 p-4 text-center bg-skyblue hover:bg-opacity-70 text-white md:text-lg font-semibold rounded-lg">
                                 용돈 주기
                             </button>
-                            <button @click="$router.push('createMission')" class="w-1/2 ml-5 p-4 text-center bg-mainyellow hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                            <button @click="$router.push('createMission')" class="w-1/2 ml-5 p-4 text-center bg-mainyellow hover:bg-opacity-70 text-white md:text-lg font-semibold rounded-lg">
                                 용돈 받기
                             </button>
                         </div>

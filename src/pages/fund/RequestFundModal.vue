@@ -9,8 +9,6 @@
                         role="dialog" 
                         aria-modal="true" 
                         aria-labelledby="modal-headline">
-                        <!-- 닫기 버튼 -->
-                        <button @click="$emit('close-modal')" class="fas fa-times float-right text-primary text-xl p-2 h-10 w-10 hover:bg-gray-100 rounded-full"></button>
                         <div v-if="!enterYn">
                             <!-- 안내 멘트 -->
                             <div class="flex justify-center font-extrabold pt-16">
@@ -36,11 +34,11 @@
                             </div>
                         </div>
                         <div v-else>
-                            <div class="text-center text-lg font-extrabold pt-16 pb-10">
+                            <div class="text-center text-lg font-extrabold pt-16">
                                 메시지를 전송했습니다.
                             </div>
                             <div class="flex place-content-center p-10 cursor-pointer">
-                                <button @click="$emit('close-modal')" class="w-1/2 m-auto mb-4 p-4 bg-skyblue hover:opacity-70 text-white text-lg font-semibold rounded-lg">
+                                <button @click="$emit('close-modal')" class="w-1/2 m-auto p-4 bg-mainyellow hover:opacity-70 text-white text-lg font-semibold rounded-lg">
                                 확인
                                 </button>
                             </div>
