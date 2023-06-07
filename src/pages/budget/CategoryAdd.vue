@@ -24,12 +24,6 @@
                             <div class="grid-rows-2 px-14">
                                 <div class="py-1">
                                     <span class="font-bold">
-                                        아이콘
-                                    </span>
-                                    <i class="hover:bg-gray-200 fa-solid fa-ellipsis text-lg rounded-full ring-1 ring-black"></i>
-                                </div>
-                                <div class="py-1">
-                                    <span class="font-bold">
                                         유형명
                                     </span>
                                     <input type="text" placeholder="입력하세요." class="w-1/2">

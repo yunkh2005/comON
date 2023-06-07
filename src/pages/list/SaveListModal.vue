@@ -30,7 +30,7 @@
                                     내역을 저장했습니다
                                 </div>
                                 <div class="flex place-content-center p-10 cursor-pointer">
-                                    <button @click="$router.push('/myList')" class="w-1/2 m-auto p-4 bg-mainyellow hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
+                                    <button @click="$router.push('/listMain')" class="w-1/2 m-auto p-4 bg-mainyellow hover:bg-opacity-70 text-white text-lg font-semibold rounded-lg">
                                         확인
                                     </button>
                                 </div>

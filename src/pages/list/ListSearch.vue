@@ -24,7 +24,7 @@
         <!-- 검색 결과 -->
         <div v-if="!isEmpty">
             <div class="absolute inset-0 mx-5 mt-32 mb-10 overflow-y-auto">
-                <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 100" :key="message">
+                <div class="flex justify-between my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 10" :key="message">
                     <!-- 사용자 프로필 사진 -->
                     <div class="w-1/5 self-center pl-3 text-center">
                         <i class="fa-solid fa-circle-user text-4xl"></i>

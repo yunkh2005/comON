@@ -11,7 +11,7 @@ import MonthlyPictureAllowance from '../pages/allowance/MonthlyPictureAllowance.
 
 //예산 CategoryAdd EmptyMonthly EmptySpecial MonthlyMain Monthlyplan SpecialMain 
 //AddSpecial DetailMonthlyType SpecialSearch
-import BudgetMain from '../pages/budget/BudgetMain.vue' 
+import BudgetMain from '../pages/budget/BudgetMain.vue'
 import AddSpecial from '../pages/budget/AddSpecial.vue'
 import CategoryAdd from '../pages/budget/CategoryAdd.vue'
 import DetailMonthlyType from '../pages/budget/DetailMonthlyType.vue'
@@ -69,11 +69,11 @@ import ModifyMission from '../pages/mission/ModifyMission.vue'
 
 //import ButtomTab from '../component/ButtomTab.vue'
 
-        
+
 const routes = [
-    { path: '/', component: FundMain},
+    { path: '/', component: ListMain },
     //용돈 //ReceiveMessage SendMessage
-    { path: '/allowanceMain', component: AllowanceMain},
+    { path: '/allowanceMain', component: AllowanceMain },
     { path: '/messageSendAllowance', component: MessageSendAllowance },
     { path: '/messageReceiveAllowance', component: MessageReceiveAllowance },
     { path: '/moneyAllowance', component: MoneyAllowance },
@@ -86,32 +86,32 @@ const routes = [
     { path: '/detailMonthlyType', component: DetailMonthlyType },
     { path: '/emptyMonthly', component: EmptyMonthly },
     { path: '/emptySpecial', component: EmptySpecial },
-    { path: '/monthlyMain', component: MonthlyMain},
+    { path: '/monthlyMain', component: MonthlyMain },
     { path: '/monthlyplan', component: Monthlyplan },
     { path: '/specialMain', component: SpecialMain },
     { path: '/specialSearch', component: SpecialSearch },
     { path: '/detailSpecial', component: DetailSpecial },
-    
+
     //모금 
     { path: '/completedFundMain', component: CompletedFundMain },
     { path: '/createFund', component: CreateFund },
     { path: '/detailFund', component: DetailFund },
     { path: '/fundInfo', component: FundInfo },
-    { path: '/fundMain', component: FundMain},
+    { path: '/fundMain', component: FundMain },
     { path: '/fundSearch', component: FundSearch },
     { path: '/completedFundSearch', component: CompletedFundSearch },
     { path: '/myCompletedFund', component: MyCompletedFund },
     { path: '/myFund', component: MyFund },
     { path: '/modifyFund', component: ModifyFund },
-    
+
     //내역 
     //AddIncome AddOutcome DateList DetailMyList DetailDateList 
     //IncomeTypeList MyList OutcomeTypeList
     { path: '/addIncome', component: AddIncome },
     { path: '/addOutcome', component: AddOutcome },
-    { path: '/allTypeOfIncome', component:AllTypeOfIncome },
-    { path: '/allTypeOfOutcome', component:AllTypeOfOutcome },
-    { path: '/analysisOfIncome',component: AnalysisOfIncome },
+    { path: '/allTypeOfIncome', component: AllTypeOfIncome },
+    { path: '/allTypeOfOutcome', component: AllTypeOfOutcome },
+    { path: '/analysisOfIncome', component: AnalysisOfIncome },
     { path: '/analysisOfOutcome', component: AnalysisOfOutcome },
     { path: '/dateList', component: DateList },
     { path: '/detailMyList', component: DetailMyList },
@@ -122,7 +122,7 @@ const routes = [
     { path: '/myList', component: MyList },
     { path: '/outcomeTypeList', component: OutcomeTypeList },
     { path: '/modifyList', component: ModifyList },
-    
+
 
 
     //미션 //CreateMission DetailMission
@@ -136,7 +136,7 @@ const routes = [
     { path: '/myMission', component: MyMission },
     { path: '/completedMissionSearch', component: CompletedMissionSearch },
     { path: '/modifyMission', component: ModifyMission },
-   
+
 ]
 
 const router = createRouter({

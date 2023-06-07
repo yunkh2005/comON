@@ -12,7 +12,7 @@
 
         <!-- 중앙 내용 -->
         <div class="absolute inset-0 mt-20 mb-10 overflow-y-auto">
-            <div class="flex justify-between h-1/6 mx-5 my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 20" :key="message">
+            <div class="flex justify-between h-1/6 mx-5 my-1 py-4 bg-gray-100 rounded-lg" v-for="message in 5" :key="message">
                 <!-- 모금 설명 사진 -->
                 <div class="w-2/5 self-center text-6xl text-center">
                     <i class="fa-solid fa-circle-user"></i>

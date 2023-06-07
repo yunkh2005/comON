@@ -28,18 +28,7 @@
 
     <!-- 중앙 내용 -->
     <div class="absolute inset-0 mx-5 mt-32 mb-20 overflow-y-auto bg-gray-100 text-center">
-        <!-- 안내 문구 -->
-        <div class="flex-col place-self-center text-2xl font-bold">
-            <div class="w-10 h-10 hover:opacity-50 cursor-pointer">
-                <i class="fa-solid fa-image"></i>
-            </div>
-        </div>
-        <div class="flex-col place-self-center text-2xl font-bold">
-            <div class="w-10 h-10 hover:opacity-50 cursor-pointer">
-                <i class="fa-solid fa-image"></i>
-            </div>
-        </div>
-        
+                
     </div>
     <!-- 하단 탭 -->
     <ButtomTab></ButtomTab>

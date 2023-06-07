@@ -2,9 +2,19 @@
     <div>
         <top>
             <div class="flex justify-center items-center py-6 text-2xl font-bold">
-                <i class="fa-solid fa-chevron-left"></i>
-                <div class="mx-3">MM월</div>
-                <i class="fa-solid fa-chevron-right"></i>
+                <!-- 이전 월 이동 버튼 -->
+                <button class="w-1/3">
+                    <i class="fa-solid fa-chevron-left px-2 text-xl hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+                </button>
+                <!-- 월 안내 -->
+                <button class="w-1/3 font-extrabold text-2xl text-center hover:bg-skyblue hover:bg-opacity-20 rounded-full">
+                    <span>MM</span>
+                    <span>월</span>
+                </button>
+                <!-- 이후 월 이동 버튼 -->
+                <button class="w-1/3 ">
+                    <i class="fa-solid fa-chevron-right px-2 text-xl hover:bg-skyblue hover:bg-opacity-20 rounded-full"></i>
+                </button>
             </div>
             <div class="fixed top-0 right-0 px-3 py-6">
                 <router-link to="/listSearch" class="flex-col cursor-pointer place-content-end hover:bg-skyblue hover:bg-opacity-20 rounded-full">

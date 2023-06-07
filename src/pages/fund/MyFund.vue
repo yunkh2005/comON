@@ -13,10 +13,10 @@
         <!-- 상단 중앙 진행, 완료 선택 버튼 -->
         <div class="flex left-0 top-0 bg-white w-full px-24 py-3">
             <button class="text-center w-1/2 h-9 bg-skyblue text-2xl text-white font-semibold rounded-l-full">
-                진행
+                생성
             </button>
             <button @click="$router.push('myCompletedFund')" class="text-center w-1/2 h-9 bg-gray-100 hover:bg-skyblue hover:text-white text-2xl font-semibold rounded-r-full">
-                완료
+                참여
             </button>
         </div>
 

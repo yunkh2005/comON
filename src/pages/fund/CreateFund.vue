@@ -21,7 +21,7 @@
             <input type="text" class="rounded w-1/2 focus:ring-2 focus:border-primary focus:outline-none"  placeholder="입력하세요"/>
         </div>
         <div class="flex pt-5 mb-3">
-            <div class="text-mainblue fontㄴ-bold text-xl w-1/3">목표금액</div>
+            <div class="text-mainblue font-bold text-xl w-1/3">목표금액</div>
             <input type="text" class="rounded w-1/2 focus:ring-2 focus:border-primary focus:outline-none"   placeholder="입력하세요"/>
         </div>
         <div class="flex pt-5 mb-3">
