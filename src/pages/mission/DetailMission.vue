@@ -111,7 +111,7 @@ import DeleteMissionModal from './DeleteMissionModal.vue'
         },
         data(){
             return{
-                isCreator: true,          //생성자인지 아닌지 구분
+                isCreator: false,          //생성자인지 아닌지 구분
                 isPayer: false,            //지급자인지 수령자인지 구분
                 isHaveParticipant: true,  //참여자가 있는지 구분
                 isComplete: false,          //완료된 미션인지 구분

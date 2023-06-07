@@ -38,7 +38,7 @@
                             <!-- 버튼 -->
                             <div class="flex place-content-center p-10">
                                 <button @click="$emit('close-modal')"
-                                    class="w-1/2 p-4 text-center ring-1 ring-gray-100 bg-gray-100 hover:bg-skyblue text-lg font-semibold rounded-lg">
+                                    class="w-1/2 p-4 text-center ring-1 ring-gray-100 bg-gray-100 hover:bg-skyblue hover:text-white text-lg font-semibold rounded-lg">
                                     거절하기
                                 </button>
                                 <button @click="enterYn = true"

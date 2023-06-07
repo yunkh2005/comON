@@ -187,7 +187,6 @@
     </div>
     <!-- 하단탭 -->
     <ButtomTab></ButtomTab>
-    <MessageAlarm></MessageAlarm>
     <DetailReceiveAllowanceModal v-if="showDetailReceiveAllowanceModal" @close-modal="showDetailReceiveAllowanceModal = false"></DetailReceiveAllowanceModal>
     <DetailSendAllowanceModal v-if="showDetailSendAllowanceModal" @close-modal="showDetailSendAllowanceModal = false"></DetailSendAllowanceModal>
 </template>

@@ -63,35 +63,6 @@ export default {
     methods: {
     
     },
-// setup(){
-//         const fundTitle = ref('')
-//         const goalMoney = ref('')
-//         const fundExplain = ref('')
-        
-        
-//         const onAddFund = async () => {
-//             try{
-//                 console.log("doc.fundtitle.value = ", doc.fundTitle.value)
-//                 console.log("doc.goalmoney.value = ", doc.goalmoney.value)
-//                 console.log("doc.fundExplain.value = ", doc.fundExplain.value)
-//            const doc = Fund_Collection.doc()
-//            await doc.set({
-//             id: doc.id,
-//             fundTitle: doc.fundtitle.value,
-//             goalmoney:  doc.goalmoney.value,
-//             fundExplain: doc.fundExplain.value
-//             })
-//             fundtitle.value = '',
-//             goalmoney.value  = '',
-//             undExplain.value  = ''
-//             }catch(e) {
-//                 console.log("on add funderror on CreateFund", e)
-//             }
-
-//         }
-
-//         return {fundTitle, goalMoney, fundExplain, onAddFund}
-//     }
 }
 </script>
 
